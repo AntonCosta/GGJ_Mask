@@ -13,7 +13,7 @@ namespace GJJ.Managers
 {
     public class MaskManager : MonoBehaviour
     {
-        private const float TWEEN_DURATION = 0.5f;
+        private const float TWEEN_DURATION = 0.0f;
         private const float TRAVEL_DISTANCE = 30f;
         
         public static MaskManager Instance { get; private set; }
@@ -63,8 +63,7 @@ namespace GJJ.Managers
                 }
             });
             Masks[0].OnScreen();
-            DialogueManager.Instance.AddText();
-            DialogueManager.Instance.ShowDialogue(0);
+            DialogueManager.Instance.AddText(Masks);
         }
 
         public void NextMask()
@@ -76,8 +75,6 @@ namespace GJJ.Managers
                 _currentMaskIndex = 0;
                 Masks[_currentMaskIndex].OnScreen();
                 Masks[LevelGenerator.Instance.NrOfMasks - 1].OffScreen();;
-                DialogueManager.Instance.ShowDialogue(_currentMaskIndex);
-                DialogueManager.Instance.HideDialogue(LevelGenerator.Instance.NrOfMasks - 1);
                 for (var i = 0; i < LevelGenerator.Instance.NrOfMasks; i++)
                 {
                     _tweenSequence.Join(
@@ -93,8 +90,6 @@ namespace GJJ.Managers
             _currentMaskIndex++;
             Masks[_currentMaskIndex].OnScreen();
             Masks[_currentMaskIndex - 1].OffScreen();
-            DialogueManager.Instance.ShowDialogue(_currentMaskIndex);
-            DialogueManager.Instance.HideDialogue(_currentMaskIndex - 1);
             LevelGenerator.Instance.MaskPositions.ForEach(mask =>
             {
                 _tweenSequence.Join(
@@ -112,8 +107,6 @@ namespace GJJ.Managers
                 _currentMaskIndex = LevelGenerator.Instance.NrOfMasks - 1;
                 Masks[_currentMaskIndex].OnScreen();
                 Masks[0].OffScreen();
-                DialogueManager.Instance.ShowDialogue(_currentMaskIndex);
-                DialogueManager.Instance.HideDialogue(0);
                 for (var i = 0; i < LevelGenerator.Instance.NrOfMasks; i++)
                 {
                     _tweenSequence.Join(
@@ -130,8 +123,6 @@ namespace GJJ.Managers
             _currentMaskIndex--;
             Masks[_currentMaskIndex].OnScreen();
             Masks[_currentMaskIndex + 1].OffScreen();
-            DialogueManager.Instance.ShowDialogue(_currentMaskIndex);
-            DialogueManager.Instance.HideDialogue(_currentMaskIndex + 1);
             LevelGenerator.Instance.MaskPositions.ForEach(mask =>
             {
                 _tweenSequence.Join(

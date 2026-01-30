@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using GGJ.Controllers;
 using GGJ.Models;
 using GJJ.Managers;
 using TMPro;
@@ -9,7 +10,6 @@ namespace GGJ.Managers
     public class DialogueManager : MonoBehaviour
     {
         public static DialogueManager Instance { get; private set; }
-        [SerializeField] public List<GameObject> UIDialogueLines;
         
         private Dialogues _dialogues;
         
@@ -27,46 +27,35 @@ namespace GGJ.Managers
         public void AddDialogues(Dialogues dialogues)
         {
             _dialogues = dialogues;
-            UIDialogueLines.ForEach(line => line.SetActive(false));
         }
 
-        public void AddText()
+        public void AddText(List<MaskController> masks)
         {
-            for (var i = 0; i < MaskManager.Instance.Masks.Count; i++)
+            for (var i = 0; i < masks.Count; i++)
             {
-                var mask = MaskManager.Instance.Masks[i];
+                var mask = masks[i];
                 switch (mask.PersonalityType)
                 {
                     case "Calm":
-                        UIDialogueLines[i].GetComponentInChildren<TextMeshProUGUI>().text = _dialogues.DialogueLines[i].Text;
+                        mask.Dialogue.text = _dialogues.DialogueLines[i].Text;
                         break;
                     case "Deceptive":
-                        UIDialogueLines[i].GetComponentInChildren<TextMeshProUGUI>().text = _dialogues.DialogueLines[i].Text;
+                        mask.Dialogue.text = _dialogues.DialogueLines[i].Text;
                         break;
                     case "Nervous":
-                        UIDialogueLines[i].GetComponentInChildren<TextMeshProUGUI>().text = _dialogues.DialogueLines[i].Text;
+                        mask.Dialogue.text = _dialogues.DialogueLines[i].Text;
                         break;
                     case "Aggressive":
-                        UIDialogueLines[i].GetComponentInChildren<TextMeshProUGUI>().text = _dialogues.DialogueLines[i].Text;
+                        mask.Dialogue.text = _dialogues.DialogueLines[i].Text;
                         break;
                     case "Shady":
-                        UIDialogueLines[i].GetComponentInChildren<TextMeshProUGUI>().text = _dialogues.DialogueLines[i].Text;
+                        mask.Dialogue.text = _dialogues.DialogueLines[i].Text;
                         break;
                     case "Vague":
-                        UIDialogueLines[i].GetComponentInChildren<TextMeshProUGUI>().text = _dialogues.DialogueLines[i].Text;
+                        mask.Dialogue.text = _dialogues.DialogueLines[i].Text;
                         break;
                 }
             }
-        }
-
-        public void ShowDialogue(int id)
-        {
-            UIDialogueLines[id].SetActive(true);
-        }
-        
-        public void HideDialogue(int id)
-        {
-            UIDialogueLines[id].SetActive(false);
         }
     }
 }

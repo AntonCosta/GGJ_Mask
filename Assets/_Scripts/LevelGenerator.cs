@@ -15,6 +15,7 @@ namespace GGJ
         private const string DIALOGUE_RESOURCE_PATH = "Data/mask_dialogue";
         private const string MASK_PREFAB = "Prefabs/Mask";
         private const string INTERVIEW_ROOM_PREFAB = "Prefabs/InterviewRoom";
+        private const float MASK_Y_OFFSET = -0.1f;
 
         public static LevelGenerator Instance { get; private set; }
         
@@ -67,7 +68,7 @@ namespace GGJ
                 var newMaskPrefab = Resources.Load<GameObject>(MASK_PREFAB);
                 var newMask = Instantiate(newMaskPrefab, transform.position, Quaternion.identity);
                 newMask.transform.parent = _maskPositions[i].transform;
-                newMask.transform.localPosition = new Vector3(0, 0, 0);
+                newMask.transform.localPosition = new Vector3(0, MASK_Y_OFFSET, 0);
 
                 var maskController = newMask.GetComponent<MaskController>();
                 maskController.Accessory.sprite = _accessory.RandomElement();

@@ -1,6 +1,7 @@
 using System;
 using DG.Tweening;
 using GGJ.Managers;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,9 +9,10 @@ namespace GGJ.Controllers
 {
     public class MaskController : MonoBehaviour
     {
-        private const float AMPLITUDE = 0.1f;
+        private const float AMPLITUDE = 0.025f;
         private const float DURATION = 0.7f;
         
+        [SerializeField] public GameObject Components;
         [SerializeField] public SpriteRenderer Accessory;
         [SerializeField] public SpriteRenderer Hat;
         [SerializeField] public SpriteRenderer Eyes;
@@ -18,6 +20,7 @@ namespace GGJ.Controllers
         [SerializeField] public SpriteRenderer Mouth;
         [SerializeField] public SpriteRenderer FaceType;
         [SerializeField] public SpriteRenderer Ears;
+        [SerializeField] public TextMeshProUGUI Dialogue;
 
         public string PersonalityType
         {
@@ -44,7 +47,7 @@ namespace GGJ.Controllers
 
         public void OnScreen()
         {
-            _tween = transform.DOMoveY(transform.position.y + AMPLITUDE, DURATION);
+            _tween = Components.transform.DOMoveY(transform.position.y + AMPLITUDE, DURATION);
             switch (PersonalityType)//"Calm", "Deceptive", "Nervous", "Aggressive", "Shady", "Vague"
             {
                 case "Calm":

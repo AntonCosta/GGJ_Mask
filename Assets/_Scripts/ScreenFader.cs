@@ -7,7 +7,7 @@ namespace GGJ.Utils
 {
     public class ScreenFader : MonoBehaviour
     {
-        private const float FADE_TIME = 0.5f;
+        private const float FADE_TIME = 0.7f;
 
         public static ScreenFader Instance { get; private set; }
         [SerializeField] private Image _fadeImage;
