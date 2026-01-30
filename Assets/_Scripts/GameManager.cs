@@ -8,17 +8,20 @@ namespace GGJ.Managers
     {
         [SerializeField] private Button _startButton;
         [SerializeField] private Button _exitButton;
+        [SerializeField] private Canvas _mainMenu;
         
         private LevelGenerator _levelGenerator;
 
         private void Start()
         {
             _startButton.onClick.AddListener(GenerateGame);
+            _levelGenerator = LevelGenerator.Instance;
         }
 
         private void GenerateGame()
         {
             _levelGenerator.GenerateLevel();
+            _mainMenu.gameObject.SetActive(false);
         }
     }
 }
