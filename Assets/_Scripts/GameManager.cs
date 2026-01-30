@@ -8,7 +8,7 @@ namespace GGJ.Managers
     {
         [SerializeField] private Button _startButton;
         [SerializeField] private Button _exitButton;
-        [SerializeField] private Canvas _mainMenu;
+        [SerializeField] private GameObject _mainMenu;
         
         private LevelGenerator _levelGenerator;
 

@@ -1,3 +1,4 @@
+using GJJ.Managers;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -8,14 +9,14 @@ namespace GGJ.Controllers
         
         private void Update()
         {
-            if (Keyboard.current.dKey.wasPressedThisFrame)
+            if (Keyboard.current.dKey.wasPressedThisFrame && !MaskManager.Instance.IsTweening)
             {
-                LevelGenerator.Instance.NextMask();
+                MaskManager.Instance.NextMask();
             }
 
-            if (Keyboard.current.aKey.wasPressedThisFrame)
+            if (Keyboard.current.aKey.wasPressedThisFrame && !MaskManager.Instance.IsTweening)
             {
-                LevelGenerator.Instance.PreviousMask();
+                MaskManager.Instance.PreviousMask();
             }
         }
     }

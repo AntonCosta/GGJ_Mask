@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using GGJ.Controllers;
 using GGJ.Models;
+using GJJ.Managers;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -14,6 +15,9 @@ namespace GGJ
         private const string MASK_PREFAB = "Prefabs/Mask";
 
         public static LevelGenerator Instance { get; private set; }
+        
+        public int NrOfMasks => _nrOfMasks;
+        public List<GameObject> MaskPositions => _maskPositions;
 
         [SerializeField] private List<GameObject> _maskPositions;
         [SerializeField] private List<Sprite> _accessory;
@@ -26,7 +30,6 @@ namespace GGJ
 
         private Dialogues _dialogueModel;
         private int _nrOfMasks = 0;
-        private int _currentMaskIndex = 0;
         
         private void Awake()
         {
@@ -69,29 +72,10 @@ namespace GGJ
                 maskController.Mouth.sprite = _mouth.RandomElement();
                 maskController.FaceType.sprite = _faceType.RandomElement();
                 maskController.Ears.sprite = _ears.RandomEvenElement();
+                
+                MaskManager.Instance.Masks.Add(maskController);
             }
-        }
-
-        public void NextMask()
-        {
-            _currentMaskIndex++;
-            _maskPositions.ForEach(mask =>
-            {
-                var pos = mask.transform.position;
-                pos.x -= 300f;
-                mask.transform.position = pos;
-            });
-        }
-
-        public void PreviousMask()
-        {
-            _currentMaskIndex++;
-            _maskPositions.ForEach(mask =>
-            {
-                var pos = mask.transform.position;
-                pos.x += 300f;
-                mask.transform.position = pos;
-            });
+            MaskManager.Instance.AllMasksAdded();
         }
     }
 }
