@@ -9,6 +9,7 @@ namespace GGJ.Managers
         [SerializeField] private Button _startButton;
         [SerializeField] private Button _exitButton;
         [SerializeField] private GameObject _mainMenu;
+        [SerializeField] private GameObject _inGameUI;
         
         private LevelGenerator _levelGenerator;
 
@@ -22,6 +23,7 @@ namespace GGJ.Managers
         {
             _levelGenerator.GenerateLevel();
             _mainMenu.gameObject.SetActive(false);
+            _inGameUI.gameObject.SetActive(true);
         }
     }
 }

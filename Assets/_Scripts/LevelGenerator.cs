@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using GGJ.Controllers;
+using GGJ.Managers;
 using GGJ.Models;
 using GJJ.Managers;
 using UnityEngine;
@@ -13,6 +14,7 @@ namespace GGJ
     {
         private const string DIALOGUE_RESOURCE_PATH = "Data/mask_dialogue";
         private const string MASK_PREFAB = "Prefabs/Mask";
+        private const string INTERVIEW_ROOM_PREFAB = "Prefabs/InterviewRoom";
 
         public static LevelGenerator Instance { get; private set; }
         
@@ -27,6 +29,8 @@ namespace GGJ
         [SerializeField] private List<Sprite> _mouth;
         [SerializeField] private List<Sprite> _faceType;
         [SerializeField] private List<Sprite> _ears;
+        [SerializeField] private List<Sprite> _foregrounds;
+        [SerializeField] private List<Sprite> _bodies;
 
         private Dialogues _dialogueModel;
         private int _nrOfMasks = 0;
@@ -47,12 +51,13 @@ namespace GGJ
             _nrOfMasks = Random.Range(5, 7);
             ReadDialogue();
             CreateMasks();
+            CreateBackgrounds();
         }
 
         private void ReadDialogue()
         {
             _dialogueModel = JsonUtility.FromJson<Dialogues>(Resources.Load<TextAsset>(DIALOGUE_RESOURCE_PATH).text);
-            Debug.Log(_dialogueModel.Dialogue_Lines.First().Text);
+            DialogueManager.Instance.AddDialogues(_dialogueModel);
         }
 
         private void CreateMasks()
@@ -76,6 +81,21 @@ namespace GGJ
                 MaskManager.Instance.Masks.Add(maskController);
             }
             MaskManager.Instance.AllMasksAdded();
+        }
+
+        private void CreateBackgrounds()
+        {
+            for (var i = 0; i < _nrOfMasks; i++)
+            {
+                var newRoomPrefab = Resources.Load<GameObject>(INTERVIEW_ROOM_PREFAB);
+                var newRoom = Instantiate(newRoomPrefab, transform.position, Quaternion.identity);
+                newRoom.transform.parent = _maskPositions[i].transform;
+                newRoom.transform.localPosition = new Vector3(0, 0, 0);
+                
+                var roomController = newRoom.GetComponent<InterviewRoomController>();
+                roomController.Foreground.sprite = _foregrounds.RandomElement();
+                roomController.Body.sprite = _bodies.RandomElement();
+            }
         }
     }
 }

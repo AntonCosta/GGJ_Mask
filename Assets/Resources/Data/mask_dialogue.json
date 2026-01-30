@@ -1,11 +1,31 @@
 {
-  "Dialogue_Lines" : [
+  "DialogueLines" : [
     {
       "Id" : 1,
       "Text" : "X mask is evil"
     },
     {
       "Id" : 2,
+      "Text" : "X mask is good"
+    },
+    {
+      "Id" : 3,
+      "Text" : "X mask is good"
+    },
+    {
+      "Id" : 4,
+      "Text" : "X mask is good"
+    },
+    {
+      "Id" : 5,
+      "Text" : "X mask is good"
+    },
+    {
+      "Id" : 6,
+      "Text" : "X mask is good"
+    },
+    {
+      "Id" : 7,
       "Text" : "X mask is good"
     }
   ]

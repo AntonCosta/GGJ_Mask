@@ -7,7 +7,7 @@ namespace GGJ.Models
     [Serializable]
     public class Dialogues
     {
-        public List<DialogueModel> Dialogue_Lines;
+        public List<DialogueModel> DialogueLines;
     }
     
     [Serializable]

@@ -1,3 +1,4 @@
+using GGJ.Utils;
 using GJJ.Managers;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -11,12 +12,12 @@ namespace GGJ.Controllers
         {
             if (Keyboard.current.dKey.wasPressedThisFrame && !MaskManager.Instance.IsTweening)
             {
-                MaskManager.Instance.NextMask();
+                ScreenFader.Instance.FadeHide(MaskManager.Instance.NextMask);
             }
 
             if (Keyboard.current.aKey.wasPressedThisFrame && !MaskManager.Instance.IsTweening)
             {
-                MaskManager.Instance.PreviousMask();
+                ScreenFader.Instance.FadeHide(MaskManager.Instance.PreviousMask);
             }
         }
     }

@@ -1,8 +1,10 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using DG.Tweening;
 using GGJ;
 using GGJ.Controllers;
+using GGJ.Managers;
 using GGJ.Utils;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -11,7 +13,8 @@ namespace GJJ.Managers
 {
     public class MaskManager : MonoBehaviour
     {
-        private const float TWEEN_DURATION = 0.3f;
+        private const float TWEEN_DURATION = 0.5f;
+        private const float TRAVEL_DISTANCE = 30f;
         
         public static MaskManager Instance { get; private set; }
         public List<MaskController> Masks;
@@ -39,6 +42,29 @@ namespace GJJ.Managers
             {
                 mask.PersonalityType = Constants.MASK_PERSONALITY_TYPES.RandomElement();
             });
+
+            do
+            {
+                var guiltyIndex = Random.Range(0, Masks.Count);
+                if (Masks[guiltyIndex].IsKiller) continue;
+                Masks[guiltyIndex].IsKiller = true;
+                Masks[guiltyIndex].Role = Constants.MASK_ROLES.Last();
+                _nrOfKillerMasks++;
+            } while (_nrOfKillerMasks < _maxNrOfKillerMasks);
+            
+            
+            Masks.ForEach(mask =>
+            {
+                if (!mask.IsKiller)
+                {
+                    var roleIndex = (Random.Range(0, Constants.MASK_ROLES.Count - 1));
+                    mask.Role = Constants.MASK_ROLES[roleIndex];
+                    mask.IsKiller = false;
+                }
+            });
+            Masks[0].OnScreen();
+            DialogueManager.Instance.AddText();
+            DialogueManager.Instance.ShowDialogue(0);
         }
 
         public void NextMask()
@@ -48,14 +74,15 @@ namespace GJJ.Managers
             if (_currentMaskIndex >= LevelGenerator.Instance.NrOfMasks - 1)
             {
                 _currentMaskIndex = 0;
+                Masks[_currentMaskIndex].OnScreen();
+                Masks[LevelGenerator.Instance.NrOfMasks - 1].OffScreen();;
+                DialogueManager.Instance.ShowDialogue(_currentMaskIndex);
+                DialogueManager.Instance.HideDialogue(LevelGenerator.Instance.NrOfMasks - 1);
                 for (var i = 0; i < LevelGenerator.Instance.NrOfMasks; i++)
                 {
-                    // var newPos = new Vector3(0 + 300f * i, 0, 0);
-                    // LevelGenerator.Instance.MaskPositions[i].transform.position = newPos;
-
                     _tweenSequence.Join(
                         LevelGenerator.Instance.MaskPositions[i].transform
-                            .DOMoveX(300f * i, TWEEN_DURATION).SetEase(Ease.InOutSine));
+                            .DOMoveX(TRAVEL_DISTANCE * i, TWEEN_DURATION).SetEase(Ease.InOutSine));
                 }
 
                 _tweenSequence.OnComplete(() => IsTweening = false);
@@ -64,10 +91,14 @@ namespace GJJ.Managers
             }
 
             _currentMaskIndex++;
+            Masks[_currentMaskIndex].OnScreen();
+            Masks[_currentMaskIndex - 1].OffScreen();
+            DialogueManager.Instance.ShowDialogue(_currentMaskIndex);
+            DialogueManager.Instance.HideDialogue(_currentMaskIndex - 1);
             LevelGenerator.Instance.MaskPositions.ForEach(mask =>
             {
                 _tweenSequence.Join(
-                    mask.transform.DOMoveX(mask.transform.position.x - 300f, TWEEN_DURATION).SetEase(Ease.InOutSine));
+                    mask.transform.DOMoveX(mask.transform.position.x - TRAVEL_DISTANCE, TWEEN_DURATION).SetEase(Ease.InOutSine));
             });
             _tweenSequence.OnComplete(() => IsTweening = false);
         }
@@ -79,13 +110,15 @@ namespace GJJ.Managers
             if (_currentMaskIndex <= 0)
             {
                 _currentMaskIndex = LevelGenerator.Instance.NrOfMasks - 1;
+                Masks[_currentMaskIndex].OnScreen();
+                Masks[0].OffScreen();
+                DialogueManager.Instance.ShowDialogue(_currentMaskIndex);
+                DialogueManager.Instance.HideDialogue(0);
                 for (var i = 0; i < LevelGenerator.Instance.NrOfMasks; i++)
                 {
-                    // var newPos = new Vector3(0 - 300f * (LevelGenerator.Instance.NrOfMasks - 1 - i), 0, 0);
-                    // LevelGenerator.Instance.MaskPositions[i].transform.position = newPos;
                     _tweenSequence.Join(
                         LevelGenerator.Instance.MaskPositions[i].transform
-                            .DOMoveX(0 - 300f * (LevelGenerator.Instance.NrOfMasks - 1 - i), TWEEN_DURATION)
+                            .DOMoveX(0 - TRAVEL_DISTANCE * (LevelGenerator.Instance.NrOfMasks - 1 - i), TWEEN_DURATION)
                             .SetEase(Ease.InOutSine));
                 }
 
@@ -95,10 +128,14 @@ namespace GJJ.Managers
             }
 
             _currentMaskIndex--;
+            Masks[_currentMaskIndex].OnScreen();
+            Masks[_currentMaskIndex + 1].OffScreen();
+            DialogueManager.Instance.ShowDialogue(_currentMaskIndex);
+            DialogueManager.Instance.HideDialogue(_currentMaskIndex + 1);
             LevelGenerator.Instance.MaskPositions.ForEach(mask =>
             {
                 _tweenSequence.Join(
-                    mask.transform.DOMoveX(mask.transform.position.x + 300f, TWEEN_DURATION).SetEase(Ease.InOutSine));
+                    mask.transform.DOMoveX(mask.transform.position.x + TRAVEL_DISTANCE, TWEEN_DURATION).SetEase(Ease.InOutSine));
             });
             _tweenSequence.OnComplete(() => IsTweening = false);
         }
