@@ -1,0 +1,12 @@
+{
+  "Dialogue_Lines" : [
+    {
+      "Id" : 1,
+      "Text" : "X mask is evil"
+    },
+    {
+      "Id" : 2,
+      "Text" : "X mask is good"
+    }
+  ]
+}
