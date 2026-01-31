@@ -25,6 +25,8 @@ namespace GJJ.Managers
         private Sequence _tweenSequence;
         private int _nrOfKillerMasks = 0;
         private int _maxNrOfKillerMasks = 1;
+        private int _maxNumberOfLiers = 2;
+        private int _currentNrLiers = 0;
         
         private void Awake()
         {
@@ -42,7 +44,9 @@ namespace GJJ.Managers
             Masks.ForEach(mask =>
             {
                 mask.PersonalityType = Constants.MASK_PERSONALITY_TYPES.RandomElement();
+                mask.Voice = Constants.MASK_VOICE.RandomElement();
             });
+            _maxNumberOfLiers = Masks.Count / 2 - 1;
 
             do
             {
@@ -62,7 +66,28 @@ namespace GJJ.Managers
                     mask.Role = Constants.MASK_ROLES[roleIndex];
                     mask.IsKiller = false;
                 }
+                
             });
+            
+            var masksCopy = Masks.ToList();
+            var rng = new System.Random();
+            for (var i = masksCopy.Count - 1; i > 0; i--)
+            {
+                var j = rng.Next(i + 1);
+                (masksCopy[i], masksCopy[j]) = (masksCopy[j], masksCopy[i]);
+            }
+            masksCopy.ForEach(mask =>
+            {
+                if (_currentNrLiers < _maxNumberOfLiers)
+                {
+                    mask.IsTruthful = Random.Range(0, 1) == 1;
+                    if (!mask.IsTruthful)
+                    {
+                        _currentNrLiers++;
+                    }
+                }
+            });
+            
             Masks[0].OnScreen();
             DialogueManager.Instance.AddText(Masks);
         }

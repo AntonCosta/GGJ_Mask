@@ -147,12 +147,22 @@ namespace GGJ.Managers
 
         private void GenerateCrimeLocation()
         {
-            _crimeLocation = _murderModel.MurderData.MurderLocations.RandomElement().Name;
+            _crimeLocation = GetRandomLocation();
         }
 
         private void GenerateCrimeTime()
         {
-            _crimeTime = Enumerable.Range(0, 24)
+            _crimeTime = GetRandomTime();
+        }
+
+        public string GetRandomLocation()
+        {
+            return _murderModel.MurderData.MurderLocations.RandomElement().Name;
+        }
+
+        public string GetRandomTime()
+        {
+            return Enumerable.Range(0, 24)
                 .Select(h => $"{h:00}:00")
                 .ToList().RandomElement();
         }

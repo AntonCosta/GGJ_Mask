@@ -26,6 +26,7 @@ namespace GGJ.Controllers
 
         public Tween Tween => _tween;
         public float Amplitude = 0.025f;
+        public string DialogueKnowledgeType;
         
         public string PersonalityType
         {
@@ -44,6 +45,18 @@ namespace GGJ.Controllers
             get => _role;
             set => _role = value;
         }
+
+        public bool IsTruthful
+        {
+            get => _isTruthful;
+            set => _isTruthful = value;
+        }
+        
+        public string Voice
+        {
+            get => _voice;
+            set => _voice = value;
+        }
         
         public string PlayerVerdict
         {
@@ -59,6 +72,8 @@ namespace GGJ.Controllers
         private string _personalityType;
         private bool _isKiller;
         private string _role;
+        private bool _isTruthful;
+        private string _voice;
         private string _playerVerdict;
         private Tween _tween;
         private bool _onScreen;
@@ -91,23 +106,20 @@ namespace GGJ.Controllers
             _tween = Components.transform.DOMoveY(transform.position.y + Amplitude, DURATION);
             switch (PersonalityType)
             {
-                case "Calm":
-                    _tween.SetEase(Ease.InOutSine);
-                    break;
-                case "Deceptive":
-                    _tween.SetEase(Ease.InOutBounce);
-                    break;
                 case "Nervous":
                     _tween.SetEase(Ease.Flash);
                     break;
-                case "Aggressive":
+                case "Calm":
+                    _tween.SetEase(Ease.InOutSine);
+                    break;
+                case "Confident":
                     _tween.SetEase(Ease.InBounce);
+                    break;
+                case "Aggressive":
+                    _tween.SetEase(Ease.InOutFlash);
                     break;
                 case "Shady":
                     _tween.SetEase(Ease.InOutCirc);
-                    break;
-                case "Vague":
-                    _tween.SetEase(Ease.Linear);
                     break;
             }
             _tween.SetLoops(-1, LoopType.Yoyo);

@@ -58,6 +58,7 @@ MonoBehaviour:
   Canvas: {fileID: 9059087158000901608}
   Dialogue: {fileID: 7362143099588989335}
   Amplitude: 0.025
+  DialogueKnowledgeType: 
   Clickable: 0
 --- !u!61 &3803427382796595883
 BoxCollider2D:
@@ -903,8 +904,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.4, y: 0.7}
-  m_SizeDelta: {x: 6.2458, y: 4.6371}
+  m_AnchoredPosition: {x: 1.049, y: 0.423}
+  m_SizeDelta: {x: 1.5732, y: 1.2912}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8597052888932216540
 CanvasRenderer:
@@ -1002,7 +1003,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -0.2668171, y: -0.13340569, z: 0.26683235, w: -0.13341331}
+  m_margin: {x: 0.0014240742, y: -0.02046156, z: 0.026827335, w: -0.0063517094}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

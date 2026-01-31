@@ -1,6 +1,8 @@
 using System.Collections.Generic;
+using System.Linq;
 using GGJ.Controllers;
 using GGJ.Models;
+using GGJ.Utils;
 using GJJ.Managers;
 using TMPro;
 using UnityEngine;
@@ -34,27 +36,40 @@ namespace GGJ.Managers
             for (var i = 0; i < masks.Count; i++)
             {
                 var mask = masks[i];
-                switch (mask.PersonalityType)
-                {
-                    case "Calm":
-                        mask.Dialogue.text = _dialogues.DialogueLines[i].Text;
-                        break;
-                    case "Deceptive":
-                        mask.Dialogue.text = _dialogues.DialogueLines[i].Text;
-                        break;
-                    case "Nervous":
-                        mask.Dialogue.text = _dialogues.DialogueLines[i].Text;
-                        break;
-                    case "Aggressive":
-                        mask.Dialogue.text = _dialogues.DialogueLines[i].Text;
-                        break;
-                    case "Shady":
-                        mask.Dialogue.text = _dialogues.DialogueLines[i].Text;
-                        break;
-                    case "Vague":
-                        mask.Dialogue.text = _dialogues.DialogueLines[i].Text;
-                        break;
-                }
+                SetUpMaskDialogue(mask, mask.PersonalityType);
+                ReplaceDialogueVariables(mask);
+            }
+        }
+
+        private void SetUpMaskDialogue(MaskController mask, string personalityType)
+        {
+            var dialogueType = _dialogues.DialogueData.First(line => line.Personality == personalityType);
+            var randomTypeText = dialogueType.Text.RandomElement();
+            mask.DialogueKnowledgeType = randomTypeText.Id;
+            mask.Dialogue.text = randomTypeText.Dialogues.RandomElement().Text;
+        }
+
+        private void ReplaceDialogueVariables(MaskController mask)
+        {
+            var gameManager = GameManager.Instance;
+            var killerMask = MaskManager.Instance.Masks.First(m => m.IsKiller);
+            if (mask.IsTruthful)
+            {
+                mask.Dialogue.text = mask.Dialogue.text
+                    .Replace("${PLACE}", gameManager.CrimeLocation)
+                    .Replace("${TIME}", gameManager.CrimeTime)
+                    .Replace("${VOICE}", killerMask.Voice);
+                    //.Replace("${MASK_DETAIL}", time2)
+                //  .Replace("${MASK_PIECE}", time2);
+            }
+            else
+            {
+                mask.Dialogue.text = mask.Dialogue.text
+                    .Replace("${PLACE}", gameManager.GetRandomLocation())
+                    .Replace("${TIME}", gameManager.GetRandomTime())
+                    .Replace("${VOICE}", Constants.MASK_VOICE.RandomElement());
+                //.Replace("${MASK_DETAIL}", time2)
+                // .Replace("${MASK_PIECE}", time2);
             }
         }
     }

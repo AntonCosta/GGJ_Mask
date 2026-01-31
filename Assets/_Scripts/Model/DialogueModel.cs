@@ -7,13 +7,27 @@ namespace GGJ.Models
     [Serializable]
     public class Dialogues
     {
-        public List<DialogueModel> DialogueLines;
+        public List<DialogueTypes> DialogueData;
     }
     
     [Serializable]
-    public class DialogueModel
+    public class DialogueTypes
     {
-        public int Id;
+        public string Personality;
+        public List<DialogueKnowledgeGroup> Text;
+    }
+    
+    [Serializable]
+    public class DialogueKnowledgeGroup
+    {
+        public string Id;
+        public List<DialogueEntry> Dialogues;
+    }
+    
+    [Serializable]
+    public class DialogueEntry
+    {
+        public string Id;
         public string Text;
     }
 }

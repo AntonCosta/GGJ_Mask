@@ -1,32 +1,930 @@
 {
-  "DialogueLines" : [
+  "DialogueData" : [
     {
-      "Id" : 1,
-      "Text" : "X mask is evil"
+      "Personality" : "Nervous",
+      "Text" : [
+        {
+          "Id" : "WHERE",
+          "Dialogues": [
+            {
+              "Id": "1",
+              "Text": "I think ${MASK_PIECE} was near the ${PLACE}…"
+            },
+            {
+              "Id": "2",
+              "Text": "Maybe around the ${PLACE}?"
+            },
+            {
+              "Id": "3",
+              "Text": "I’m not sure, but near the ${PLACE}."
+            },
+            {
+              "Id": "4",
+              "Text": "Possibly at the ${PLACE}."
+            },
+            {
+              "Id": "5",
+              "Text": "It might have been the ${PLACE}."
+            },
+            {
+              "Id": "6",
+              "Text": "I vaguely remember the ${PLACE}."
+            },
+            {
+              "Id": "7",
+              "Text": "I think they were there?"
+            },
+            {
+              "Id": "8",
+              "Text": "Somewhere near the ${PLACE}, I guess."
+            },
+            {
+              "Id": "9",
+              "Text": "I’m not certain, but the ${PLACE}."
+            },
+            {
+              "Id": "10",
+              "Text": "It could’ve been near the ${PLACE}."
+            }
+          ]
+        },
+        {
+          "Id" : "WHEN",
+          "Dialogues": [
+            {
+              "Id": "1",
+              "Text": "Maybe around ${TIME}?"
+            },
+            {
+              "Id": "2",
+              "Text": "I think it was ${TIME}…"
+            },
+            {
+              "Id": "3",
+              "Text": "Not sure, but maybe ${TIME}."
+            },
+            {
+              "Id": "4",
+              "Text": "It was late, maybe ${TIME}."
+            },
+            {
+              "Id": "5",
+              "Text": "Possibly ${TIME}."
+            },
+            {
+              "Id": "6",
+              "Text": "I can’t remember, but ${TIME}?"
+            },
+            {
+              "Id": "7",
+              "Text": "Around ${TIME}, I think."
+            },
+            {
+              "Id": "8",
+              "Text": "It might’ve been ${TIME}."
+            },
+            {
+              "Id": "9",
+              "Text": "Hard to say, maybe ${TIME}."
+            },
+            {
+              "Id": "10",
+              "Text": "Somewhere near ${TIME}."
+            }
+          ]
+        },
+        {
+          "Id" : "MASK",
+          "Dialogues": [
+            {
+              "Id": "1",
+              "Text": "I think they had ${MASK_DETAIL}?"
+            },
+            {
+              "Id": "2",
+              "Text": "Maybe ${MASK_DETAIL}…"
+            },
+            {
+              "Id": "3",
+              "Text": "Something like ${MASK_DETAIL}."
+            },
+            {
+              "Id": "4",
+              "Text": "It looked like ${MASK_DETAIL}, I think."
+            },
+            {
+              "Id": "5",
+              "Text": "Possibly ${MASK_DETAIL}."
+            },
+            {
+              "Id": "6",
+              "Text": "I’m not sure, but ${MASK_DETAIL}."
+            },
+            {
+              "Id": "7",
+              "Text": "I vaguely remember ${MASK_DETAIL}."
+            },
+            {
+              "Id": "8",
+              "Text": "It might have been ${MASK_DETAIL}."
+            },
+            {
+              "Id": "9",
+              "Text": "Could be ${MASK_DETAIL}."
+            },
+            {
+              "Id": "10",
+              "Text": "I could be wrong, but ${MASK_DETAIL}."
+            }
+          ]
+        },
+        {
+          "Id" : "VOICE",
+          "Dialogues": [
+            {
+              "Id": "1",
+              "Text": "I think their voice was ${VOICE}?"
+            },
+            {
+              "Id": "2",
+              "Text": "Maybe a ${VOICE} voice…"
+            },
+            {
+              "Id": "3",
+              "Text": "It sounded kind of ${VOICE}."
+            },
+            {
+              "Id": "4",
+              "Text": "Not sure about their voice."
+            },
+            {
+              "Id": "5",
+              "Text": "Possibly ${VOICE}."
+            },
+            {
+              "Id": "6",
+              "Text": "It might’ve been ${VOICE}."
+            },
+            {
+              "Id": "7",
+              "Text": "I don’t really remember."
+            },
+            {
+              "Id": "8",
+              "Text": "Sort of ${VOICE}, I guess."
+            },
+            {
+              "Id": "9",
+              "Text": "Hard to say, maybe ${VOICE}."
+            },
+            {
+              "Id": "10",
+              "Text": "I’m unsure, but ${VOICE}."
+            }
+          ]
+        }
+      ]
     },
     {
-      "Id" : 2,
-      "Text" : "X mask is good"
+      "Personality" : "Calm",
+      "Text" : [
+        {
+          "Id" : "WHERE",
+          "Dialogues": [
+            {
+              "Id": "1",
+              "Text": "I saw ${MASK_PIECE} near the ${PLACE}."
+            },
+            {
+              "Id": "2",
+              "Text": "${MASK_PIECE} was around the ${PLACE}."
+            },
+            {
+              "Id": "3",
+              "Text": "They were close to the ${PLACE}."
+            },
+            {
+              "Id": "4",
+              "Text": "I noticed ${MASK_PIECE} at the ${PLACE}."
+            },
+            {
+              "Id": "5",
+              "Text": "${MASK_PIECE} was standing by the ${PLACE}."
+            },
+            {
+              "Id": "6",
+              "Text": "I saw them near the ${PLACE}."
+            },
+            {
+              "Id": "7",
+              "Text": "They were at the ${PLACE} for a while."
+            },
+            {
+              "Id": "8",
+              "Text": "I remember seeing ${MASK_PIECE} at the ${PLACE}."
+            },
+            {
+              "Id": "9",
+              "Text": "They passed by the ${PLACE}."
+            },
+            {
+              "Id": "10",
+              "Text": "They stayed near the ${PLACE}."
+            }
+          ]
+        },
+        {
+          "Id" : "WHEN",
+          "Dialogues": [
+            {
+              "Id": "1",
+              "Text": "It was around ${TIME}."
+            },
+            {
+              "Id": "2",
+              "Text": "It happened at about ${TIME}."
+            },
+            {
+              "Id": "3",
+              "Text": "I remember it was near ${TIME}."
+            },
+            {
+              "Id": "4",
+              "Text": "It was roughly ${TIME}."
+            },
+            {
+              "Id": "5",
+              "Text": "Around ${TIME}, I think."
+            },
+            {
+              "Id": "6",
+              "Text": "It must have been ${TIME}."
+            },
+            {
+              "Id": "7",
+              "Text": "It was close to ${TIME}."
+            },
+            {
+              "Id": "8",
+              "Text": "I’m sure it was ${TIME}."
+            },
+            {
+              "Id": "9",
+              "Text": "I saw them at ${TIME}."
+            },
+            {
+              "Id": "10",
+              "Text": "That was around ${TIME}."
+            }
+          ]
+        },
+        {
+          "Id" : "MASK",
+          "Dialogues": [
+            {
+              "Id": "1",
+              "Text": "They had ${MASK_DETAIL}."
+            },
+            {
+              "Id": "2",
+              "Text": "Their mask had ${MASK_DETAIL}."
+            },
+            {
+              "Id": "3",
+              "Text": "I noticed ${MASK_DETAIL}."
+            },
+            {
+              "Id": "4",
+              "Text": "I clearly saw ${MASK_DETAIL}."
+            },
+            {
+              "Id": "5",
+              "Text": "The mask featured ${MASK_DETAIL}."
+            },
+            {
+              "Id": "6",
+              "Text": "It was a mask with ${MASK_DETAIL}."
+            },
+            {
+              "Id": "7",
+              "Text": "I remember ${MASK_DETAIL}."
+            },
+            {
+              "Id": "8",
+              "Text": "There was ${MASK_DETAIL} on it."
+            },
+            {
+              "Id": "9",
+              "Text": "Their mask showed ${MASK_DETAIL}."
+            },
+            {
+              "Id": "10",
+              "Text": "I’m sure it had ${MASK_DETAIL}."
+            }
+          ]
+        },
+        {
+          "Id" : "VOICE",
+          "Dialogues": [
+            {
+              "Id": "1",
+              "Text": "They had a ${VOICE} voice."
+            },
+            {
+              "Id": "2",
+              "Text": "Their voice was ${VOICE}."
+            },
+            {
+              "Id": "3",
+              "Text": "It sounded ${VOICE}."
+            },
+            {
+              "Id": "4",
+              "Text": "They spoke in a ${VOICE} tone."
+            },
+            {
+              "Id": "5",
+              "Text": "I noticed a ${VOICE} voice."
+            },
+            {
+              "Id": "6",
+              "Text": "Their voice stood out as ${VOICE}."
+            },
+            {
+              "Id": "7",
+              "Text": "I remember a ${VOICE} voice."
+            },
+            {
+              "Id": "8",
+              "Text": "It was clearly ${VOICE}."
+            },
+            {
+              "Id": "9",
+              "Text": "They talked with a ${VOICE} voice."
+            },
+            {
+              "Id": "10",
+              "Text": "I’m sure it was ${VOICE}."
+            }
+          ]
+        }
+      ]
     },
     {
-      "Id" : 3,
-      "Text" : "X mask is good"
+      "Personality" : "Confident",
+      "Text" : [
+        {
+          "Id" : "WHERE",
+          "Dialogues": [
+            {
+              "Id": "1",
+              "Text": "${MASK_PIECE} was at the ${PLACE}, for sure."
+            },
+            {
+              "Id": "2",
+              "Text": "I clearly saw them at the ${PLACE}."
+            },
+            {
+              "Id": "3",
+              "Text": "They were definitely at the ${PLACE}."
+            },
+            {
+              "Id": "4",
+              "Text": "No doubt, the ${PLACE}."
+            },
+            {
+              "Id": "5",
+              "Text": "It was the ${PLACE}, trust me."
+            },
+            {
+              "Id": "6",
+              "Text": "I remember the ${PLACE} clearly."
+            },
+            {
+              "Id": "7",
+              "Text": "They stayed near the ${PLACE}."
+            },
+            {
+              "Id": "8",
+              "Text": "Absolutely at the ${PLACE}."
+            },
+            {
+              "Id": "9",
+              "Text": "Without question, the ${PLACE}."
+            },
+            {
+              "Id": "10",
+              "Text": "I’m certain it was the ${PLACE}."
+
+            }
+          ]
+        },
+        {
+          "Id" : "WHEN",
+          "Dialogues": [
+            {
+              "Id": "1",
+              "Text": "It was exactly ${TIME}."
+            },
+            {
+              "Id": "2",
+              "Text": "Definitely ${TIME}."
+            },
+            {
+              "Id": "3",
+              "Text": "I remember ${TIME} clearly."
+            },
+            {
+              "Id": "4",
+              "Text": "No doubt, ${TIME}."
+            },
+            {
+              "Id": "5",
+              "Text": "It was ${TIME}, trust me."
+            },
+            {
+              "Id": "6",
+              "Text": "For sure at ${TIME}."
+            },
+            {
+              "Id": "7",
+              "Text": "Absolutely ${TIME}."
+            },
+            {
+              "Id": "8",
+              "Text": "Without question, ${TIME}."
+            },
+            {
+              "Id": "9",
+              "Text": "I know it was ${TIME}."
+            },
+            {
+              "Id": "10",
+              "Text": "100% ${TIME}."
+            }
+          ]
+        },
+        {
+          "Id" : "MASK",
+          "Dialogues": [
+            {
+              "Id": "1",
+              "Text": "They definitely had ${MASK_DETAIL}."
+            },
+            {
+              "Id": "2",
+              "Text": "It was clearly ${MASK_DETAIL}."
+            },
+            {
+              "Id": "3",
+              "Text": "No doubt, ${MASK_DETAIL}."
+            },
+            {
+              "Id": "4",
+              "Text": "I’m sure it was ${MASK_DETAIL}."
+            },
+            {
+              "Id": "5",
+              "Text": "Trust me, ${MASK_DETAIL}."
+            },
+            {
+              "Id": "6",
+              "Text": "I saw ${MASK_DETAIL} for sure."
+            },
+            {
+              "Id": "7",
+              "Text": "Absolutely ${MASK_DETAIL}."
+            },
+            {
+              "Id": "8",
+              "Text": "Without mistake, ${MASK_DETAIL}."
+            },
+            {
+              "Id": "9",
+              "Text": "I remember ${MASK_DETAIL} perfectly."
+            },
+            {
+              "Id": "10",
+              "Text": "It was obviously ${MASK_DETAIL}."
+            }
+          ]
+        },
+        {
+          "Id" : "VOICE",
+          "Dialogues": [
+            {
+              "Id": "1",
+              "Text": "Their voice was definitely ${VOICE}."
+            },
+            {
+              "Id": "2",
+              "Text": "It was ${VOICE}, 100%."
+            },
+            {
+              "Id": "3",
+              "Text": "No doubt, ${VOICE}."
+            },
+            {
+              "Id": "4",
+              "Text": "I’m sure it was ${VOICE}."
+            },
+            {
+              "Id": "5",
+              "Text": "Trust me, ${VOICE}."
+            },
+            {
+              "Id": "6",
+              "Text": "It sounded exactly ${VOICE}."
+            },
+            {
+              "Id": "7",
+              "Text": "Absolutely ${VOICE}."
+            },
+            {
+              "Id": "8",
+              "Text": "Without question, ${VOICE}."
+            },
+            {
+              "Id": "9",
+              "Text": "I know it was ${VOICE}."
+            },
+            {
+              "Id": "10",
+              "Text": "Clearly ${VOICE}."
+            }
+          ]
+        }
+      ]
     },
     {
-      "Id" : 4,
-      "Text" : "X mask is good"
+      "Personality" : "Aggressive",
+      "Text" : [
+        {
+          "Id" : "WHERE",
+          "Dialogues": [
+            {
+              "Id": "1",
+              "Text": "Why are you asking me?"
+            },
+            {
+              "Id": "2",
+              "Text": "Ask ${MASK_PIECE} about that."
+            },
+            {
+              "Id": "3",
+              "Text": "I wasn’t watching."
+            },
+            {
+              "Id": "4",
+              "Text": "Not my problem."
+            },
+            {
+              "Id": "5",
+              "Text": "Go ask someone else."
+            },
+            {
+              "Id": "6",
+              "Text": "I don’t care where they were."
+            },
+            {
+              "Id": "7",
+              "Text": "Figure it out yourself."
+            },
+            {
+              "Id": "8",
+              "Text": "Stop bothering me."
+            },
+            {
+              "Id": "9",
+              "Text": "I wasn’t paying attention."
+            },
+            {
+              "Id": "10",
+              "Text": "Why does that matter?"
+            }
+          ]
+        },
+        {
+          "Id" : "WHEN",
+          "Dialogues": [
+            {
+              "Id": "1",
+              "Text": "I don’t track time."
+            },
+            {
+              "Id": "2",
+              "Text": "Ask someone else."
+            },
+            {
+              "Id": "3",
+              "Text": "Who cares about the time?"
+            },
+            {
+              "Id": "4",
+              "Text": "Not my problem."
+            },
+            {
+              "Id": "5",
+              "Text": "I wasn’t checking my watch."
+            },
+            {
+              "Id": "6",
+              "Text": "Why does that matter?"
+            },
+            {
+              "Id": "7",
+              "Text": "Figure it out."
+            },
+            {
+              "Id": "8",
+              "Text": "I don’t know."
+            },
+            {
+              "Id": "9",
+              "Text": "Go ask ${MASK_PIECE}."
+            },
+            {
+              "Id": "10",
+              "Text": "Stop asking me."
+            }
+          ]
+        },
+        {
+          "Id" : "MASK",
+          "Dialogues": [
+            {
+              "Id": "1",
+              "Text": "I didn’t study their face."
+            },
+            {
+              "Id": "2",
+              "Text": "Why do you care?"
+            },
+            {
+              "Id": "3",
+              "Text": "Ask someone else."
+            },
+            {
+              "Id": "4",
+              "Text": "Not my problem."
+            },
+            {
+              "Id": "5",
+              "Text": "I wasn’t staring."
+            },
+            {
+              "Id": "6",
+              "Text": "Who cares?"
+            },
+            {
+              "Id": "7",
+              "Text": "That’s irrelevant."
+            },
+            {
+              "Id": "8",
+              "Text": "Figure it out yourself."
+            },
+            {
+              "Id": "9",
+              "Text": "Stop asking."
+            },
+            {
+              "Id": "10",
+              "Text": "I wasn’t focused on that."
+            }
+          ]
+        },
+        {
+          "Id" : "VOICE",
+          "Dialogues": [
+            {
+              "Id": "1",
+              "Text": "I wasn’t listening."
+            },
+            {
+              "Id": "2",
+              "Text": "Why does that matter?"
+            },
+            {
+              "Id": "3",
+              "Text": "Not my problem."
+            },
+            {
+              "Id": "4",
+              "Text": "Ask someone else."
+            },
+            {
+              "Id": "5",
+              "Text": "Who cares?"
+            },
+            {
+              "Id": "6",
+              "Text": "That’s irrelevant."
+            },
+            {
+              "Id": "7",
+              "Text": "Go ask ${MASK_PIECE}."
+            },
+            {
+              "Id": "8",
+              "Text": "Stop bothering me."
+            },
+            {
+              "Id": "9",
+              "Text": "I don’t know."
+            },
+            {
+              "Id": "10",
+              "Text": "Figure it out."
+            }
+          ]
+        }
+      ]
     },
     {
-      "Id" : 5,
-      "Text" : "X mask is good"
-    },
-    {
-      "Id" : 6,
-      "Text" : "X mask is good"
-    },
-    {
-      "Id" : 7,
-      "Text" : "X mask is good"
+      "Personality" : "Shady",
+      "Text" : [
+        {
+          "Id" : "WHERE",
+          "Dialogues": [
+            {
+              "Id": "1",
+              "Text": "I don’t remember."
+            },
+            {
+              "Id": "2",
+              "Text": "I wasn’t paying attention."
+            },
+            {
+              "Id": "3",
+              "Text": "No idea."
+            },
+            {
+              "Id": "4",
+              "Text": "I didn’t see."
+            },
+            {
+              "Id": "5",
+              "Text": "I can’t recall."
+            },
+            {
+              "Id": "6",
+              "Text": "It’s blurry."
+            },
+            {
+              "Id": "7",
+              "Text": "I wasn’t watching."
+            },
+            {
+              "Id": "8",
+              "Text": "Not sure."
+            },
+            {
+              "Id": "9",
+              "Text": "I don’t know."
+            },
+            {
+              "Id": "10",
+              "Text": "I didn’t notice."
+            }
+          ]
+        },
+        {
+          "Id" : "WHEN",
+          "Dialogues": [
+            {
+              "Id": "1",
+              "Text": "I don’t know."
+            },
+            {
+              "Id": "2",
+              "Text": "No idea."
+            },
+            {
+              "Id": "3",
+              "Text": "I can’t remember."
+            },
+            {
+              "Id": "4",
+              "Text": "Not sure."
+            },
+            {
+              "Id": "5",
+              "Text": "I wasn’t checking."
+            },
+            {
+              "Id": "6",
+              "Text": "I forgot."
+            },
+            {
+              "Id": "7",
+              "Text": "It’s blurry."
+            },
+            {
+              "Id": "8",
+              "Text": "Hard to say."
+            },
+            {
+              "Id": "9",
+              "Text": "I don’t recall."
+            },
+            {
+              "Id": "10",
+              "Text": "I wasn’t paying attention."
+            }
+          ]
+        },
+        {
+          "Id" : "MASK",
+          "Dialogues": [
+            {
+              "Id": "1",
+              "Text": "I didn’t notice."
+            },
+            {
+              "Id": "2",
+              "Text": "No idea."
+            },
+            {
+              "Id": "3",
+              "Text": "I don’t remember."
+            },
+            {
+              "Id": "4",
+              "Text": "I wasn’t looking."
+            },
+            {
+              "Id": "5",
+              "Text": "I can’t recall."
+            },
+            {
+              "Id": "6",
+              "Text": "Not sure."
+            },
+            {
+              "Id": "7",
+              "Text": "It’s blurry."
+            },
+            {
+              "Id": "8",
+              "Text": "Didn’t see."
+            },
+            {
+              "Id": "9",
+              "Text": "I forgot."
+            },
+            {
+              "Id": "10",
+              "Text": "I don’t know."
+            }
+          ]
+        },
+        {
+          "Id" : "VOICE",
+          "Dialogues": [
+            {
+              "Id": "1",
+              "Text": "I didn’t hear them."
+            },
+            {
+              "Id": "2",
+              "Text": "No idea."
+            },
+            {
+              "Id": "3",
+              "Text": "I don’t know."
+            },
+            {
+              "Id": "4",
+              "Text": "I wasn’t listening."
+            },
+            {
+              "Id": "5",
+              "Text": "I can’t remember."
+            },
+            {
+              "Id": "6",
+              "Text": "Not sure."
+            },
+            {
+              "Id": "7",
+              "Text": "Didn’t notice."
+            },
+            {
+              "Id": "8",
+              "Text": "Hard to say."
+            },
+            {
+              "Id": "9",
+              "Text": "I forgot."
+            },
+            {
+              "Id": "10",
+              "Text": "I don’t recall."
+            }
+          ]
+        }
+      ]
     }
   ]
 }
