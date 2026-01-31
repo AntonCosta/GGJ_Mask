@@ -1,32 +1,31 @@
 ﻿{
-  "MurderData" : [
+  "MurderData" : 
     {
       "MurderLocations": [
         {
           "Id" : 1,
-          "Location" : "Ballroom"
+          "Name" : "Ballroom"
         },
         {
           "Id" : 2,
-          "Location" : "Toilet"
+          "Name" : "Toilet"
         },
         {
           "Id" : 3,
-          "Location" : "Kitchen"
+          "Name" : "Kitchen"
         },
         {
           "Id" : 4,
-          "Location" : "Hallway"
+          "Name" : "Hallway"
         },
         {
           "Id" : 5,
-          "Location" : "Garden"
+          "Name" : "Garden"
         },
         {
           "Id" : 6,
-          "Location" : "Staircase"
+          "Name" : "Staircase"
         }
       ]
     }
-  ]
 }

@@ -65,23 +65,31 @@ namespace GGJ
         {
             for (var i = 0; i < _nrOfMasks; i++)
             {
-                var newMaskPrefab = Resources.Load<GameObject>(MASK_PREFAB);
-                var newMask = Instantiate(newMaskPrefab, transform.position, Quaternion.identity);
+                var newMask = CreateMask();
+
                 newMask.transform.parent = _maskPositions[i].transform;
                 newMask.transform.localPosition = new Vector3(0, MASK_Y_OFFSET, 0);
-
-                var maskController = newMask.GetComponent<MaskController>();
-                maskController.Accessory.sprite = _accessory.RandomElement();
-                maskController.Hat.sprite = _hats.RandomElement();
-                maskController.Eyes.sprite = _eyes.RandomEvenElement();
-                maskController.Nose.sprite = _nose.RandomElement();
-                maskController.Mouth.sprite = _mouth.RandomElement();
-                maskController.FaceType.sprite = _faceType.RandomElement();
-                maskController.Ears.sprite = _ears.RandomEvenElement();
                 
-                MaskManager.Instance.Masks.Add(maskController);
+                MaskManager.Instance.Masks.Add(newMask.GetComponent<MaskController>());
             }
             MaskManager.Instance.AllMasksAdded();
+        }
+
+        public GameObject CreateMask()
+        {
+            var newMaskPrefab = Resources.Load<GameObject>(MASK_PREFAB);
+            var newMask = Instantiate(newMaskPrefab, transform.position, Quaternion.identity);
+
+            var maskController = newMask.GetComponent<MaskController>();
+            maskController.Accessory.sprite = _accessory.RandomElement();
+            maskController.Hat.sprite = _hats.RandomElement();
+            maskController.Eyes.sprite = _eyes.RandomEvenElement();
+            maskController.Nose.sprite = _nose.RandomElement();
+            maskController.Mouth.sprite = _mouth.RandomElement();
+            maskController.FaceType.sprite = _faceType.RandomElement();
+            maskController.Ears.sprite = _ears.RandomEvenElement();
+            
+            return newMask;
         }
 
         private void CreateBackgrounds()

@@ -1,4 +1,6 @@
 ﻿{
-  "OutsideText": "There was a crime.\nYou were called to investigate.",
-  "InsideText": "Find out who commited the murder or risk it happen again. \nA body was found in the ${LOCATION}. The murder happend between ${TIME_1} and ${TIME_2}. \nGood Luck."
+  "IntroText": {
+    "OutsideText": "There was a crime.\nYou were called to investigate.",
+    "InsideText": "Find out who commited the murder or risk it happen again. \nA body was found in the ${LOCATION}. The murder happend between ${TIME_1} and ${TIME_2}. \nGood Luck."
+  }
 }
