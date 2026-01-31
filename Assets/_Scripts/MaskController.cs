@@ -39,11 +39,21 @@ namespace GGJ.Controllers
             get => _role;
             set => _role = value;
         }
+        
+        public string PlayerVerdict
+        {
+            get => _playerVerdict;
+            set => _playerVerdict = value;
+        }
+
+        public bool Onscreen => _onScreen;
 
         private string _personalityType;
         private bool _isKiller;
         private string _role;
+        private string _playerVerdict;
         private Tween _tween;
+        private bool _onScreen;
 
         public void OnScreen()
         {
@@ -71,11 +81,13 @@ namespace GGJ.Controllers
             }
             _tween.SetLoops(-1, LoopType.Yoyo);
             Debug.Log(PersonalityType + " PersonalityType " + IsKiller + " IsKiller " + Role + " Role");
+            _onScreen = true;
         }
 
         public void OffScreen()
         {
             _tween.Kill();
+            _onScreen = false;
         }
     }
 }

@@ -50,7 +50,7 @@ namespace GGJ.Managers
 
         private void Update()
         {
-            if (Keyboard.current.spaceKey.wasPressedThisFrame && _canPressSpace)
+            if (Keyboard.current.spaceKey.wasPressedThisFrame && _canPressSpace && !ScreenFader.Instance.IsTweening)
             {
                 _canPressSpace = false;
                 _currentScreenCounter++;
@@ -108,6 +108,7 @@ namespace GGJ.Managers
         {
             _outsideShot.SetActive(false);
             _insideShot.SetActive(false);
+            _inGameUI.SetActive(true);
             _levelGenerator.GenerateLevel();
         }
 

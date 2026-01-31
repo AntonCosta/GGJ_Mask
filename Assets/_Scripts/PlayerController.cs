@@ -10,12 +10,12 @@ namespace GGJ.Controllers
         
         private void Update()
         {
-            if (Keyboard.current.dKey.wasPressedThisFrame && !MaskManager.Instance.IsTweening)
+            if (Keyboard.current.dKey.wasPressedThisFrame && !ScreenFader.Instance.IsTweening)
             {
                 ScreenFader.Instance.FadeHide(MaskManager.Instance.NextMask);
             }
 
-            if (Keyboard.current.aKey.wasPressedThisFrame && !MaskManager.Instance.IsTweening)
+            if (Keyboard.current.aKey.wasPressedThisFrame && !ScreenFader.Instance.IsTweening)
             {
                 ScreenFader.Instance.FadeHide(MaskManager.Instance.PreviousMask);
             }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using DG.Tweening;
 using GGJ;
+using GGJ.Contollers;
 using GGJ.Controllers;
 using GGJ.Managers;
 using GGJ.Utils;
@@ -82,7 +83,11 @@ namespace GJJ.Managers
                             .DOMoveX(TRAVEL_DISTANCE * i, TWEEN_DURATION).SetEase(Ease.InOutSine));
                 }
 
-                _tweenSequence.OnComplete(() => IsTweening = false);
+                _tweenSequence.OnComplete(() =>
+                {
+                    IsTweening = false;
+                    VerdictController.Instance.CheckCurrentVerdict();
+                });
 
                 return;
             }
@@ -95,7 +100,11 @@ namespace GJJ.Managers
                 _tweenSequence.Join(
                     mask.transform.DOMoveX(mask.transform.position.x - TRAVEL_DISTANCE, TWEEN_DURATION).SetEase(Ease.InOutSine));
             });
-            _tweenSequence.OnComplete(() => IsTweening = false);
+            _tweenSequence.OnComplete(() =>
+            {
+                IsTweening = false;
+                VerdictController.Instance.CheckCurrentVerdict();
+            });
         }
 
         public void PreviousMask()
@@ -115,7 +124,11 @@ namespace GJJ.Managers
                             .SetEase(Ease.InOutSine));
                 }
 
-                _tweenSequence.OnComplete(() => IsTweening = false);
+                _tweenSequence.OnComplete(() =>
+                {
+                    IsTweening = false;
+                    VerdictController.Instance.CheckCurrentVerdict();
+                });
 
                 return;
             }
@@ -128,7 +141,13 @@ namespace GJJ.Managers
                 _tweenSequence.Join(
                     mask.transform.DOMoveX(mask.transform.position.x + TRAVEL_DISTANCE, TWEEN_DURATION).SetEase(Ease.InOutSine));
             });
-            _tweenSequence.OnComplete(() => IsTweening = false);
+            _tweenSequence.OnComplete(() =>
+            {
+                IsTweening = false;
+                VerdictController.Instance.CheckCurrentVerdict();
+            });
         }
+        
+        public MaskController CurrentMask => Masks[_currentMaskIndex];
     }
 }
