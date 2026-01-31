@@ -3,6 +3,7 @@ using DG.Tweening;
 using GGJ.Managers;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 namespace GGJ.Controllers
@@ -51,6 +52,8 @@ namespace GGJ.Controllers
 
         public bool Onscreen => _onScreen;
         public bool WasOnScreen => _wasOnScreen;
+        public bool Clickable;
+        public Action<MaskController> OnMaskClicked;
 
         private string _personalityType;
         private bool _isKiller;
@@ -59,6 +62,25 @@ namespace GGJ.Controllers
         private Tween _tween;
         private bool _onScreen;
         private bool _wasOnScreen;
+        private Camera _camera;
+
+        private void Start()
+        {
+            _camera = Camera.main;
+        }
+
+        private void Update()
+        {
+            if (Mouse.current.leftButton.wasPressedThisFrame && Clickable)
+            {
+                var worldPoint = _camera.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+                var hit = Physics2D.Raycast(worldPoint, Vector2.zero, 0f);
+                if (hit.collider != null)
+                {
+                    OnMaskClicked?.Invoke(this);
+                }
+            }
+        }
 
         public void OnScreen()
         {
