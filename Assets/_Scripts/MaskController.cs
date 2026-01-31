@@ -9,7 +9,6 @@ namespace GGJ.Controllers
 {
     public class MaskController : MonoBehaviour
     {
-        private const float AMPLITUDE = 0.025f;
         private const float DURATION = 0.7f;
         
         [SerializeField] public GameObject Components;
@@ -20,8 +19,12 @@ namespace GGJ.Controllers
         [SerializeField] public SpriteRenderer Mouth;
         [SerializeField] public SpriteRenderer FaceType;
         [SerializeField] public SpriteRenderer Ears;
+        [SerializeField] public Canvas Canvas;
         [SerializeField] public TextMeshProUGUI Dialogue;
 
+        public Tween Tween => _tween;
+        public float Amplitude = 0.025f;
+        
         public string PersonalityType
         {
             get => _personalityType;
@@ -47,6 +50,7 @@ namespace GGJ.Controllers
         }
 
         public bool Onscreen => _onScreen;
+        public bool WasOnScreen => _wasOnScreen;
 
         private string _personalityType;
         private bool _isKiller;
@@ -54,11 +58,12 @@ namespace GGJ.Controllers
         private string _playerVerdict;
         private Tween _tween;
         private bool _onScreen;
+        private bool _wasOnScreen;
 
         public void OnScreen()
         {
-            _tween = Components.transform.DOMoveY(transform.position.y + AMPLITUDE, DURATION);
-            switch (PersonalityType)//"Calm", "Deceptive", "Nervous", "Aggressive", "Shady", "Vague"
+            _tween = Components.transform.DOMoveY(transform.position.y + Amplitude, DURATION);
+            switch (PersonalityType)
             {
                 case "Calm":
                     _tween.SetEase(Ease.InOutSine);
@@ -82,6 +87,7 @@ namespace GGJ.Controllers
             _tween.SetLoops(-1, LoopType.Yoyo);
             Debug.Log(PersonalityType + " PersonalityType " + IsKiller + " IsKiller " + Role + " Role");
             _onScreen = true;
+            _wasOnScreen = true;
         }
 
         public void OffScreen()

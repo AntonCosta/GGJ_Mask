@@ -69,6 +69,10 @@ namespace GJJ.Managers
 
         public void NextMask()
         {
+            if (Masks.All(mask => mask.WasOnScreen))
+            {
+                GameManager.Instance.ShowNextPhaseButton();
+            }
             IsTweening = true;
             _tweenSequence = DOTween.Sequence();
             if (_currentMaskIndex >= LevelGenerator.Instance.NrOfMasks - 1)
@@ -109,6 +113,10 @@ namespace GJJ.Managers
 
         public void PreviousMask()
         {
+            if (Masks.All(mask => mask.WasOnScreen))
+            {
+                GameManager.Instance.ShowNextPhaseButton();
+            }
             IsTweening = true;
             _tweenSequence = DOTween.Sequence();
             if (_currentMaskIndex <= 0)

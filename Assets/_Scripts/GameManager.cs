@@ -18,16 +18,21 @@ namespace GGJ.Managers
         
         [SerializeField] private Button _startButton;
         [SerializeField] private Button _exitButton;
+        [SerializeField] private Button _nextPhase;
         [SerializeField] private GameObject _mainMenu;
         [SerializeField] private GameObject _inGameUI;
         [SerializeField] private GameObject _outsideShot;
+        [SerializeField] private GameObject _maskPositions;
+        [SerializeField] private GameObject _convictionScreen;
         [SerializeField] private TextMeshProUGUI _outsideShotText;
         [SerializeField] private GameObject _insideShot;
         [SerializeField] private TextMeshProUGUI _insideShotText;
 
+        public static GameManager Instance { get; private set; }
         public MurderModel MurderData => _murderModel;
         public string CrimeLocation => _crimeLocation;
         public string CrimeTime => _crimeTime;
+        public GameObject ConvictionScreen => _convictionScreen;
 
         private MurderModel _murderModel;
         private IntroTextModel _introTextModel;
@@ -37,6 +42,17 @@ namespace GGJ.Managers
         private string _crimeLocation;
         private string _crimeTime;
 
+        private void Awake()
+        {
+            if (Instance != null && Instance != this)
+            {
+                Destroy(gameObject);
+                return;
+            }
+
+            Instance = this;
+        }
+        
         private void Start()
         {
             _startButton.onClick.AddListener(GenerateGame);
@@ -50,7 +66,7 @@ namespace GGJ.Managers
 
         private void Update()
         {
-            if (Keyboard.current.spaceKey.wasPressedThisFrame && _canPressSpace && !ScreenFader.Instance.IsTweening)
+            if ((Keyboard.current.spaceKey.wasPressedThisFrame || Mouse.current.leftButton.wasPressedThisFrame) && _canPressSpace && !ScreenFader.Instance.IsTweening)
             {
                 _canPressSpace = false;
                 _currentScreenCounter++;
@@ -109,6 +125,7 @@ namespace GGJ.Managers
             _outsideShot.SetActive(false);
             _insideShot.SetActive(false);
             _inGameUI.SetActive(true);
+            _nextPhase.gameObject.SetActive(false);
             _levelGenerator.GenerateLevel();
         }
 
@@ -138,6 +155,20 @@ namespace GGJ.Managers
             _crimeTime = Enumerable.Range(0, 24)
                 .Select(h => $"{h:00}:00")
                 .ToList().RandomElement();
+        }
+        
+        public void ShowNextPhaseButton()
+        {
+            _nextPhase.gameObject.SetActive(true);
+            _nextPhase.onClick.AddListener(() => ScreenFader.Instance.FadeHide(GoToConvictionPhase));
+        }
+
+        private void GoToConvictionPhase()
+        {
+            _maskPositions.SetActive(false);
+            _inGameUI.SetActive(false);
+            _convictionScreen.SetActive(true);
+            _convictionScreen.GetComponent<ConvictionPhaseController>().MoveMasksToConviction();
         }
     }
 }
