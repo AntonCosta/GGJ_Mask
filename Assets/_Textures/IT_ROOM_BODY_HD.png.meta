@@ -1,40 +1,25 @@
 fileFormatVersion: 2
-guid: f9ab9a70a5fb81d43ab0078208601149
+guid: c75248f362e6d2b4d92ea496d243c73c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1839095543586420497
-    second: MOUTH 1_0
+      213: -432400632219838889
+    second: IT_ROOM_BODY_HD_0
   - first:
-      213: -3181552708039817622
-    second: MOUTH 1_1
+      213: -3710679596176666257
+    second: IT_ROOM_BODY_HD_1
   - first:
-      213: -5288812711448994313
-    second: MOUTH 1_2
+      213: 172060992960039088
+    second: IT_ROOM_BODY_HD_2
   - first:
-      213: 6661261106406951261
-    second: MOUTH 1_3
+      213: -6441578029731678715
+    second: IT_ROOM_BODY_HD_3
   - first:
-      213: -5579254149585800187
-    second: MOUTH 1_4
+      213: 3145648548659674152
+    second: IT_ROOM_BODY_HD_4
   - first:
-      213: 8140946740801567577
-    second: MOUTH 1_5
-  - first:
-      213: 4740190405545588413
-    second: MOUTH 1_6
-  - first:
-      213: -5255852740539653110
-    second: MOUTH 1_7
-  - first:
-      213: 6446225641357939463
-    second: MOUTH 1_8
-  - first:
-      213: -8088958459560934778
-    second: MOUTH 1_9
-  - first:
-      213: -4425367324929987009
-    second: MOUTH 1_10
+      213: -422768824948137557
+    second: IT_ROOM_BODY_HD_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -143,13 +128,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MOUTH 1_0
+      name: IT_ROOM_BODY_HD_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 96
-        height: 96
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fe80788d8583a76e0800000000000000
-      internalID: -1839095543586420497
+      spriteID: 756d1eb7aedcff9f0800000000000000
+      internalID: -432400632219838889
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MOUTH 1_1
+      name: IT_ROOM_BODY_HD_1
       rect:
         serializedVersion: 2
-        x: 96
+        x: 1920
         y: 0
-        width: 96
-        height: 96
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -180,20 +165,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a66ca1b2baad8d3d0800000000000000
-      internalID: -3181552708039817622
+      spriteID: f61999a3194018cc0800000000000000
+      internalID: -3710679596176666257
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MOUTH 1_2
+      name: IT_ROOM_BODY_HD_2
       rect:
         serializedVersion: 2
-        x: 192
+        x: 3840
         y: 0
-        width: 96
-        height: 96
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7fd138a3cdc5a96b0800000000000000
-      internalID: -5288812711448994313
+      spriteID: 0b8851dbf88436200800000000000000
+      internalID: 172060992960039088
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MOUTH 1_3
+      name: IT_ROOM_BODY_HD_3
       rect:
         serializedVersion: 2
-        x: 288
+        x: 5760
         y: 0
-        width: 96
-        height: 96
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,20 +209,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d590383fead817c50800000000000000
-      internalID: 6661261106406951261
+      spriteID: 506f1e039eaea96a0800000000000000
+      internalID: -6441578029731678715
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MOUTH 1_4
+      name: IT_ROOM_BODY_HD_4
       rect:
         serializedVersion: 2
-        x: 384
+        x: 7680
         y: 0
-        width: 96
-        height: 96
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -246,20 +231,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 504705e39e18292b0800000000000000
-      internalID: -5579254149585800187
+      spriteID: 82c351b40b697ab20800000000000000
+      internalID: 3145648548659674152
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MOUTH 1_5
+      name: IT_ROOM_BODY_HD_5
       rect:
         serializedVersion: 2
-        x: 480
+        x: 9600
         y: 0
-        width: 96
-        height: 96
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -268,96 +253,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 95bf9dc9de37af070800000000000000
-      internalID: 8140946740801567577
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MOUTH 1_6
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 0
-        width: 96
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: db6724a2f0a88c140800000000000000
-      internalID: 4740190405545588413
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MOUTH 1_7
-      rect:
-        serializedVersion: 2
-        x: 672
-        y: 0
-        width: 96
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a04ee5877c57f07b0800000000000000
-      internalID: -5255852740539653110
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MOUTH 1_8
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 0
-        width: 96
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 70397273118957950800000000000000
-      internalID: 6446225641357939463
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MOUTH 1_9
-      rect:
-        serializedVersion: 2
-        x: 864
-        y: 0
-        width: 96
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 682cafe532f3ebf80800000000000000
-      internalID: -8088958459560934778
+      spriteID: ba16bde5ef5022af0800000000000000
+      internalID: -422768824948137557
       vertices: []
       indices: 
       edges: []
@@ -366,7 +263,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: dc713549cc0fb844f87f913456d7f6bf
+    spriteID: c608bb75295c97f45a261b1caf9b1816
     internalID: 0
     vertices: []
     indices: 
@@ -376,18 +273,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":1.0},"gridSpriteSize":{"x":96.0,"y":96.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":1.0},"gridSpriteSize":{"x":1920.0,"y":1080.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      MOUTH 1_0: -1839095543586420497
-      MOUTH 1_1: -3181552708039817622
-      MOUTH 1_2: -5288812711448994313
-      MOUTH 1_3: 6661261106406951261
-      MOUTH 1_4: -5579254149585800187
-      MOUTH 1_5: 8140946740801567577
-      MOUTH 1_6: 4740190405545588413
-      MOUTH 1_7: -5255852740539653110
-      MOUTH 1_8: 6446225641357939463
-      MOUTH 1_9: -8088958459560934778
+      IT_ROOM_BODY_HD_0: -432400632219838889
+      IT_ROOM_BODY_HD_1: -3710679596176666257
+      IT_ROOM_BODY_HD_2: 172060992960039088
+      IT_ROOM_BODY_HD_3: -6441578029731678715
+      IT_ROOM_BODY_HD_4: 3145648548659674152
+      IT_ROOM_BODY_HD_5: -422768824948137557
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

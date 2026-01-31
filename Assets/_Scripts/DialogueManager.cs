@@ -55,20 +55,53 @@ namespace GGJ.Managers
             var killerMask = MaskManager.Instance.Masks.First(m => m.IsKiller);
             if (mask.IsTruthful)
             {
+                var maskCopy = killerMask.gameObject;
+                var randomMaskComponent = maskCopy.GetComponent<MaskController>().MaskComponents.RandomElement();
+                while (randomMaskComponent.sprite == null)
+                {
+                    randomMaskComponent = maskCopy.GetComponent<MaskController>().MaskComponents.RandomElement();
+                }
+                int id = 0;
+                for (var i = 0; i < mask.Dialogue.spriteAsset.spriteCharacterTable.Count; i++)
+                {
+                    var characterTable = mask.Dialogue.spriteAsset.spriteCharacterTable[i];
+                    var spriteName = characterTable.name;
+                    if (spriteName == randomMaskComponent.name)
+                    {
+                        id = i;
+                    }
+                }
+
                 mask.Dialogue.text = mask.Dialogue.text
                     .Replace("${PLACE}", gameManager.CrimeLocation)
                     .Replace("${TIME}", gameManager.CrimeTime)
-                    .Replace("${VOICE}", killerMask.Voice);
-                    //.Replace("${MASK_DETAIL}", time2)
+                    .Replace("${VOICE}", killerMask.Voice)
+                    .Replace("${MASK_DETAIL}", $"<space=0.2><size=300%><voffset=0.06><sprite={id}></voffset></size>.");
                 //  .Replace("${MASK_PIECE}", time2);
             }
             else
             {
+                var maskCopy = MaskManager.Instance.Masks.RandomElement().gameObject;
+                var randomMaskComponent = maskCopy.GetComponent<MaskController>().MaskComponents.RandomElement();
+                while (randomMaskComponent.sprite == null)
+                {
+                    randomMaskComponent = maskCopy.GetComponent<MaskController>().MaskComponents.RandomElement();
+                }
+                int id = 0;
+                for (var i = 0; i < mask.Dialogue.spriteAsset.spriteCharacterTable.Count; i++)
+                {
+                    var characterTable = mask.Dialogue.spriteAsset.spriteCharacterTable[i];
+                    var spriteName = characterTable.name;
+                    if (spriteName == randomMaskComponent.name)
+                    {
+                        id = i;
+                    }
+                }
                 mask.Dialogue.text = mask.Dialogue.text
                     .Replace("${PLACE}", gameManager.GetRandomLocation())
                     .Replace("${TIME}", gameManager.GetRandomTime())
-                    .Replace("${VOICE}", Constants.MASK_VOICE.RandomElement());
-                //.Replace("${MASK_DETAIL}", time2)
+                    .Replace("${VOICE}", Constants.MASK_VOICE.RandomElement())
+                    .Replace("${MASK_DETAIL}", $"<space=0.2><size=300%><voffset=0.06><sprite={id}></voffset></size>.");
                 // .Replace("${MASK_PIECE}", time2);
             }
         }

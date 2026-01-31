@@ -88,6 +88,12 @@ namespace GGJ
             maskController.Mouth.sprite = _mouth.RandomElement();
             maskController.FaceType.sprite = _faceType.RandomElement();
             maskController.Ears.sprite = _ears.RandomEvenElement();
+            maskController.MaskComponents.Add(maskController.Accessory);
+            maskController.MaskComponents.Add(maskController.Hat);
+            maskController.MaskComponents.Add(maskController.Eyes);
+            maskController.MaskComponents.Add(maskController.Nose);
+            maskController.MaskComponents.Add(maskController.Mouth);
+            maskController.MaskComponents.Add(maskController.Ears);
             
             return newMask;
         }

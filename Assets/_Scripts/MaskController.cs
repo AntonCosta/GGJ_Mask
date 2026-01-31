@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using DG.Tweening;
 using GGJ.Managers;
 using GGJ.Utils;
@@ -25,8 +26,9 @@ namespace GGJ.Controllers
         [SerializeField] public TextMeshProUGUI Dialogue;
 
         public Tween Tween => _tween;
-        public float Amplitude = 0.025f;
-        public string DialogueKnowledgeType;
+        [HideInInspector] public float Amplitude = 0.025f;
+        [HideInInspector] public string DialogueKnowledgeType;
+        [HideInInspector] public List<SpriteRenderer> MaskComponents;
         
         public string PersonalityType
         {
