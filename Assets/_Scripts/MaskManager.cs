@@ -26,7 +26,11 @@ namespace GJJ.Managers
         private int _nrOfKillerMasks = 0;
         private int _maxNrOfKillerMasks = 1;
         private int _maxNumberOfLiers = 2;
+        private int _maxNumberOfAggresive = 1;
+        private int _maxNumberOfShady = 1;
         private int _currentNrLiers = 0;
+        private int _currentNrAggresive= 0;
+        private int _currentNrShady = 0;
         
         private void Awake()
         {
@@ -44,6 +48,22 @@ namespace GJJ.Managers
             Masks.ForEach(mask =>
             {
                 mask.PersonalityType = Constants.MASK_PERSONALITY_TYPES.RandomElement();
+                while (mask.PersonalityType == "Aggressive" && _currentNrAggresive >= _maxNumberOfAggresive)
+                {
+                    mask.PersonalityType = Constants.MASK_PERSONALITY_TYPES.RandomElement();
+                }
+                while (mask.PersonalityType == "Shady" && _currentNrShady >= _maxNumberOfShady)
+                {
+                    mask.PersonalityType = Constants.MASK_PERSONALITY_TYPES.RandomElement();
+                }
+                if (mask.PersonalityType == "Aggressive")
+                {
+                    _currentNrAggresive++;
+                }
+                else if (mask.PersonalityType == "Shady")
+                {
+                    _currentNrShady++;
+                }
                 mask.Voice = Constants.MASK_VOICE.RandomElement();
             });
             _maxNumberOfLiers = Masks.Count / 2 - 1;

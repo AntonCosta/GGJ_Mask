@@ -12,9 +12,9 @@ namespace GGJ.Managers
     public class DialogueManager : MonoBehaviour
     {
         public static DialogueManager Instance { get; private set; }
-        
+
         private Dialogues _dialogues;
-        
+
         private void Awake()
         {
             if (Instance != null && Instance != this)
@@ -61,12 +61,13 @@ namespace GGJ.Managers
                 {
                     randomMaskComponent = maskCopy.GetComponent<MaskController>().MaskComponents.RandomElement();
                 }
+
                 int id = 0;
                 for (var i = 0; i < mask.Dialogue.spriteAsset.spriteCharacterTable.Count; i++)
                 {
                     var characterTable = mask.Dialogue.spriteAsset.spriteCharacterTable[i];
                     var spriteName = characterTable.name;
-                    if (spriteName == randomMaskComponent.name)
+                    if (spriteName == randomMaskComponent.sprite.name)
                     {
                         id = i;
                     }
@@ -76,8 +77,19 @@ namespace GGJ.Managers
                     .Replace("${PLACE}", gameManager.CrimeLocation)
                     .Replace("${TIME}", gameManager.CrimeTime)
                     .Replace("${VOICE}", killerMask.Voice)
-                    .Replace("${MASK_DETAIL}", $"<space=0.2><size=300%><voffset=0.06><sprite={id}></voffset></size>.");
-                //  .Replace("${MASK_PIECE}", time2);
+                    .Replace("${MASK_DETAIL}", $"<space=0.2><size=300%><voffset=0.06><sprite={id}></voffset></size>");
+
+                if (mask.Dialogue.text.Contains("MASK_NAME"))
+                {
+                    mask.SpeachBubble.gameObject.SetActive(true);
+                    var newMask = Instantiate(maskCopy, mask.PotentialMaskPosition.transform, false);
+                    newMask.transform.localPosition = new Vector3(0f, 0f, -1f);
+                    newMask.transform.localRotation = Quaternion.identity;
+                    newMask.transform.localScale = new Vector3(0.6f, 0.6f, 0.6f);
+                    newMask.GetComponent<MaskController>().Canvas.gameObject.SetActive(false);
+                }
+
+                mask.Dialogue.text = mask.Dialogue.text.Replace("${MASK_NAME}", "     ");
             }
             else
             {
@@ -87,22 +99,35 @@ namespace GGJ.Managers
                 {
                     randomMaskComponent = maskCopy.GetComponent<MaskController>().MaskComponents.RandomElement();
                 }
+
                 int id = 0;
                 for (var i = 0; i < mask.Dialogue.spriteAsset.spriteCharacterTable.Count; i++)
                 {
                     var characterTable = mask.Dialogue.spriteAsset.spriteCharacterTable[i];
                     var spriteName = characterTable.name;
-                    if (spriteName == randomMaskComponent.name)
+                    if (spriteName == randomMaskComponent.sprite.name)
                     {
                         id = i;
                     }
                 }
+
                 mask.Dialogue.text = mask.Dialogue.text
                     .Replace("${PLACE}", gameManager.GetRandomLocation())
                     .Replace("${TIME}", gameManager.GetRandomTime())
                     .Replace("${VOICE}", Constants.MASK_VOICE.RandomElement())
-                    .Replace("${MASK_DETAIL}", $"<space=0.2><size=300%><voffset=0.06><sprite={id}></voffset></size>.");
-                // .Replace("${MASK_PIECE}", time2);
+                    .Replace("${MASK_DETAIL}", $"<space=0.2><size=300%><voffset=0.06><sprite={id}></voffset></size>");
+
+                if (mask.Dialogue.text.Contains("MASK_NAME"))
+                {
+                    mask.SpeachBubble.gameObject.SetActive(true);
+                    var newMask = Instantiate(maskCopy, mask.PotentialMaskPosition.transform, false);
+                    newMask.transform.localPosition = new Vector3(0f, 0f, -1f);
+                    newMask.transform.localRotation = Quaternion.identity;
+                    newMask.transform.localScale = new Vector3(0.6f, 0.6f, 0.6f);
+                    newMask.GetComponent<MaskController>().Canvas.gameObject.SetActive(false);
+                }
+
+                mask.Dialogue.text = mask.Dialogue.text.Replace("${MASK_NAME}", "     ");
             }
         }
     }

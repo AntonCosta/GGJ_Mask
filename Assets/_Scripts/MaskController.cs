@@ -24,6 +24,8 @@ namespace GGJ.Controllers
         [SerializeField] public SpriteRenderer Ears;
         [SerializeField] public Canvas Canvas;
         [SerializeField] public TextMeshProUGUI Dialogue;
+        [SerializeField] public Image SpeachBubble;
+        [SerializeField] public GameObject PotentialMaskPosition;
 
         public Tween Tween => _tween;
         [HideInInspector] public float Amplitude = 0.025f;

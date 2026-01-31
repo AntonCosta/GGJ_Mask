@@ -8,7 +8,7 @@
           "Dialogues": [
             {
               "Id": "1",
-              "Text": "I think ${MASK_PIECE} was near the ${PLACE}…"
+              "Text": "I think ${MASK_NAME} was near the ${PLACE}…"
             },
             {
               "Id": "2",
@@ -193,11 +193,11 @@
           "Dialogues": [
             {
               "Id": "1",
-              "Text": "I saw ${MASK_PIECE} near the ${PLACE}."
+              "Text": "I saw ${MASK_NAME} near the ${PLACE}."
             },
             {
               "Id": "2",
-              "Text": "${MASK_PIECE} was around the ${PLACE}."
+              "Text": "${MASK_NAME} was around the ${PLACE}."
             },
             {
               "Id": "3",
@@ -205,11 +205,11 @@
             },
             {
               "Id": "4",
-              "Text": "I noticed ${MASK_PIECE} at the ${PLACE}."
+              "Text": "I noticed ${MASK_NAME} at the ${PLACE}."
             },
             {
               "Id": "5",
-              "Text": "${MASK_PIECE} was standing by the ${PLACE}."
+              "Text": "${MASK_NAME} was standing by the ${PLACE}."
             },
             {
               "Id": "6",
@@ -221,7 +221,7 @@
             },
             {
               "Id": "8",
-              "Text": "I remember seeing ${MASK_PIECE} at the ${PLACE}."
+              "Text": "I remember seeing ${MASK_NAME} at the ${PLACE}."
             },
             {
               "Id": "9",
@@ -378,7 +378,7 @@
           "Dialogues": [
             {
               "Id": "1",
-              "Text": "${MASK_PIECE} was at the ${PLACE}, for sure."
+              "Text": "${MASK_NAME} was at the ${PLACE}, for sure."
             },
             {
               "Id": "2",
@@ -568,7 +568,7 @@
             },
             {
               "Id": "2",
-              "Text": "Ask ${MASK_PIECE} about that."
+              "Text": "Ask ${MASK_NAME} about that."
             },
             {
               "Id": "3",
@@ -641,7 +641,7 @@
             },
             {
               "Id": "9",
-              "Text": "Go ask ${MASK_PIECE}."
+              "Text": "Go ask ${MASK_NAME}."
             },
             {
               "Id": "10",
@@ -723,7 +723,7 @@
             },
             {
               "Id": "7",
-              "Text": "Go ask ${MASK_PIECE}."
+              "Text": "Go ask ${MASK_NAME}."
             },
             {
               "Id": "8",
