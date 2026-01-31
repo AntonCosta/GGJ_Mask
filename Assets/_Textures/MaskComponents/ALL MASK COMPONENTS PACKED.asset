@@ -24,7 +24,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: f393c8eb8f37ca942a745fdeb00c046d, type: 3}
+        m_Texture: {fileID: 2800000, guid: 5bb3dec90c0492d4da098ea451a695fc, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
@@ -78,7 +78,7 @@ MonoBehaviour:
     m_StrikethroughThickness: 0
     m_TabWidth: 0
   m_Material: {fileID: -3386859784158795479}
-  spriteSheet: {fileID: 2800000, guid: f393c8eb8f37ca942a745fdeb00c046d, type: 3}
+  spriteSheet: {fileID: 2800000, guid: 5bb3dec90c0492d4da098ea451a695fc, type: 3}
   m_SpriteCharacterTable:
   - m_ElementType: 2
     m_Unicode: 65534

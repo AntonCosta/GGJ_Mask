@@ -69,6 +69,18 @@ namespace GGJ.Controllers
             get => _playerVerdict;
             set => _playerVerdict = value;
         }
+        
+        public string AtWhatTime
+        {
+            get => _atWhatTime;
+            set => _atWhatTime = value;
+        }
+        
+        public string WhereWereThey
+        {
+            get => _whereWereThey;
+            set => _whereWereThey = value;
+        }
 
         public bool Onscreen => _onScreen;
         public bool WasOnScreen => _wasOnScreen;
@@ -85,6 +97,8 @@ namespace GGJ.Controllers
         private bool _onScreen;
         private bool _wasOnScreen;
         private Camera _camera;
+        private string _atWhatTime;
+        private string _whereWereThey;
 
         private void Start()
         {

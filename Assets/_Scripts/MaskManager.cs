@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using DG.Tweening;
 using GGJ;
@@ -84,7 +85,19 @@ namespace GJJ.Managers
                 {
                     var roleIndex = (Random.Range(0, Constants.MASK_ROLES.Count - 1));
                     mask.Role = Constants.MASK_ROLES[roleIndex];
-                    mask.IsKiller = false;
+                    mask.WhereWereThey = GameManager.Instance.GetRandomLocation();
+                    var time = DateTime.ParseExact(GameManager.Instance.CrimeTime, "HH:mm", CultureInfo.InvariantCulture);
+
+                    string time1 = time.AddHours(-1).ToString("HH:mm");
+                    string time2 = time.AddHours( 1).ToString("HH:mm");
+                    string time3 = time.AddHours( 0).ToString("HH:mm");
+                    var tempTime = new List<string>() { time1, time2, time3 };
+                    mask.AtWhatTime = tempTime.RandomElement();
+                }
+                else
+                {
+                    mask.WhereWereThey = GameManager.Instance.CrimeLocation;
+                    mask.AtWhatTime = GameManager.Instance.CrimeTime;
                 }
                 
             });

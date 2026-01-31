@@ -4,6 +4,7 @@ using DG.Tweening;
 using GGJ.Managers;
 using GGJ.Utils;
 using GJJ.Managers;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -16,6 +17,9 @@ namespace GGJ.Controllers
         [SerializeField] private GameObject _background;
         [SerializeField] private GameObject _yes;
         [SerializeField] private GameObject _no;
+        [SerializeField] private TextMeshPro _location;
+        [SerializeField] private TextMeshPro _time;
+        [SerializeField] private TextMeshPro _voice;
 
         private MaskFileController _maskFileController;
         private Camera _camera;
@@ -123,6 +127,9 @@ namespace GGJ.Controllers
                 _maskFileController.OthersText.text = string.Join("\n", mask.WhatTheySaidAboutYou.Where(t => t != null).Select(t => t.text));
                 mask.transform.localPosition = _maskFileController.MaskPosition.transform.localPosition;
                 mask.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
+                _location.text = "Location: " + mask.WhereWereThey;
+                _time.text = "Time: " + mask.AtWhatTime;
+                _voice.text = "Voice: " + mask.Voice;
                 switch (mask.PlayerVerdict)
                 {
                     case "Guilty":
