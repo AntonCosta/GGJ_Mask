@@ -1,0 +1,32 @@
+﻿{
+  "MurderData" : [
+    {
+      "MurderLocations": [
+        {
+          "Id" : 1,
+          "Location" : "Ballroom"
+        },
+        {
+          "Id" : 2,
+          "Location" : "Toilet"
+        },
+        {
+          "Id" : 3,
+          "Location" : "Kitchen"
+        },
+        {
+          "Id" : 4,
+          "Location" : "Hallway"
+        },
+        {
+          "Id" : 5,
+          "Location" : "Garden"
+        },
+        {
+          "Id" : 6,
+          "Location" : "Staircase"
+        }
+      ]
+    }
+  ]
+}

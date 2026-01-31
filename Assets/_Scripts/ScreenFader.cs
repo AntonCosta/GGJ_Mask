@@ -25,23 +25,23 @@ namespace GGJ.Utils
             Instance = this;
         }
 
-        public Tween FadeOutToBlack()
+        public Tween FadeOutToBlack(float fade_time = FADE_TIME)
         {
-            return _fadeImage.DOFade(1f, FADE_TIME).SetUpdate(true);
+            return _fadeImage.DOFade(1f, fade_time).SetUpdate(true);
         }
 
-        public Tween FadeInFromBlack()
+        public Tween FadeInFromBlack(float fade_time = FADE_TIME)
         {
-            return _fadeImage.DOFade(0f, FADE_TIME).SetUpdate(true);
+            return _fadeImage.DOFade(0f, fade_time).SetUpdate(true);
         }
 
-        public void FadeHide(Action work)
+        public void FadeHide(Action work, float fade_time = FADE_TIME)
         {
-            FadeOutToBlack()
+            FadeOutToBlack(fade_time)
                 .OnComplete(() =>
                 {
                     work?.Invoke();
-                    FadeInFromBlack();
+                    FadeInFromBlack(fade_time);
                 });
         }
     }
