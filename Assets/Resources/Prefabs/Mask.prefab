@@ -58,6 +58,7 @@ MonoBehaviour:
   Canvas: {fileID: 9059087158000901608}
   Dialogue: {fileID: 7362143099588989335}
   Amplitude: 0.025
+  Clickable: 0
 --- !u!61 &3803427382796595883
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -102,7 +103,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.75, y: 0.75}
   m_EdgeRadius: 0
 --- !u!1 &330620364033859916
 GameObject:

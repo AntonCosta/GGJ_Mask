@@ -1,6 +1,7 @@
 using System;
 using DG.Tweening;
 using GGJ.Managers;
+using GGJ.Utils;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -71,13 +72,16 @@ namespace GGJ.Controllers
 
         private void Update()
         {
-            if (Mouse.current.leftButton.wasPressedThisFrame && Clickable)
+            if (Mouse.current.leftButton.wasPressedThisFrame && Clickable && !ScreenFader.Instance.IsTweening)
             {
                 var worldPoint = _camera.ScreenToWorldPoint(Mouse.current.position.ReadValue());
                 var hit = Physics2D.Raycast(worldPoint, Vector2.zero, 0f);
                 if (hit.collider != null)
                 {
-                    OnMaskClicked?.Invoke(this);
+                    if (hit.collider.gameObject == gameObject)
+                    {
+                        OnMaskClicked?.Invoke(this);
+                    }
                 }
             }
         }
