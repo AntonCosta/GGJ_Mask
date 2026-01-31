@@ -1,25 +1,40 @@
 fileFormatVersion: 2
-guid: 68432edded3fb364da9b130c24771617
+guid: f9ab9a70a5fb81d43ab0078208601149
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8828865232882267660
-    second: MOUTH_0
+      213: -1839095543586420497
+    second: MOUTH 1_0
   - first:
-      213: 2890882090813790678
-    second: MOUTH_1
+      213: -3181552708039817622
+    second: MOUTH 1_1
   - first:
-      213: -8308654632461633268
-    second: MOUTH_2
+      213: -5288812711448994313
+    second: MOUTH 1_2
   - first:
-      213: 2049762292081993144
-    second: MOUTH_3
+      213: 6661261106406951261
+    second: MOUTH 1_3
   - first:
-      213: -2591872502742805051
-    second: MOUTH_4
+      213: -5579254149585800187
+    second: MOUTH 1_4
   - first:
-      213: -7440759305428336613
-    second: MOUTH_5
+      213: 8140946740801567577
+    second: MOUTH 1_5
+  - first:
+      213: 4740190405545588413
+    second: MOUTH 1_6
+  - first:
+      213: -5255852740539653110
+    second: MOUTH 1_7
+  - first:
+      213: 6446225641357939463
+    second: MOUTH 1_8
+  - first:
+      213: -8088958459560934778
+    second: MOUTH 1_9
+  - first:
+      213: -4425367324929987009
+    second: MOUTH 1_10
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -52,7 +67,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -128,7 +143,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MOUTH_0
+      name: MOUTH 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -143,14 +158,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c067eb7e62e668a70800000000000000
-      internalID: 8828865232882267660
+      spriteID: fe80788d8583a76e0800000000000000
+      internalID: -1839095543586420497
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MOUTH_1
+      name: MOUTH 1_1
       rect:
         serializedVersion: 2
         x: 96
@@ -165,14 +180,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6d99e7ee1f97e1820800000000000000
-      internalID: 2890882090813790678
+      spriteID: a66ca1b2baad8d3d0800000000000000
+      internalID: -3181552708039817622
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MOUTH_2
+      name: MOUTH 1_2
       rect:
         serializedVersion: 2
         x: 192
@@ -187,14 +202,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c0978b602aab1bc80800000000000000
-      internalID: -8308654632461633268
+      spriteID: 7fd138a3cdc5a96b0800000000000000
+      internalID: -5288812711448994313
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MOUTH_3
+      name: MOUTH 1_3
       rect:
         serializedVersion: 2
         x: 288
@@ -209,14 +224,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8b5a98dc1f7327c10800000000000000
-      internalID: 2049762292081993144
+      spriteID: d590383fead817c50800000000000000
+      internalID: 6661261106406951261
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MOUTH_4
+      name: MOUTH 1_4
       rect:
         serializedVersion: 2
         x: 384
@@ -231,8 +246,118 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5c599eae0b1d70cd0800000000000000
-      internalID: -2591872502742805051
+      spriteID: 504705e39e18292b0800000000000000
+      internalID: -5579254149585800187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOUTH 1_5
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95bf9dc9de37af070800000000000000
+      internalID: 8140946740801567577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOUTH 1_6
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db6724a2f0a88c140800000000000000
+      internalID: 4740190405545588413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOUTH 1_7
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a04ee5877c57f07b0800000000000000
+      internalID: -5255852740539653110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOUTH 1_8
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70397273118957950800000000000000
+      internalID: 6446225641357939463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOUTH 1_9
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 682cafe532f3ebf80800000000000000
+      internalID: -8088958459560934778
       vertices: []
       indices: 
       edges: []
@@ -241,7 +366,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 46f248ddd4517b24e9abdbb10f0ae802
+    spriteID: dc713549cc0fb844f87f913456d7f6bf
     internalID: 0
     vertices: []
     indices: 
@@ -251,13 +376,18 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":96.0,"y":96.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":1.0},"gridSpriteSize":{"x":96.0,"y":96.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      MOUTH_0: 8828865232882267660
-      MOUTH_1: 2890882090813790678
-      MOUTH_2: -8308654632461633268
-      MOUTH_3: 2049762292081993144
-      MOUTH_4: -2591872502742805051
+      MOUTH 1_0: -1839095543586420497
+      MOUTH 1_1: -3181552708039817622
+      MOUTH 1_2: -5288812711448994313
+      MOUTH 1_3: 6661261106406951261
+      MOUTH 1_4: -5579254149585800187
+      MOUTH 1_5: 8140946740801567577
+      MOUTH 1_6: 4740190405545588413
+      MOUTH 1_7: -5255852740539653110
+      MOUTH 1_8: 6446225641357939463
+      MOUTH 1_9: -8088958459560934778
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

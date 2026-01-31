@@ -1,31 +1,58 @@
 fileFormatVersion: 2
-guid: 36979f18af085b44397cf3d064736222
+guid: 396d20d49f70e8d48919bd5648eb45dd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6366630669484602570
-    second: EARS_0
+      213: -8975307992622441743
+    second: EARS 1_0
   - first:
-      213: -8320302099884238598
-    second: EARS_1
+      213: -984260369915599512
+    second: EARS 1_1
   - first:
-      213: -2946647020836615718
-    second: EARS_2
+      213: 8711631051319816053
+    second: EARS 1_2
   - first:
-      213: -9063662977328357597
-    second: EARS_3
+      213: 4469825170192650928
+    second: EARS 1_3
   - first:
-      213: -6189924566137352885
-    second: EARS_4
+      213: -655411586231076096
+    second: EARS 1_4
   - first:
-      213: -68938296067219491
-    second: EARS_5
+      213: -4145301464106159791
+    second: EARS 1_5
   - first:
-      213: -5803916720124589508
-    second: EARS_6
+      213: 5820007627162503123
+    second: EARS 1_6
   - first:
-      213: 1244993626142697128
-    second: EARS_7
+      213: 4407224365604069800
+    second: EARS 1_7
+  - first:
+      213: 6680945206566495572
+    second: EARS 1_8
+  - first:
+      213: 6501600785758877070
+    second: EARS 1_9
+  - first:
+      213: -4289969531623967244
+    second: EARS 1_10
+  - first:
+      213: -1834337097124346886
+    second: EARS 1_11
+  - first:
+      213: -4446346302595654447
+    second: EARS 1_12
+  - first:
+      213: 354729658440327708
+    second: EARS 1_13
+  - first:
+      213: -3963831417536125697
+    second: EARS 1_14
+  - first:
+      213: -607827630876756476
+    second: EARS 1_15
+  - first:
+      213: 2987136847650630102
+    second: EARS 1_16
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -58,7 +85,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -134,7 +161,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: EARS_0
+      name: EARS 1_0
       rect:
         serializedVersion: 2
         x: 96
@@ -149,14 +176,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ac4bcbeacd0da5850800000000000000
-      internalID: 6366630669484602570
+      spriteID: 1fad3061fec417380800000000000000
+      internalID: -8975307992622441743
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EARS_1
+      name: EARS 1_1
       rect:
         serializedVersion: 2
         x: 192
@@ -171,14 +198,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: af89670b259588c80800000000000000
-      internalID: -8320302099884238598
+      spriteID: 865afac88643752f0800000000000000
+      internalID: -984260369915599512
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EARS_2
+      name: EARS 1_2
       rect:
         serializedVersion: 2
         x: 288
@@ -193,14 +220,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ad9029485286b17d0800000000000000
-      internalID: -2946647020836615718
+      spriteID: 57f2e24f84ee5e870800000000000000
+      internalID: 8711631051319816053
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EARS_3
+      name: EARS 1_3
       rect:
         serializedVersion: 2
         x: 384
@@ -215,8 +242,118 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 32fdb702b86673280800000000000000
-      internalID: -9063662977328357597
+      spriteID: 0b2de656f42080e30800000000000000
+      internalID: 4469825170192650928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EARS 1_4
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00b750582a287e6f0800000000000000
+      internalID: -655411586231076096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EARS 1_5
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 151bb09f74ee876c0800000000000000
+      internalID: -4145301464106159791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EARS 1_6
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d7c517e912d4c050800000000000000
+      internalID: 5820007627162503123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EARS 1_7
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a1e645c53b992d30800000000000000
+      internalID: 4407224365604069800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EARS 1_8
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 455ae39a44c77bc50800000000000000
+      internalID: 6680945206566495572
       vertices: []
       indices: 
       edges: []
@@ -225,7 +362,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 78e282bd1ea166b4d9e36932c6bef11e
+    spriteID: 13169e31c6ea26842a0892a944368210
     internalID: 0
     vertices: []
     indices: 
@@ -235,12 +372,17 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":96.0,"y":96.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":1.0},"gridSpriteSize":{"x":96.0,"y":96.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      EARS_0: 6366630669484602570
-      EARS_1: -8320302099884238598
-      EARS_2: -2946647020836615718
-      EARS_3: -9063662977328357597
+      EARS 1_0: -8975307992622441743
+      EARS 1_1: -984260369915599512
+      EARS 1_2: 8711631051319816053
+      EARS 1_3: 4469825170192650928
+      EARS 1_4: -655411586231076096
+      EARS 1_5: -4145301464106159791
+      EARS 1_6: 5820007627162503123
+      EARS 1_7: 4407224365604069800
+      EARS 1_8: 6680945206566495572
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

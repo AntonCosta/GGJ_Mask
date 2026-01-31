@@ -1,22 +1,37 @@
 fileFormatVersion: 2
-guid: 06c49bf23a3b6a04d9935cb3d1ab64a2
+guid: 1800cdc47c8193144a1bdd5166016399
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4484672333904882093
-    second: FACE TYPE_0
+      213: -2382516945541198374
+    second: FACE TYPE 1_0
   - first:
-      213: 7554270712651904898
-    second: FACE TYPE_1
+      213: 7443904150409252355
+    second: FACE TYPE 1_1
   - first:
-      213: -8883881769207906562
-    second: FACE TYPE_2
+      213: -39565850957590484
+    second: FACE TYPE 1_2
   - first:
-      213: 1039885407878453361
-    second: FACE TYPE_3
+      213: -8682299461123835465
+    second: FACE TYPE 1_3
   - first:
-      213: 9177806606198924021
-    second: FACE TYPE_4
+      213: -7720730409674830926
+    second: FACE TYPE 1_4
+  - first:
+      213: 1254913428449473627
+    second: FACE TYPE 1_5
+  - first:
+      213: -2810164809268500152
+    second: FACE TYPE 1_6
+  - first:
+      213: -7705887205087208735
+    second: FACE TYPE 1_7
+  - first:
+      213: -5525101012167344681
+    second: FACE TYPE 1_8
+  - first:
+      213: 4982292721178754862
+    second: FACE TYPE 1_9
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,7 +64,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -125,7 +140,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FACE TYPE_0
+      name: FACE TYPE 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -140,14 +155,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 356d39be54e33c1c0800000000000000
-      internalID: -4484672333904882093
+      spriteID: add0bad06799feed0800000000000000
+      internalID: -2382516945541198374
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FACE TYPE_1
+      name: FACE TYPE 1_1
       rect:
         serializedVersion: 2
         x: 96
@@ -162,14 +177,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 287f0cc503926d860800000000000000
-      internalID: 7554270712651904898
+      spriteID: 30e0333a26f0e4760800000000000000
+      internalID: 7443904150409252355
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FACE TYPE_2
+      name: FACE TYPE 1_2
       rect:
         serializedVersion: 2
         x: 192
@@ -184,14 +199,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: efe3bc7899c16b480800000000000000
-      internalID: -8883881769207906562
+      spriteID: c20df64711f637ff0800000000000000
+      internalID: -39565850957590484
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FACE TYPE_3
+      name: FACE TYPE 1_3
       rect:
         serializedVersion: 2
         x: 288
@@ -206,14 +221,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 17815b7d44a6e6e00800000000000000
-      internalID: 1039885407878453361
+      spriteID: 7b9f52214a6428780800000000000000
+      internalID: -8682299461123835465
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FACE TYPE_4
+      name: FACE TYPE 1_4
       rect:
         serializedVersion: 2
         x: 384
@@ -228,8 +243,118 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5f268b37b7e1e5f70800000000000000
-      internalID: 9177806606198924021
+      spriteID: 2bb86cc39947ad490800000000000000
+      internalID: -7720730409674830926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FACE TYPE 1_5
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5439964d195a6110800000000000000
+      internalID: 1254913428449473627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FACE TYPE 1_6
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8496f3faef94009d0800000000000000
+      internalID: -2810164809268500152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FACE TYPE 1_7
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ea9c8d1a603f0590800000000000000
+      internalID: -7705887205087208735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FACE TYPE 1_8
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7dd3d9517e5e253b0800000000000000
+      internalID: -5525101012167344681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FACE TYPE 1_9
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2fbfd425d8a42540800000000000000
+      internalID: 4982292721178754862
       vertices: []
       indices: 
       edges: []
@@ -238,7 +363,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: ca75921af768e6a47a4b0fbc63403e25
+    spriteID: 311744ec7114a7544a4410e59b317eb2
     internalID: 0
     vertices: []
     indices: 
@@ -248,13 +373,18 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":96.0,"y":96.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":1.0},"gridSpriteSize":{"x":96.0,"y":96.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      FACE TYPE_0: -4484672333904882093
-      FACE TYPE_1: 7554270712651904898
-      FACE TYPE_2: -8883881769207906562
-      FACE TYPE_3: 1039885407878453361
-      FACE TYPE_4: 9177806606198924021
+      FACE TYPE 1_0: -2382516945541198374
+      FACE TYPE 1_1: 7443904150409252355
+      FACE TYPE 1_2: -39565850957590484
+      FACE TYPE 1_3: -8682299461123835465
+      FACE TYPE 1_4: -7720730409674830926
+      FACE TYPE 1_5: 1254913428449473627
+      FACE TYPE 1_6: -2810164809268500152
+      FACE TYPE 1_7: -7705887205087208735
+      FACE TYPE 1_8: -5525101012167344681
+      FACE TYPE 1_9: 4982292721178754862
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
