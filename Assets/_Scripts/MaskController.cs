@@ -28,9 +28,11 @@ namespace GGJ.Controllers
         [SerializeField] public GameObject PotentialMaskPosition;
 
         public Tween Tween => _tween;
+        [HideInInspector] public int Id;
         [HideInInspector] public float Amplitude = 0.025f;
         [HideInInspector] public string DialogueKnowledgeType;
         [HideInInspector] public List<SpriteRenderer> MaskComponents;
+        [HideInInspector] public List<TextMeshProUGUI> WhatTheySaidAboutYou;
         
         public string PersonalityType
         {

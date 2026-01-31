@@ -35,6 +35,7 @@ namespace GGJ
 
         private Dialogues _dialogueModel;
         private int _nrOfMasks = 0;
+        private int _maskId = 0;
         
         private void Awake()
         {
@@ -81,6 +82,7 @@ namespace GGJ
             var newMask = Instantiate(newMaskPrefab, transform.position, Quaternion.identity);
 
             var maskController = newMask.GetComponent<MaskController>();
+            maskController.Id = _maskId++;
             maskController.Accessory.sprite = _accessory.RandomElement();
             maskController.Hat.sprite = _hats.RandomElement();
             maskController.Eyes.sprite = _eyes.RandomEvenElement();

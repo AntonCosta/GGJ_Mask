@@ -90,10 +90,16 @@ namespace GGJ.Managers
                 }
 
                 mask.Dialogue.text = mask.Dialogue.text.Replace("${MASK_NAME}", "     ");
+                killerMask.WhatTheySaidAboutYou.Add(mask.Dialogue);
             }
             else
             {
-                var maskCopy = MaskManager.Instance.Masks.RandomElement().gameObject;
+                var maskCopyController = MaskManager.Instance.Masks.RandomElement();
+                while (maskCopyController.Id == mask.Id)
+                {
+                    maskCopyController = MaskManager.Instance.Masks.RandomElement();
+                }
+                var maskCopy = maskCopyController.gameObject;
                 var randomMaskComponent = maskCopy.GetComponent<MaskController>().MaskComponents.RandomElement();
                 while (randomMaskComponent.sprite == null)
                 {
@@ -128,6 +134,7 @@ namespace GGJ.Managers
                 }
 
                 mask.Dialogue.text = mask.Dialogue.text.Replace("${MASK_NAME}", "     ");
+                maskCopyController.WhatTheySaidAboutYou.Add(mask.Dialogue);
             }
         }
     }
