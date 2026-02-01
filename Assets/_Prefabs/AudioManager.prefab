@@ -61,10 +61,14 @@ MonoBehaviour:
   hoverClip: {fileID: 8300000, guid: cc9185f92ddb3bf418da0f4dbacfe434, type: 3}
   positiveClip: {fileID: 8300000, guid: cc9185f92ddb3bf418da0f4dbacfe434, type: 3}
   negativeClip: {fileID: 8300000, guid: cd0644f3aee866841a5c5ea8789c52ee, type: 3}
+  writingClip: {fileID: 8300000, guid: 18a7621571a5c834bbc1269c1370789a, type: 3}
+  writingPitchVariation: 0.04
+  writingVolumeVariation: 0.1
   npcVoiceSource: {fileID: 2369134157488454371}
   voiceLow: {fileID: 8300000, guid: 82fc4cf98a80b4c4982285aa675c2281, type: 3}
   voiceNormal: {fileID: 8300000, guid: 53c531f969664c4489cc7ff19f3107ab, type: 3}
   voiceHigh: {fileID: 8300000, guid: 7ba023b586959a24d905aba2b94a8e99, type: 3}
+  voicePitchVariation: 0.03
   voiceCooldown: 0.15
 --- !u!1 &5189609108270148064
 GameObject:

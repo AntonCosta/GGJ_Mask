@@ -21,7 +21,15 @@ public class AudioManager : MonoBehaviour
     public AudioClip hoverClip;
     public AudioClip positiveClip;
     public AudioClip negativeClip;
+    [Header("UI Writing Sound")]
+    public AudioClip writingClip;
 
+    [Range(0f, 0.1f)] public float writingPitchVariation = 0.04f; // +-4%
+    [Range(0f, 0.2f)] public float writingVolumeVariation = 0.1f; // +-10%
+
+    
+
+    
     [Header("NPC Voice One Shots")]
     public AudioSource npcVoiceSource;
     public AudioClip voiceLow;
@@ -117,6 +125,21 @@ public class AudioManager : MonoBehaviour
 
         npcVoiceSource.PlayOneShot(clip, 1f);
     }
+    public void PlayUIWriting()
+    {
+        if (uiSource == null || writingClip == null) return;
+
+        // Random pitch
+        float pitchOffset = Random.Range(-writingPitchVariation, writingPitchVariation);
+        uiSource.pitch = 1f + pitchOffset;
+
+        // Random volume
+        float volOffset = Random.Range(-writingVolumeVariation, writingVolumeVariation);
+        float finalVol = Mathf.Clamp01(0.6f + volOffset);
+
+        uiSource.PlayOneShot(writingClip, finalVol);
+    }
+
 
 
 }
