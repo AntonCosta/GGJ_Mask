@@ -113,4 +113,7 @@ MonoBehaviour:
   end_low: {fileID: 8300000, guid: 810c6c6933f0bec4dac10522dd15e43c, type: 3}
   end_percussion: {fileID: 8300000, guid: 9cdf0e026503a7b49add726b432c3946, type: 3}
   end_cymbal_crash: {fileID: 8300000, guid: 1edf8a9c974477548aca96911673415c, type: 3}
-  endVolume: 0.436
+  endVolume: 0.349
+  wrongDist1: 0.282
+  wrongDist2: 0.651
+  wrongDistFade: 0.15

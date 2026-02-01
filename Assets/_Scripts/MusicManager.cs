@@ -89,6 +89,15 @@ public class MusicManager : MonoBehaviour
 
     [Range(0f, 1f)] public float endVolume = 1f;
 
+    [Header("Wrong Guess Distortion")]
+    [Range(0f, 1f)] public float wrongDist1 = 0.15f;
+    [Range(0f, 1f)] public float wrongDist2 = 0.35f;
+    public float wrongDistFade = 0.15f;
+
+    int wrongGuessCount = 0;
+    List<AudioDistortionFilter> distFilters = new List<AudioDistortionFilter>();
+    Coroutine distRoutine;
+
 
     
     MusicState currentState = MusicState.None;
@@ -110,6 +119,9 @@ public class MusicManager : MonoBehaviour
         EnsureSource(ref low);
         EnsureSource(ref pedal);
         EnsureSource(ref percussion);
+        
+        CacheDistortionFilters();
+
 
         // Keep a lowpass filter on percussion so we can toggle it in conviction.
         if (percussion.source != null)
@@ -174,8 +186,20 @@ public class MusicManager : MonoBehaviour
 
     public void SetState(MusicState state, float overrideFadeSeconds)
     {
+        if (state == MusicState.MainMenu)
+        {
+            wrongGuessCount = 0;
+            FadeDistortion(0f, 0.2f);
+        }
+
         currentState = state;
 
+
+        if (state == MusicState.MainMenu)
+{
+    wrongGuessCount = 0;
+    FadeDistortion(0f, 0.2f);
+}
 
         // Stop any loop randomization routine and restart if needed.
         if (loopRoutine != null)
@@ -295,6 +319,10 @@ public class MusicManager : MonoBehaviour
     {
         if (currentState != MusicState.ConvictionPhase) return;
 
+        wrongGuessCount++;
+        
+        if (wrongGuessCount == 1) FadeDistortion(wrongDist1, wrongDistFade);
+        else FadeDistortion(wrongDist2, wrongDistFade);
         // Stop normal random loop, switch to penalty mode.
         if (loopRoutine != null)
         {
@@ -317,12 +345,18 @@ public class MusicManager : MonoBehaviour
     // Call when player is correct and wins (from conviction).
     public void ResolveWin()
     {
+        wrongGuessCount = 0;
+        FadeDistortion(0f, 0.2f);
+
         SetState(MusicState.Win);
     }
 
     // Call when player is wrong again and loses.
     public void ResolveLose()
     {
+        wrongGuessCount = 0;
+        FadeDistortion(0f, 0.2f);
+
         SetState(MusicState.Lose);
     }
 
@@ -637,6 +671,97 @@ public class MusicManager : MonoBehaviour
         stem.source.Stop();
         stem.source.volume = 0f;
     }
+
+void CacheDistortionFilters()
+{
+    distFilters.Clear();
+    AddDist(bass_arp);
+    AddDist(bass);
+    AddDist(bells);
+    AddDist(chords);
+    AddDist(high);
+    AddDist(low);
+    AddDist(pedal);
+    AddDist(percussion);
+
+    SetDistortionImmediate(0f);
+}
+
+void AddDist(Stem stem)
+{
+    if (stem == null || stem.source == null) return;
+
+    AudioDistortionFilter f = stem.source.GetComponent<AudioDistortionFilter>();
+    if (f == null) f = stem.source.gameObject.AddComponent<AudioDistortionFilter>();
+    f.enabled = false;
+    f.distortionLevel = 0f;
+    distFilters.Add(f);
+}
+
+void SetDistortionImmediate(float level)
+{
+    level = Mathf.Clamp01(level);
+    for (int i = 0; i < distFilters.Count; i++)
+    {
+        var f = distFilters[i];
+        if (f == null) continue;
+        f.enabled = level > 0f;
+        f.distortionLevel = level;
+    }
+}
+
+void FadeDistortion(float target, float seconds)
+{
+    if (distRoutine != null) StopCoroutine(distRoutine);
+    distRoutine = StartCoroutine(DistRoutine(target, seconds));
+}
+
+IEnumerator DistRoutine(float target, float seconds)
+{
+    target = Mathf.Clamp01(target);
+
+    float start = 0f;
+    if (distFilters.Count > 0 && distFilters[0] != null)
+        start = distFilters[0].distortionLevel;
+
+    for (int i = 0; i < distFilters.Count; i++)
+    {
+        var f = distFilters[i];
+        if (f == null) continue;
+        if (target > 0f) f.enabled = true;
+    }
+
+    float t = 0f;
+    if (seconds <= 0f) seconds = 0.0001f;
+
+    while (t < seconds)
+    {
+        t += Time.deltaTime;
+        float k = t / seconds;
+        if (k > 1f) k = 1f;
+
+        float v = Mathf.Lerp(start, target, k);
+
+        for (int i = 0; i < distFilters.Count; i++)
+        {
+            var f = distFilters[i];
+            if (f == null) continue;
+            f.distortionLevel = v;
+        }
+
+        yield return null;
+    }
+
+    for (int i = 0; i < distFilters.Count; i++)
+    {
+        var f = distFilters[i];
+        if (f == null) continue;
+        f.distortionLevel = target;
+        if (target <= 0f) f.enabled = false;
+    }
+
+    distRoutine = null;
+}
 
 
 }
