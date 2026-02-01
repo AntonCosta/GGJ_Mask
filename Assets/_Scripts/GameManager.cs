@@ -34,6 +34,7 @@ namespace GGJ.Managers
         [SerializeField] private GameObject _youWinUI;
         [SerializeField] private GameObject _youLoseUI;
         [SerializeField] private GameObject _notepad;
+        [SerializeField] private GameObject _logo;
 
         [Header("Audio")]
         [SerializeField] private AudioManager audioManager;
@@ -120,6 +121,7 @@ namespace GGJ.Managers
                     _convictionScreen.SetActive(false);
                     InConvictionPhase = false;
                     _maskPositions.SetActive(true);
+                    _logo.SetActive(true);
                     LevelGenerator.Instance.InterviewRooms.ForEach(Destroy);
                     LevelGenerator.Instance.InterviewRooms.Clear();
                     PlayerController.Instance.Navigation.SetActive(false);
@@ -210,6 +212,7 @@ namespace GGJ.Managers
             _outsideShot.SetActive(false);
             _insideShot.SetActive(false);
             _tutorialShot.SetActive(false);
+            _logo.SetActive(false);
             _inGameUI.SetActive(true);
             _notepad.SetActive(true);
             _nextPhase.gameObject.SetActive(false);

@@ -73,6 +73,7 @@ namespace GGJ.Managers
                     }
                 }
 
+                mask.Dialogue.text = mask.DialogueKnowledgeType + "?\n" + mask.Dialogue.text;
                 mask.Dialogue.text = mask.Dialogue.text
                     .Replace("${PLACE}", gameManager.CrimeLocation)
                     .Replace("${TIME}", gameManager.CrimeTime)
@@ -118,6 +119,7 @@ namespace GGJ.Managers
                     }
                 }
 
+                mask.Dialogue.text = mask.DialogueKnowledgeType + "?\n" + mask.Dialogue.text;
                 mask.Dialogue.text = mask.Dialogue.text
                     .Replace("${PLACE}", gameManager.GetRandomLocation())
                     .Replace("${TIME}", gameManager.GetRandomTime())
