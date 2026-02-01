@@ -58,9 +58,11 @@ namespace GGJ.Managers
         [SerializeField] private AudioClip _positiveClip;
         [SerializeField] private AudioClip _negativeClip;
         
-        [Header("Vox audio")]
-        [SerializeField] private AudioClip _dialogueClip;
-
+        [Header("NPC Voice One Shots")]
+        [SerializeField] private AudioSource _npcVoiceSource;
+        [SerializeField] private AudioClip _voiceLow;
+        [SerializeField] private AudioClip _voiceNormal;
+        [SerializeField] private AudioClip _voiceHigh;
 
         public static GameManager Instance { get; private set; }
         public MurderModel MurderData => _murderModel;
@@ -331,11 +333,20 @@ namespace GGJ.Managers
           if (_uiSource != null && clip != null)
               _uiSource.PlayOneShot(clip, vol);
       }
-
-      public void PlayDialogueReveal()
+      public void PlayNpcVoiceOneShot(string voice)
       {
-          PlayUI(_dialogueClip, 0.5f);
+          if (_npcVoiceSource == null) return;
+
+          AudioClip clip = _voiceNormal;
+
+          if (voice == "Low") clip = _voiceLow;
+          else if (voice == "High") clip = _voiceHigh;
+
+          if (clip == null) return;
+
+          _npcVoiceSource.PlayOneShot(clip, 1f);
       }
+
 
 
     }
