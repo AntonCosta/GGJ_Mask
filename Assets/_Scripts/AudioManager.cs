@@ -212,6 +212,52 @@ public class AudioManager : MonoBehaviour
 
         uiSource.PlayOneShot(npcCycleClip, finalVol);
     }
+    public void StopNpcVoice(float fadeOutSeconds)
+    {
+        if (npcVoiceSource == null) return;
+
+        if (npcVoiceRoutine != null)
+        {
+            StopCoroutine(npcVoiceRoutine);
+            npcVoiceRoutine = null;
+        }
+
+        npcVoiceRoutine = StartCoroutine(FadeOutAndStopNpcVoice(fadeOutSeconds));
+    }
+
+    IEnumerator FadeOutAndStopNpcVoice(float fadeOutSeconds)
+    {
+        if (!npcVoiceSource.isPlaying)
+        {
+            npcVoiceRoutine = null;
+            yield break;
+        }
+
+        float startVol = npcVoiceSource.volume;
+
+        if (fadeOutSeconds <= 0f)
+        {
+            npcVoiceSource.Stop();
+            npcVoiceSource.volume = startVol;
+            npcVoiceRoutine = null;
+            yield break;
+        }
+
+        float t = 0f;
+        while (t < fadeOutSeconds)
+        {
+            t += Time.deltaTime;
+            float k = t / fadeOutSeconds;
+            if (k > 1f) k = 1f;
+            npcVoiceSource.volume = Mathf.Lerp(startVol, 0f, k);
+            yield return null;
+        }
+
+        npcVoiceSource.Stop();
+        npcVoiceSource.volume = startVol;
+        npcVoiceRoutine = null;
+    }
+
 
 
 
