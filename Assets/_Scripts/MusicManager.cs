@@ -671,6 +671,54 @@ public class MusicManager : MonoBehaviour
         stem.source.Stop();
         stem.source.volume = 0f;
     }
+    // =======================
+// MAIN MENU RESET
+// =======================
+
+    public void ResetToMainMenu(float fadeInSeconds)
+    {
+        // Stop any randomization coroutine
+        if (loopRoutine != null)
+        {
+            StopCoroutine(loopRoutine);
+            loopRoutine = null;
+        }
+
+        // Stop end one-shots if used
+        if (endOneShotSource != null)
+            endOneShotSource.Stop();
+
+        // Restart all stems if stopped
+        EnsureStemPlaying(bass_arp);
+        EnsureStemPlaying(bass);
+        EnsureStemPlaying(bells);
+        EnsureStemPlaying(chords);
+        EnsureStemPlaying(high);
+        EnsureStemPlaying(low);
+        EnsureStemPlaying(pedal);
+        EnsureStemPlaying(percussion);
+
+        // Apply menu mix
+        SetState(MusicState.MainMenu, fadeInSeconds);
+    }
+
+    void EnsureStemPlaying(Stem stem)
+    {
+        if (stem == null) return;
+        if (stem.source == null) return;
+        if (stem.source.clip == null) return;
+
+        stem.source.loop = true;
+
+        if (!stem.source.isPlaying)
+        {
+            stem.source.time = 0f;
+            stem.source.volume = 0f;
+            stem.source.Play();
+        }
+    }
+
+
 
 void CacheDistortionFilters()
 {
@@ -762,6 +810,7 @@ IEnumerator DistRoutine(float target, float seconds)
 
     distRoutine = null;
 }
+
 
 
 }

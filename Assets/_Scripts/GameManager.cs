@@ -114,6 +114,17 @@ namespace GGJ.Managers
             {
                 ScreenFader.Instance.FadeHide(() =>
                 {
+                    // RESET MUSIC FIRST
+                    if (music != null)
+                    {
+                        music.ResetToMainMenu(0.4f);
+                    }
+
+                    // Stop any leftover NPC voice
+                    if (audioManager != null)
+                    {
+                        audioManager.StopNpcVoice(0.08f);
+                    }
                     _youWon = false;
                     _youLost = false;
                     _youWinUI.SetActive(false);
@@ -125,6 +136,7 @@ namespace GGJ.Managers
                     LevelGenerator.Instance.InterviewRooms.ForEach(Destroy);
                     LevelGenerator.Instance.InterviewRooms.Clear();
                     PlayerController.Instance.Navigation.SetActive(false);
+                    
                     _mainMenu.gameObject.SetActive(true);
                     _levelGenerator = LevelGenerator.Instance;
                     ReadMurderData();
@@ -176,7 +188,7 @@ namespace GGJ.Managers
         {
             
             audioManager.StartRainSFX(_menuRainVolume, audioManager.menuCutoff);
-            music.SetState(MusicState.InsideShot);
+            music.SetState(MusicState.OutsideShot);
             
             _outsideShot.SetActive(true);
             _insideShot.SetActive(false);
@@ -187,7 +199,7 @@ namespace GGJ.Managers
         private void ShowInsideShot()
         {
             audioManager.PlayThunder();
-            
+            music.SetState(MusicState.InsideShot);
             
             _outsideShot.SetActive(false);
             _insideShot.SetActive(true);
