@@ -8,7 +8,7 @@
           "Dialogues": [
             {
               "Id": "1",
-              "Text": "I think ${MASK_NAME} was near the ${PLACE}…"
+              "Text": "I think ${MASK_NAME} were near the ${PLACE}…"
             },
             {
               "Id": "2",
@@ -193,11 +193,11 @@
           "Dialogues": [
             {
               "Id": "1",
-              "Text": "I saw ${MASK_NAME} near the ${PLACE}."
+              "Text": "I saw ${MASK_NAME} were near the ${PLACE}."
             },
             {
               "Id": "2",
-              "Text": "${MASK_NAME} was around the ${PLACE}."
+              "Text": "I know ${MASK_NAME} were around the ${PLACE}."
             },
             {
               "Id": "3",
@@ -205,11 +205,11 @@
             },
             {
               "Id": "4",
-              "Text": "I noticed ${MASK_NAME} at the ${PLACE}."
+              "Text": "I noticed ${MASK_NAME} were at the ${PLACE}."
             },
             {
               "Id": "5",
-              "Text": "${MASK_NAME} was standing by the ${PLACE}."
+              "Text": "I know ${MASK_NAME} were standing by the ${PLACE}."
             },
             {
               "Id": "6",
@@ -221,7 +221,7 @@
             },
             {
               "Id": "8",
-              "Text": "I remember seeing ${MASK_NAME} at the ${PLACE}."
+              "Text": "I remember seeing ${MASK_NAME} were at the ${PLACE}."
             },
             {
               "Id": "9",
@@ -378,7 +378,7 @@
           "Dialogues": [
             {
               "Id": "1",
-              "Text": "${MASK_NAME} was at the ${PLACE}, for sure."
+              "Text": "For sure ${MASK_NAME} were at the ${PLACE}."
             },
             {
               "Id": "2",
@@ -568,7 +568,7 @@
             },
             {
               "Id": "2",
-              "Text": "Ask ${MASK_NAME} about that."
+              "Text": "Ask some else about that, ${MASK_NAME} know about this."
             },
             {
               "Id": "3",
@@ -641,7 +641,7 @@
             },
             {
               "Id": "9",
-              "Text": "Go ask ${MASK_NAME}."
+              "Text": "Go ask someone else, ${MASK_NAME} know something."
             },
             {
               "Id": "10",
@@ -723,7 +723,7 @@
             },
             {
               "Id": "7",
-              "Text": "Go ask ${MASK_NAME}."
+              "Text": "Go ask someone else, ${MASK_NAME} know something."
             },
             {
               "Id": "8",

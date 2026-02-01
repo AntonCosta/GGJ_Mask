@@ -34,7 +34,7 @@ namespace GJJ.Managers
         private int _currentNrAggresive= 0;
         private int _currentNrShady = 0;
         
-        public AudioManager audio;
+        public AudioManager audioManager;
         
         private void Awake()
         {
@@ -144,7 +144,8 @@ namespace GJJ.Managers
                 //GameManager.Instance.PlayNpcVoiceOneShot(Masks[_currentMaskIndex].Voice);
                 //audio.PlayNpcVoice(Masks[_currentMaskIndex].Voice,1);
                 
-                Masks[LevelGenerator.Instance.NrOfMasks - 1].OffScreen();;
+                Masks[LevelGenerator.Instance.NrOfMasks - 1].OffScreen();
+                NotepadController.Instance.ChangeNotepad(Masks[_currentMaskIndex].PlayerVerdict);
                 for (var i = 0; i < LevelGenerator.Instance.NrOfMasks; i++)
                 {
                     _tweenSequence.Join(
@@ -191,6 +192,7 @@ namespace GJJ.Managers
                 //GameManager.Instance.PlayNpcVoiceOneShot(Masks[_currentMaskIndex].Voice);
 
                 Masks[0].OffScreen();
+                NotepadController.Instance.ChangeNotepad(Masks[_currentMaskIndex].PlayerVerdict);
                 for (var i = 0; i < LevelGenerator.Instance.NrOfMasks; i++)
                 {
                     _tweenSequence.Join(

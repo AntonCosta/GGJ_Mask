@@ -143,7 +143,6 @@ namespace GGJ.Controllers
                     break;
             }
             _tween.SetLoops(-1, LoopType.Yoyo);
-            Debug.Log(PersonalityType + " PersonalityType " + IsKiller + " IsKiller " + Role + " Role");
             _onScreen = true;
             _wasOnScreen = true;
         }

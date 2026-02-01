@@ -2541,7 +2541,7 @@ MonoBehaviour:
   _youWinUI: {fileID: 443383191}
   _youLoseUI: {fileID: 75829411}
   _notepad: {fileID: 1824337222}
-  audio: {fileID: 1026192483396023673}
+  audioManager: {fileID: 1026192483396023673}
   _menuRainVolume: 0.6
   _gameRainVolume: 0.25
   _convictionRainVolume: 0
@@ -7783,7 +7783,7 @@ MonoBehaviour:
   _location: {fileID: 2103612049}
   _time: {fileID: 121150128}
   _voice: {fileID: 1573567980}
-  audio: {fileID: 0}
+  audio: {fileID: 1026192483396023673}
 --- !u!114 &1983064281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8325,7 +8325,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MaskManager
   Masks: []
   IsTweening: 0
-  audio: {fileID: 0}
+  audioManager: {fileID: 1026192483396023673}
 --- !u!4 &2080047224
 Transform:
   m_ObjectHideFlags: 0

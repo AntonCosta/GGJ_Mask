@@ -36,7 +36,7 @@ namespace GGJ.Managers
         [SerializeField] private GameObject _notepad;
 
         [Header("Audio")]
-        [SerializeField] private AudioManager audio;
+        [SerializeField] private AudioManager audioManager;
         
         [Header("Rain Mix (per state)")]
         [Range(0f, 1f)] [SerializeField] private float _menuRainVolume = 0.6f;
@@ -67,21 +67,23 @@ namespace GGJ.Managers
             }
 
             Instance = this;
-            
-            if (audio == null)
-                audio = FindObjectOfType<AudioManager>();
+
+            if (audioManager == null)
+            {
+                audioManager = FindFirstObjectByType<AudioManager>();
+            }
         }
         
         private void Start()
         {
             _startButton.onClick.AddListener(() =>
             {
-                audio.PlayUIPositive();
+                audioManager.PlayUIPositive();
                 GenerateGame();
             });
             _exitButton.onClick.AddListener(() =>
             {
-                audio.PlayUIClick();
+                audioManager.PlayUIClick();
                 Application.Quit();
             });
             _levelGenerator = LevelGenerator.Instance;
@@ -105,6 +107,7 @@ namespace GGJ.Managers
                 _youWinUI.SetActive(false);
                 _youLoseUI.SetActive(false);
                 _convictionScreen.SetActive(false);
+                _maskPositions.SetActive(true);
                 PlayerController.Instance.Navigation.SetActive(false);
                 _mainMenu.gameObject.SetActive(true);
                 _levelGenerator = LevelGenerator.Instance;
@@ -155,7 +158,7 @@ namespace GGJ.Managers
         private void ShowOutsideShot()
         {
             
-            audio.StartRainSFX(_menuRainVolume, audio.menuCutoff);
+            audioManager.StartRainSFX(_menuRainVolume, audioManager.menuCutoff);
             
             _outsideShot.SetActive(true);
             _insideShot.SetActive(false);
@@ -165,7 +168,7 @@ namespace GGJ.Managers
 
         private void ShowInsideShot()
         {
-            audio.PlayThunder();
+            audioManager.PlayThunder();
             
             _outsideShot.SetActive(false);
             _insideShot.SetActive(true);
@@ -183,7 +186,7 @@ namespace GGJ.Managers
 
         private void ShowGame()
         {
-            audio.StartRainSFX(_gameRainVolume, audio.gameCutoff);
+            audioManager.StartRainSFX(_gameRainVolume, audioManager.gameCutoff);
             
             _outsideShot.SetActive(false);
             _insideShot.SetActive(false);
@@ -241,7 +244,7 @@ namespace GGJ.Managers
 
         private void GoToConvictionPhase()
         {
-            audio.StartRainSFX(_convictionRainVolume, audio.convictionCutoff);
+            audioManager.StartRainSFX(_convictionRainVolume, audioManager.convictionCutoff);
             
             _maskPositions.SetActive(false);
             _inGameUI.SetActive(false);
@@ -253,14 +256,14 @@ namespace GGJ.Managers
 
         public void YouWin()
         {
-            audio.PlayUIPositive();
+            audioManager.PlayUIPositive();
             _youWinUI.SetActive(true);
             _youWon = true;
         }
 
         public void YouLose()
         {
-            audio.PlayUINegative();
+            audioManager.PlayUINegative();
             _youLoseUI.SetActive(true);
             _youLost = true;
         }

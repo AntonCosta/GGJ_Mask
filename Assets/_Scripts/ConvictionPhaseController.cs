@@ -29,12 +29,12 @@ namespace GGJ.Controllers
         private List<MaskController> _maskCopies;
         
         [Header("Audio")]
-        [SerializeField] private AudioManager audio;
+        [SerializeField] private AudioManager audioManager;
 
         private void Awake()
         {
-            if (audio == null)
-                audio = FindObjectOfType<AudioManager>();
+            if (audioManager == null)
+                audioManager = FindFirstObjectByType<AudioManager>();
         }
         private void Start()
         {
@@ -69,7 +69,7 @@ namespace GGJ.Controllers
         {
             if (Keyboard.current.escapeKey.wasPressedThisFrame && _maskFile.activeSelf && !ScreenFader.Instance.IsTweening)
             {
-                audio.PlayUINegative();
+                audioManager.PlayUINegative();
                 
                 ReturnToConviction();
             }
@@ -118,7 +118,7 @@ namespace GGJ.Controllers
         {
             if (_currentMask.IsKiller)
             {
-                audio.PlayUIPositive();
+                audioManager.PlayUIPositive();
                 
                 ScreenFader.Instance.FadeHide(GameManager.Instance.YouWin);
                 _maskFile.SetActive(false);
@@ -131,7 +131,7 @@ namespace GGJ.Controllers
             else
             {
                 //GameManager.Instance.PlayUINegative();
-                audio.PlayUINegative();
+                audioManager.PlayUINegative();
                 
                 _maskCopies.RemoveAll(mask => mask.Id == _currentMask.Id);
                 if (_maskCopies.Count == 1)
@@ -167,7 +167,7 @@ namespace GGJ.Controllers
         private void PressedNo()
         {
             //GameManager.Instance.PlayUINegative();
-            audio.PlayUINegative();
+            audioManager.PlayUINegative();
             ReturnToConviction();
         }
 
@@ -175,7 +175,7 @@ namespace GGJ.Controllers
         {
             
             //GameManager.Instance.PlayUIClick();
-            audio.PlayUIClick();
+            audioManager.PlayUIClick();
             
             ScreenFader.Instance.FadeHide(() =>
             {
