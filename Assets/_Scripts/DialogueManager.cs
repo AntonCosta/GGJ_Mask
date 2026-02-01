@@ -67,7 +67,7 @@ namespace GGJ.Managers
                 {
                     var characterTable = mask.Dialogue.spriteAsset.spriteCharacterTable[i];
                     var spriteName = characterTable.name;
-                    if (spriteName == randomMaskComponent.sprite.name)
+                    if (spriteName.Split('_').Last() == randomMaskComponent.sprite.name.Split('_').Last())
                     {
                         id = i;
                     }
@@ -111,7 +111,7 @@ namespace GGJ.Managers
                 {
                     var characterTable = mask.Dialogue.spriteAsset.spriteCharacterTable[i];
                     var spriteName = characterTable.name;
-                    if (spriteName == randomMaskComponent.sprite.name)
+                    if (spriteName.Split('_').Last() == randomMaskComponent.sprite.name.Split('_').Last())
                     {
                         id = i;
                     }

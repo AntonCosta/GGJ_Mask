@@ -339,8 +339,8 @@ TextureImporter:
         y: 515
         width: 62
         height: 23
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -361,8 +361,8 @@ TextureImporter:
         y: 516
         width: 62
         height: 23
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -383,8 +383,8 @@ TextureImporter:
         y: 517
         width: 56
         height: 17
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -405,8 +405,8 @@ TextureImporter:
         y: 517
         width: 56
         height: 17
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -427,8 +427,8 @@ TextureImporter:
         y: 495
         width: 25
         height: 43
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -449,8 +449,8 @@ TextureImporter:
         y: 504
         width: 68
         height: 15
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -471,8 +471,8 @@ TextureImporter:
         y: 483
         width: 52
         height: 39
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -493,8 +493,8 @@ TextureImporter:
         y: 497
         width: 50
         height: 25
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -515,8 +515,8 @@ TextureImporter:
         y: 486
         width: 60
         height: 66
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -537,8 +537,8 @@ TextureImporter:
         y: 425
         width: 88
         height: 54
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -559,8 +559,8 @@ TextureImporter:
         y: 430
         width: 64
         height: 50
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -581,8 +581,8 @@ TextureImporter:
         y: 423
         width: 79
         height: 54
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -603,8 +603,8 @@ TextureImporter:
         y: 440
         width: 66
         height: 37
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -625,8 +625,8 @@ TextureImporter:
         y: 425
         width: 48
         height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -647,8 +647,8 @@ TextureImporter:
         y: 386
         width: 80
         height: 83
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -669,8 +669,8 @@ TextureImporter:
         y: 429
         width: 92
         height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -691,8 +691,8 @@ TextureImporter:
         y: 429
         width: 90
         height: 42
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -713,8 +713,8 @@ TextureImporter:
         y: 433
         width: 86
         height: 44
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -733,10 +733,10 @@ TextureImporter:
         serializedVersion: 2
         x: 25
         y: 324
-        width: 21
+        width: 46
         height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -753,34 +753,12 @@ TextureImporter:
       name: ALL MASK COMPONENTS PACKED 1_19
       rect:
         serializedVersion: 2
-        x: 50
-        y: 324
-        width: 21
-        height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 768f5d2a36eeb66468e49806d1054265
-      internalID: 839085179
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ALL MASK COMPONENTS PACKED 1_20
-      rect:
-        serializedVersion: 2
         x: 122
         y: 328
-        width: 19
+        width: 44
         height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -794,37 +772,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ALL MASK COMPONENTS PACKED 1_21
-      rect:
-        serializedVersion: 2
-        x: 147
-        y: 328
-        width: 19
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e15845a2d9fbd9f469a34802b71cd54a
-      internalID: 293951822
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ALL MASK COMPONENTS PACKED 1_22
+      name: ALL MASK COMPONENTS PACKED 1_20
       rect:
         serializedVersion: 2
         x: 218
         y: 331
-        width: 20
+        width: 43
         height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -838,37 +794,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ALL MASK COMPONENTS PACKED 1_23
-      rect:
-        serializedVersion: 2
-        x: 242
-        y: 331
-        width: 20
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bc2fdfcce78dacc4e814973dcf8c6144
-      internalID: 1696670507
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ALL MASK COMPONENTS PACKED 1_24
+      name: ALL MASK COMPONENTS PACKED 1_21
       rect:
         serializedVersion: 2
         x: 314
         y: 325
         width: 44
         height: 20
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -882,15 +816,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ALL MASK COMPONENTS PACKED 1_25
+      name: ALL MASK COMPONENTS PACKED 1_22
       rect:
         serializedVersion: 2
         x: 409
         y: 326
-        width: 21
+        width: 46
         height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -904,37 +838,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ALL MASK COMPONENTS PACKED 1_26
-      rect:
-        serializedVersion: 2
-        x: 434
-        y: 326
-        width: 21
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c68294021f3553a478ce342c71593679
-      internalID: -1615684543
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ALL MASK COMPONENTS PACKED 1_27
+      name: ALL MASK COMPONENTS PACKED 1_23
       rect:
         serializedVersion: 2
         x: 513
         y: 330
-        width: 5
+        width: 29
         height: 6
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -948,37 +860,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ALL MASK COMPONENTS PACKED 1_28
-      rect:
-        serializedVersion: 2
-        x: 538
-        y: 330
-        width: 5
-        height: 6
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d019cc9ddad952e408eeb9785e86ccdb
-      internalID: -810297791
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ALL MASK COMPONENTS PACKED 1_29
+      name: ALL MASK COMPONENTS PACKED 1_24
       rect:
         serializedVersion: 2
         x: 602
         y: 323
-        width: 19
+        width: 44
         height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -992,37 +882,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ALL MASK COMPONENTS PACKED 1_30
-      rect:
-        serializedVersion: 2
-        x: 627
-        y: 323
-        width: 19
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e49496c6fcfce594e8c92e75a1445ebc
-      internalID: -651188619
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ALL MASK COMPONENTS PACKED 1_31
+      name: ALL MASK COMPONENTS PACKED 1_25
       rect:
         serializedVersion: 2
         x: 704
         y: 323
-        width: 7
+        width: 32
         height: 21
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1036,37 +904,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ALL MASK COMPONENTS PACKED 1_32
-      rect:
-        serializedVersion: 2
-        x: 729
-        y: 323
-        width: 7
-        height: 21
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 37c69e3618cbbc44fba515eada047163
-      internalID: 1706326464
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ALL MASK COMPONENTS PACKED 1_33
+      name: ALL MASK COMPONENTS PACKED 1_26
       rect:
         serializedVersion: 2
         x: 794
         y: 328
-        width: 19
+        width: 45
         height: 10
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1080,37 +926,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ALL MASK COMPONENTS PACKED 1_34
-      rect:
-        serializedVersion: 2
-        x: 819
-        y: 328
-        width: 19
-        height: 10
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4b5e58c78cdbd5c4db296555d6ed03ef
-      internalID: 1332391584
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ALL MASK COMPONENTS PACKED 1_35
+      name: ALL MASK COMPONENTS PACKED 1_27
       rect:
         serializedVersion: 2
         x: 892
         y: 329
-        width: 16
+        width: 40
         height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1124,37 +948,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ALL MASK COMPONENTS PACKED 1_36
-      rect:
-        serializedVersion: 2
-        x: 916
-        y: 329
-        width: 16
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a6be6367e7db0c746ab83d27eab543be
-      internalID: 1587110124
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ALL MASK COMPONENTS PACKED 1_37
+      name: ALL MASK COMPONENTS PACKED 1_28
       rect:
         serializedVersion: 2
         x: 44
         y: 222
         width: 8
         height: 10
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1168,15 +970,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ALL MASK COMPONENTS PACKED 1_38
+      name: ALL MASK COMPONENTS PACKED 1_29
       rect:
         serializedVersion: 2
         x: 140
         y: 220
         width: 8
         height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1190,15 +992,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ALL MASK COMPONENTS PACKED 1_39
+      name: ALL MASK COMPONENTS PACKED 1_30
       rect:
         serializedVersion: 2
-        x: 236
-        y: 218
-        width: 8
-        height: 16
-      alignment: 9
-      pivot: {x: 0.47858158, y: 0.5}
+        x: 238
+        y: 219
+        width: 4
+        height: 12
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1212,15 +1014,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ALL MASK COMPONENTS PACKED 1_40
+      name: ALL MASK COMPONENTS PACKED 1_31
       rect:
         serializedVersion: 2
         x: 334
         y: 221
         width: 20
         height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1234,15 +1036,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ALL MASK COMPONENTS PACKED 1_41
+      name: ALL MASK COMPONENTS PACKED 1_32
       rect:
         serializedVersion: 2
         x: 425
         y: 210
         width: 14
         height: 23
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1256,15 +1058,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ALL MASK COMPONENTS PACKED 1_42
+      name: ALL MASK COMPONENTS PACKED 1_33
       rect:
         serializedVersion: 2
         x: 525
         y: 215
         width: 9
         height: 14
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1278,15 +1080,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ALL MASK COMPONENTS PACKED 1_43
+      name: ALL MASK COMPONENTS PACKED 1_34
       rect:
         serializedVersion: 2
         x: 620
         y: 220
         width: 8
         height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1300,15 +1102,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ALL MASK COMPONENTS PACKED 1_44
+      name: ALL MASK COMPONENTS PACKED 1_35
       rect:
         serializedVersion: 2
         x: 715
         y: 224
-        width: 4
+        width: 10
         height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1322,37 +1124,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ALL MASK COMPONENTS PACKED 1_45
-      rect:
-        serializedVersion: 2
-        x: 721
-        y: 224
-        width: 4
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d286d810fee222e4fbafa209eff6b922
-      internalID: -1892428957
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ALL MASK COMPONENTS PACKED 1_46
+      name: ALL MASK COMPONENTS PACKED 1_36
       rect:
         serializedVersion: 2
         x: 814
         y: 224
         width: 4
         height: 6
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1366,15 +1146,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ALL MASK COMPONENTS PACKED 1_47
+      name: ALL MASK COMPONENTS PACKED 1_37
       rect:
         serializedVersion: 2
         x: 30
         y: 115
         width: 36
         height: 20
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1388,15 +1168,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ALL MASK COMPONENTS PACKED 1_48
+      name: ALL MASK COMPONENTS PACKED 1_38
       rect:
         serializedVersion: 2
         x: 132
         y: 119
         width: 21
         height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1417,8 +1197,8 @@ TextureImporter:
         y: 119
         width: 4
         height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1432,15 +1212,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ALL MASK COMPONENTS PACKED 1_50
+      name: ALL MASK COMPONENTS PACKED 1_40
       rect:
         serializedVersion: 2
         x: 333
         y: 114
         width: 6
         height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1454,15 +1234,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ALL MASK COMPONENTS PACKED 1_51
+      name: ALL MASK COMPONENTS PACKED 1_41
       rect:
         serializedVersion: 2
         x: 417
         y: 116
         width: 30
         height: 14
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1476,23 +1256,243 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ALL MASK COMPONENTS PACKED 1_52
+      name: ALL MASK COMPONENTS PACKED 1_42
       rect:
         serializedVersion: 2
         x: 510
         y: 112
         width: 36
         height: 20
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 184fdd9016449bc479b91f6e0f881614
+      spriteID: 34ca69e53dce52c4c8f9f1a451e84e95
       internalID: 433445023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL MASK COMPONENTS PACKED 1_43
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 115
+        width: 28
+        height: 10
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8716fa180a9f23544a2ebcb3b4bfcadd
+      internalID: 1721026783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL MASK COMPONENTS PACKED 1_44
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 117
+        width: 25
+        height: 10
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c5614361ff234444974268707703c2a
+      internalID: -1421010343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL MASK COMPONENTS PACKED 1_45
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 117
+        width: 14
+        height: 7
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5353343360442fe44a808ceb917c17c7
+      internalID: 523932986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL MASK COMPONENTS PACKED 1_46
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 117
+        width: 19
+        height: 10
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93cda2363092b344c9c462d3946c5b85
+      internalID: -1100925056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL MASK COMPONENTS PACKED 1_47
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 35
+        width: 68
+        height: 20
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7690b4e38b1e444da4bbec50e39f7a4
+      internalID: -1560775757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL MASK COMPONENTS PACKED 1_48
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 38
+        width: 86
+        height: 26
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83723841d9c74474884a40219b72b654
+      internalID: 1479392803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL MASK COMPONENTS PACKED 1_
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 27
+        width: 90
+        height: 36
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e61f3fffb4d5ca4c8ac6df64c2f6700
+      internalID: 688530949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL MASK COMPONENTS PACKED 1_50
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 48
+        width: 74
+        height: 23
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c093219fe9d016b4c8edf77f2fb91cdd
+      internalID: -814201494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL MASK COMPONENTS PACKED 1_51
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 33
+        width: 76
+        height: 52
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fa2d33535e7357459639df744ddbc6c
+      internalID: 354602982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ALL MASK COMPONENTS PACKED 1_52
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 31
+        width: 94
+        height: 33
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5af0f795248553641a2ccac2af17117f
+      internalID: -1321219251
       vertices: []
       indices: 
       edges: []
@@ -1501,20 +1501,20 @@ TextureImporter:
       name: ALL MASK COMPONENTS PACKED 1_53
       rect:
         serializedVersion: 2
-        x: 610
-        y: 115
-        width: 28
-        height: 10
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 591
+        y: 37
+        width: 66
+        height: 19
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c474ee7bd1385ea43b5a1b0a93caa6b9
-      internalID: 1721026783
+      spriteID: 69b7cd808deb19940b88c029bfe85142
+      internalID: -891607646
       vertices: []
       indices: 
       edges: []
@@ -1523,20 +1523,20 @@ TextureImporter:
       name: ALL MASK COMPONENTS PACKED 1_54
       rect:
         serializedVersion: 2
-        x: 705
-        y: 117
-        width: 25
-        height: 10
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 689
+        y: 36
+        width: 62
+        height: 18
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e39a464bd28e7be4086785a5a93b6dac
-      internalID: -1421010343
+      spriteID: 1f015c6e6487aa847bdb0cc604dfa6d9
+      internalID: -1321331765
       vertices: []
       indices: 
       edges: []
@@ -1545,428 +1545,32 @@ TextureImporter:
       name: ALL MASK COMPONENTS PACKED 1_55
       rect:
         serializedVersion: 2
-        x: 809
-        y: 117
-        width: 14
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 102eebe00b8761c47b60f946c6b7e858
-      internalID: 523932986
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ALL MASK COMPONENTS PACKED 1_56
-      rect:
-        serializedVersion: 2
-        x: 903
-        y: 117
-        width: 19
-        height: 10
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d7957c3f74364c94f9367d935c9aa68a
-      internalID: -1100925056
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ALL MASK COMPONENTS PACKED 1_57
-      rect:
-        serializedVersion: 2
-        x: 14
-        y: 35
-        width: 10
-        height: 20
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5655a07fc6b027a4282bfa11c5955772
-      internalID: -1560775757
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ALL MASK COMPONENTS PACKED 1_58
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 35
-        width: 10
-        height: 20
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d10205003429db043a3fcf5570a02f55
-      internalID: 1554636570
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ALL MASK COMPONENTS PACKED 1_59
-      rect:
-        serializedVersion: 2
-        x: 101
-        y: 38
-        width: 19
-        height: 26
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: af9aba690b9b4234d9b207b287e0e119
-      internalID: 1479392803
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ALL MASK COMPONENTS PACKED 1_60
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 38
-        width: 19
-        height: 26
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4dc57e92c257ec04794b03dff0eecc8c
-      internalID: 534756700
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ALL MASK COMPONENTS PACKED 1_61
-      rect:
-        serializedVersion: 2
-        x: 195
-        y: 27
-        width: 23
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4f74c195ef9820d499db9f92a4984085
-      internalID: 688530949
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ALL MASK COMPONENTS PACKED 1_62
-      rect:
-        serializedVersion: 2
-        x: 262
-        y: 27
-        width: 23
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 12dadd31429e0a84b8646d8e756d4ace
-      internalID: 1441525041
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ALL MASK COMPONENTS PACKED 1_63
-      rect:
-        serializedVersion: 2
-        x: 299
-        y: 48
-        width: 25
-        height: 23
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 82e06d221420376429bb10e81930738e
-      internalID: -814201494
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ALL MASK COMPONENTS PACKED 1_64
-      rect:
-        serializedVersion: 2
-        x: 348
-        y: 48
-        width: 25
-        height: 23
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cddd1d82a528a1343ada740be07727eb
-      internalID: 1924592695
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ALL MASK COMPONENTS PACKED 1_65
-      rect:
-        serializedVersion: 2
-        x: 394
-        y: 33
-        width: 76
-        height: 52
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9b618fc5d0182e446837caaa01086f26
-      internalID: 354602982
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ALL MASK COMPONENTS PACKED 1_66
-      rect:
-        serializedVersion: 2
-        x: 481
-        y: 31
-        width: 25
-        height: 33
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a68f5751b6cc33b4db05eaa95e3b3f76
-      internalID: -1321219251
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ALL MASK COMPONENTS PACKED 1_67
-      rect:
-        serializedVersion: 2
-        x: 550
-        y: 31
-        width: 25
-        height: 33
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2b7b793cc77647843ac121624cb39386
-      internalID: -1733410307
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ALL MASK COMPONENTS PACKED 1_68
-      rect:
-        serializedVersion: 2
-        x: 591
-        y: 37
-        width: 9
-        height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d201339c2fffa644a96e5ab6387261e4
-      internalID: -891607646
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ALL MASK COMPONENTS PACKED 1_69
-      rect:
-        serializedVersion: 2
-        x: 648
-        y: 37
-        width: 9
-        height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 72b3a529423bd9f408a86ce640a4ebad
-      internalID: 542953011
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ALL MASK COMPONENTS PACKED 1_70
-      rect:
-        serializedVersion: 2
-        x: 689
-        y: 36
-        width: 7
-        height: 18
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d0fd5b4d2139b78449da399c4a5c3edf
-      internalID: -1321331765
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ALL MASK COMPONENTS PACKED 1_71
-      rect:
-        serializedVersion: 2
-        x: 744
-        y: 36
-        width: 7
-        height: 18
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 178f486cdc6469048be6deec77ac3df3
-      internalID: 351551391
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ALL MASK COMPONENTS PACKED 1_72
-      rect:
-        serializedVersion: 2
         x: 774
         y: 40
-        width: 19
+        width: 84
         height: 33
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 260c958f0780c614f8ed65bee354e4c2
+      spriteID: ebb30adbe92cf7444a20e58b6f344800
       internalID: -1878613865
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ALL MASK COMPONENTS PACKED 1_73
+      name: ALL MASK COMPONENTS PACKED 1_39
       rect:
         serializedVersion: 2
-        x: 839
-        y: 40
-        width: 19
-        height: 33
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 252cdb1f8b5457a4f821cb74b4b57d4a
-      internalID: 2010403946
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ALL MASK COMPONENTS PACKED 1_74
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 114
-        width: 31
-        height: 19
+        x: 226
+        y: 117
+        width: 29
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1975,8 +1579,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e0a95c74a8a2924a850b0ea15cf292f
-      internalID: 1894164372
+      spriteID: 1605e43f8f8b16646a3313c65a78773f
+      internalID: 650798702
       vertices: []
       indices: 
       edges: []
@@ -1995,8 +1599,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":10.0,"y":6.0},"gridSpriteSize":{"x":96.0,"y":96.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":4,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
+      ALL MASK COMPONENTS PACKED: -2036454597
+      ALL MASK COMPONENTS PACKED 1_: 688530949
       ALL MASK COMPONENTS PACKED 1_0: 187396914
       ALL MASK COMPONENTS PACKED 1_1: -805684213
       ALL MASK COMPONENTS PACKED 1_10: 835790472
@@ -2008,68 +1614,57 @@ TextureImporter:
       ALL MASK COMPONENTS PACKED 1_16: -514876783
       ALL MASK COMPONENTS PACKED 1_17: 483550035
       ALL MASK COMPONENTS PACKED 1_18: 1128382627
-      ALL MASK COMPONENTS PACKED 1_19: 839085179
+      ALL MASK COMPONENTS PACKED 1_19: -614372955
       ALL MASK COMPONENTS PACKED 1_2: -997663810
-      ALL MASK COMPONENTS PACKED 1_20: -614372955
-      ALL MASK COMPONENTS PACKED 1_21: 293951822
-      ALL MASK COMPONENTS PACKED 1_22: 915749227
-      ALL MASK COMPONENTS PACKED 1_23: 1696670507
-      ALL MASK COMPONENTS PACKED 1_24: 1337654249
-      ALL MASK COMPONENTS PACKED 1_25: -641516499
-      ALL MASK COMPONENTS PACKED 1_26: -1615684543
-      ALL MASK COMPONENTS PACKED 1_27: -1115885906
-      ALL MASK COMPONENTS PACKED 1_28: -810297791
-      ALL MASK COMPONENTS PACKED 1_29: -1651580584
+      ALL MASK COMPONENTS PACKED 1_20: 915749227
+      ALL MASK COMPONENTS PACKED 1_21: 1337654249
+      ALL MASK COMPONENTS PACKED 1_22: -641516499
+      ALL MASK COMPONENTS PACKED 1_23: -1115885906
+      ALL MASK COMPONENTS PACKED 1_24: -1651580584
+      ALL MASK COMPONENTS PACKED 1_25: -653021116
+      ALL MASK COMPONENTS PACKED 1_26: 1851700136
+      ALL MASK COMPONENTS PACKED 1_27: -1109431347
+      ALL MASK COMPONENTS PACKED 1_28: 607453993
+      ALL MASK COMPONENTS PACKED 1_29: 35198315
       ALL MASK COMPONENTS PACKED 1_3: 1400467836
-      ALL MASK COMPONENTS PACKED 1_30: -651188619
-      ALL MASK COMPONENTS PACKED 1_31: -653021116
-      ALL MASK COMPONENTS PACKED 1_32: 1706326464
-      ALL MASK COMPONENTS PACKED 1_33: 1851700136
-      ALL MASK COMPONENTS PACKED 1_34: 1332391584
-      ALL MASK COMPONENTS PACKED 1_35: -1109431347
-      ALL MASK COMPONENTS PACKED 1_36: 1587110124
-      ALL MASK COMPONENTS PACKED 1_37: 607453993
-      ALL MASK COMPONENTS PACKED 1_38: 35198315
-      ALL MASK COMPONENTS PACKED 1_39: 1661140397
+      ALL MASK COMPONENTS PACKED 1_30: 1661140397
+      ALL MASK COMPONENTS PACKED 1_31: -2036454597
+      ALL MASK COMPONENTS PACKED 1_32: -318700152
+      ALL MASK COMPONENTS PACKED 1_33: -901397093
+      ALL MASK COMPONENTS PACKED 1_34: -1881947077
+      ALL MASK COMPONENTS PACKED 1_35: -271247123
+      ALL MASK COMPONENTS PACKED 1_36: -863078772
+      ALL MASK COMPONENTS PACKED 1_37: 761298491
+      ALL MASK COMPONENTS PACKED 1_38: 590289790
+      ALL MASK COMPONENTS PACKED 1_39: 650798702
       ALL MASK COMPONENTS PACKED 1_4: 743678704
-      ALL MASK COMPONENTS PACKED 1_40: -2036454597
-      ALL MASK COMPONENTS PACKED 1_41: -318700152
-      ALL MASK COMPONENTS PACKED 1_42: -901397093
-      ALL MASK COMPONENTS PACKED 1_43: -1881947077
-      ALL MASK COMPONENTS PACKED 1_44: -271247123
-      ALL MASK COMPONENTS PACKED 1_45: -1892428957
-      ALL MASK COMPONENTS PACKED 1_46: -863078772
-      ALL MASK COMPONENTS PACKED 1_47: 761298491
-      ALL MASK COMPONENTS PACKED 1_48: 590289790
+      ALL MASK COMPONENTS PACKED 1_40: 1795134078
+      ALL MASK COMPONENTS PACKED 1_41: 730780202
+      ALL MASK COMPONENTS PACKED 1_42: 433445023
+      ALL MASK COMPONENTS PACKED 1_43: 1721026783
+      ALL MASK COMPONENTS PACKED 1_44: -1421010343
+      ALL MASK COMPONENTS PACKED 1_45: 523932986
+      ALL MASK COMPONENTS PACKED 1_46: -1100925056
+      ALL MASK COMPONENTS PACKED 1_47: -1560775757
+      ALL MASK COMPONENTS PACKED 1_48: 1479392803
       ALL MASK COMPONENTS PACKED 1_49: -775158129
       ALL MASK COMPONENTS PACKED 1_5: 223180401
-      ALL MASK COMPONENTS PACKED 1_50: 1795134078
-      ALL MASK COMPONENTS PACKED 1_51: 730780202
-      ALL MASK COMPONENTS PACKED 1_52: 433445023
-      ALL MASK COMPONENTS PACKED 1_53: 1721026783
-      ALL MASK COMPONENTS PACKED 1_54: -1421010343
-      ALL MASK COMPONENTS PACKED 1_55: 523932986
-      ALL MASK COMPONENTS PACKED 1_56: -1100925056
-      ALL MASK COMPONENTS PACKED 1_57: -1560775757
+      ALL MASK COMPONENTS PACKED 1_50: -814201494
+      ALL MASK COMPONENTS PACKED 1_51: 354602982
+      ALL MASK COMPONENTS PACKED 1_52: -1321219251
+      ALL MASK COMPONENTS PACKED 1_53: -891607646
+      ALL MASK COMPONENTS PACKED 1_54: -1321331765
+      ALL MASK COMPONENTS PACKED 1_55: -1878613865
       ALL MASK COMPONENTS PACKED 1_58: 1554636570
-      ALL MASK COMPONENTS PACKED 1_59: 1479392803
       ALL MASK COMPONENTS PACKED 1_6: -405349947
       ALL MASK COMPONENTS PACKED 1_60: 534756700
-      ALL MASK COMPONENTS PACKED 1_61: 688530949
       ALL MASK COMPONENTS PACKED 1_62: 1441525041
-      ALL MASK COMPONENTS PACKED 1_63: -814201494
       ALL MASK COMPONENTS PACKED 1_64: 1924592695
-      ALL MASK COMPONENTS PACKED 1_65: 354602982
-      ALL MASK COMPONENTS PACKED 1_66: -1321219251
       ALL MASK COMPONENTS PACKED 1_67: -1733410307
-      ALL MASK COMPONENTS PACKED 1_68: -891607646
       ALL MASK COMPONENTS PACKED 1_69: 542953011
       ALL MASK COMPONENTS PACKED 1_7: 2143334908
-      ALL MASK COMPONENTS PACKED 1_70: -1321331765
       ALL MASK COMPONENTS PACKED 1_71: 351551391
-      ALL MASK COMPONENTS PACKED 1_72: -1878613865
       ALL MASK COMPONENTS PACKED 1_73: 2010403946
-      ALL MASK COMPONENTS PACKED 1_74: 1894164372
       ALL MASK COMPONENTS PACKED 1_8: 1227905028
       ALL MASK COMPONENTS PACKED 1_9: 277012145
   mipmapLimitGroupName: 
