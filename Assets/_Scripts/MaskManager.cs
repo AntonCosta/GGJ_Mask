@@ -13,6 +13,7 @@ using Random = UnityEngine.Random;
 
 namespace GJJ.Managers
 {
+    
     public class MaskManager : MonoBehaviour
     {
         private const float TWEEN_DURATION = 0.0f;
@@ -138,6 +139,7 @@ namespace GJJ.Managers
             {
                 _currentMaskIndex = 0;
                 Masks[_currentMaskIndex].OnScreen();
+                GameManager.Instance.PlayNpcVoiceOneShot(Masks[_currentMaskIndex].Voice);
                 Masks[LevelGenerator.Instance.NrOfMasks - 1].OffScreen();;
                 for (var i = 0; i < LevelGenerator.Instance.NrOfMasks; i++)
                 {
@@ -155,6 +157,7 @@ namespace GJJ.Managers
             }
 
             _currentMaskIndex++;
+            GameManager.Instance.PlayNpcVoiceOneShot(Masks[_currentMaskIndex].Voice);
             Masks[_currentMaskIndex].OnScreen();
             Masks[_currentMaskIndex - 1].OffScreen();
             NotepadController.Instance.ChangeNotepad(Masks[_currentMaskIndex].PlayerVerdict);
@@ -181,6 +184,8 @@ namespace GJJ.Managers
             {
                 _currentMaskIndex = LevelGenerator.Instance.NrOfMasks - 1;
                 Masks[_currentMaskIndex].OnScreen();
+                GameManager.Instance.PlayNpcVoiceOneShot(Masks[_currentMaskIndex].Voice);
+
                 Masks[0].OffScreen();
                 for (var i = 0; i < LevelGenerator.Instance.NrOfMasks; i++)
                 {
@@ -199,6 +204,7 @@ namespace GJJ.Managers
             }
 
             _currentMaskIndex--;
+            GameManager.Instance.PlayNpcVoiceOneShot(Masks[_currentMaskIndex].Voice);
             Masks[_currentMaskIndex].OnScreen();
             Masks[_currentMaskIndex + 1].OffScreen();
             NotepadController.Instance.ChangeNotepad(Masks[_currentMaskIndex].PlayerVerdict);
@@ -213,6 +219,14 @@ namespace GJJ.Managers
             });
         }
         
-        public MaskController CurrentMask => Masks[_currentMaskIndex];
+        public MaskController CurrentMask
+        {
+            get
+            {
+                if (Masks == null || Masks.Count == 0) return null;
+                return Masks[_currentMaskIndex];
+            }
+        }
+
     }
 }
