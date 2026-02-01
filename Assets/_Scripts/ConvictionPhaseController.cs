@@ -121,14 +121,7 @@ namespace GGJ.Controllers
                 _maskCopies.RemoveAll(mask => mask.Id == _currentMask.Id);
                 if (_maskCopies.Count == 1)
                 {
-                    ScreenFader.Instance.FadeHide(GameManager.Instance.YouLose);
-                    _maskFile.SetActive(false);
-                    _background.SetActive(true);
-                    for (int i = transform.childCount - 1; i >= 0; i--)
-                    {
-                        Destroy(transform.GetChild(i).gameObject);
-                    }
-                    return;
+                    CheckIfLost();
                 }
                 var randomMask = _maskCopies.RandomElement();
                 while (randomMask.IsKiller)
@@ -137,7 +130,22 @@ namespace GGJ.Controllers
                 }
                 _maskCopies.RemoveAll(mask => mask.Id == randomMask.Id);
                 randomMask.gameObject.SetActive(false);
+                if (_maskCopies.Count == 1)
+                {
+                    CheckIfLost();
+                }
                 ReturnToConviction();
+            }
+        }
+
+        private void CheckIfLost()
+        {
+            ScreenFader.Instance.FadeHide(GameManager.Instance.YouLose);
+            _maskFile.SetActive(false);
+            _background.SetActive(true);
+            for (int i = transform.childCount - 1; i >= 0; i--)
+            {
+                Destroy(transform.GetChild(i).gameObject);
             }
         }
 

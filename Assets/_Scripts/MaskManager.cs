@@ -157,6 +157,7 @@ namespace GJJ.Managers
             _currentMaskIndex++;
             Masks[_currentMaskIndex].OnScreen();
             Masks[_currentMaskIndex - 1].OffScreen();
+            NotepadController.Instance.ChangeNotepad(Masks[_currentMaskIndex].PlayerVerdict);
             LevelGenerator.Instance.MaskPositions.ForEach(mask =>
             {
                 _tweenSequence.Join(
@@ -200,6 +201,7 @@ namespace GJJ.Managers
             _currentMaskIndex--;
             Masks[_currentMaskIndex].OnScreen();
             Masks[_currentMaskIndex + 1].OffScreen();
+            NotepadController.Instance.ChangeNotepad(Masks[_currentMaskIndex].PlayerVerdict);
             LevelGenerator.Instance.MaskPositions.ForEach(mask =>
             {
                 _tweenSequence.Join(

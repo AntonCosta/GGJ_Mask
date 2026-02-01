@@ -9,6 +9,8 @@ namespace GGJ.Controllers
 {
     public class NotepadController : MonoBehaviour
     {
+        public static NotepadController Instance { get; private set; }
+
         [SerializeField] private GameObject _notepad;
         [SerializeField] private SpriteRenderer _notepadSprite;
         [SerializeField] private GameObject _arrowRight;
@@ -17,6 +19,17 @@ namespace GGJ.Controllers
         
         private Camera _camera;
         private int _notepadIndex = 0;
+
+        private void Awake()
+        {
+            if (Instance != null && Instance != this)
+            {
+                Destroy(gameObject);
+                return;
+            }
+
+            Instance = this;
+        }
 
         private void Start()
         {
@@ -56,6 +69,23 @@ namespace GGJ.Controllers
                     }
                 }
             }
+        }
+
+        public void ChangeNotepad(string verdict)
+        {
+            switch (verdict)
+            {
+                case "Innocent":
+                    _notepadIndex = 0;
+                    break;
+                case "Guilty":
+                    _notepadIndex = 1;
+                    break;
+                case "Suspicious":
+                    _notepadIndex = 2;
+                    break;
+            }
+            _notepadSprite.sprite = _notepads[_notepadIndex];
         }
     }
 }
