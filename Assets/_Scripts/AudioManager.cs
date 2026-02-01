@@ -27,6 +27,8 @@ public class AudioManager : MonoBehaviour
     public AudioClip voiceLow;
     public AudioClip voiceNormal;
     public AudioClip voiceHigh;
+    [Range(0f, 0.1f)]
+    public float voicePitchVariation = 0.03f; // = +-3%
 
     Coroutine rainFadeRoutine;
 
@@ -89,16 +91,32 @@ public class AudioManager : MonoBehaviour
         if (uiSource == null || clip == null) return;
         uiSource.PlayOneShot(clip, vol);
     }
+    float nextVoiceAllowedTime = 0f;
+    public float voiceCooldown = 0.15f;
 
     public void PlayNpcVoiceOneShot(string voice)
     {
         if (npcVoiceSource == null) return;
+        if (Time.time < nextVoiceAllowedTime) return;
+
+        nextVoiceAllowedTime = Time.time + voiceCooldown;
+
+        string v = voice != null ? voice.Trim().ToLowerInvariant() : "normal";
 
         AudioClip clip = voiceNormal;
-        if (voice == "Low") clip = voiceLow;
-        else if (voice == "High") clip = voiceHigh;
+
+        if (v == "low") clip = voiceLow;
+        else if (v == "high") clip = voiceHigh;
+        else clip = voiceNormal;
 
         if (clip == null) return;
+
+        // Random pitch: 1.0 +- variation
+        float pitchOffset = Random.Range(-voicePitchVariation, voicePitchVariation);
+        npcVoiceSource.pitch = 1f + pitchOffset;
+
         npcVoiceSource.PlayOneShot(clip, 1f);
     }
+
+
 }

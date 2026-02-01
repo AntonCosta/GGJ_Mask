@@ -34,7 +34,9 @@ namespace GJJ.Managers
         private int _currentNrAggresive= 0;
         private int _currentNrShady = 0;
         
-        public AudioManager audioManager;
+        [Header("Audio")]
+        [SerializeField] private AudioManager audioManager;
+        
         
         private void Awake()
         {
@@ -45,6 +47,18 @@ namespace GJJ.Managers
             }
 
             Instance = this;
+            
+            if (audioManager == null)
+                audioManager = FindObjectOfType<AudioManager>();
+        }
+        
+        void PlayCurrentMaskVoice()
+        {
+            if (audioManager == null) return;
+            MaskController m = CurrentMask;
+            if (m == null) return;
+
+            audioManager.PlayNpcVoiceOneShot(m.Voice);
         }
 
         public void AllMasksAdded()
@@ -124,7 +138,7 @@ namespace GJJ.Managers
                     }
                 }
             });
-            
+            PlayCurrentMaskVoice();
             Masks[0].OnScreen();
             DialogueManager.Instance.AddText(Masks);
         }
@@ -141,6 +155,8 @@ namespace GJJ.Managers
             {
                 _currentMaskIndex = 0;
                 Masks[_currentMaskIndex].OnScreen();
+                
+                PlayCurrentMaskVoice();
                 //GameManager.Instance.PlayNpcVoiceOneShot(Masks[_currentMaskIndex].Voice);
                 //audio.PlayNpcVoice(Masks[_currentMaskIndex].Voice,1);
                 
@@ -163,6 +179,7 @@ namespace GJJ.Managers
 
             _currentMaskIndex++;
             //GameManager.Instance.PlayNpcVoiceOneShot(Masks[_currentMaskIndex].Voice);
+            PlayCurrentMaskVoice();
             Masks[_currentMaskIndex].OnScreen();
             Masks[_currentMaskIndex - 1].OffScreen();
             NotepadController.Instance.ChangeNotepad(Masks[_currentMaskIndex].PlayerVerdict);
@@ -189,8 +206,9 @@ namespace GJJ.Managers
             {
                 _currentMaskIndex = LevelGenerator.Instance.NrOfMasks - 1;
                 Masks[_currentMaskIndex].OnScreen();
+                
                 //GameManager.Instance.PlayNpcVoiceOneShot(Masks[_currentMaskIndex].Voice);
-
+                PlayCurrentMaskVoice();
                 Masks[0].OffScreen();
                 NotepadController.Instance.ChangeNotepad(Masks[_currentMaskIndex].PlayerVerdict);
                 for (var i = 0; i < LevelGenerator.Instance.NrOfMasks; i++)
@@ -210,6 +228,7 @@ namespace GJJ.Managers
             }
 
             _currentMaskIndex--;
+            PlayCurrentMaskVoice();
             //GameManager.Instance.PlayNpcVoiceOneShot(Masks[_currentMaskIndex].Voice);
             Masks[_currentMaskIndex].OnScreen();
             Masks[_currentMaskIndex + 1].OffScreen();

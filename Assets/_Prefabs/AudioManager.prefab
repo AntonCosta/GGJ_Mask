@@ -62,9 +62,10 @@ MonoBehaviour:
   positiveClip: {fileID: 8300000, guid: cc9185f92ddb3bf418da0f4dbacfe434, type: 3}
   negativeClip: {fileID: 8300000, guid: cd0644f3aee866841a5c5ea8789c52ee, type: 3}
   npcVoiceSource: {fileID: 2369134157488454371}
-  voiceLow: {fileID: 8300000, guid: 2ac4d9158fb9f6249a8d9fd1ab106d12, type: 3}
-  voiceNormal: {fileID: 8300000, guid: 5db461b8a9f662d43bac5a00136a2895, type: 3}
-  voiceHigh: {fileID: 8300000, guid: 86ac216953cdc024f9048ddd9dd1c1b2, type: 3}
+  voiceLow: {fileID: 8300000, guid: 82fc4cf98a80b4c4982285aa675c2281, type: 3}
+  voiceNormal: {fileID: 8300000, guid: 53c531f969664c4489cc7ff19f3107ab, type: 3}
+  voiceHigh: {fileID: 8300000, guid: 7ba023b586959a24d905aba2b94a8e99, type: 3}
+  voiceCooldown: 0.15
 --- !u!1 &5189609108270148064
 GameObject:
   m_ObjectHideFlags: 0
