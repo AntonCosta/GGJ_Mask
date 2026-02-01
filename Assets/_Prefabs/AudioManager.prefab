@@ -64,6 +64,9 @@ MonoBehaviour:
   writingClip: {fileID: 8300000, guid: 18a7621571a5c834bbc1269c1370789a, type: 3}
   writingPitchVariation: 0.04
   writingVolumeVariation: 0.1
+  npcCycleClip: {fileID: 8300000, guid: 21bdbaba5fbe16a4e98b8134279ce16e, type: 3}
+  npcCyclePitchVariation: 0.03
+  npcCycleVolumeVariation: 0.08
   npcVoiceSource: {fileID: 2369134157488454371}
   voiceLow: {fileID: 8300000, guid: 82fc4cf98a80b4c4982285aa675c2281, type: 3}
   voiceNormal: {fileID: 8300000, guid: 53c531f969664c4489cc7ff19f3107ab, type: 3}

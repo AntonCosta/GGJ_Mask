@@ -27,8 +27,11 @@ public class AudioManager : MonoBehaviour
     [Range(0f, 0.1f)] public float writingPitchVariation = 0.04f; // +-4%
     [Range(0f, 0.2f)] public float writingVolumeVariation = 0.1f; // +-10%
 
-    
+    [Header("UI NPC Cycle Sound")]
+    public AudioClip npcCycleClip;
 
+    [Range(0f, 0.1f)] public float npcCyclePitchVariation = 0.03f;
+    [Range(0f, 0.2f)] public float npcCycleVolumeVariation = 0.08f;
     
     [Header("NPC Voice One Shots")]
     public AudioSource npcVoiceSource;
@@ -38,6 +41,13 @@ public class AudioManager : MonoBehaviour
     [Range(0f, 0.1f)]
     public float voicePitchVariation = 0.03f; // = +-3%
 
+    [Header("NPC Voice Fade")]
+    public float npcVoiceFadeOutSeconds = 0.06f;
+    public float npcVoiceFadeInSeconds = 0.03f;
+
+    Coroutine npcVoiceRoutine;
+
+    
     Coroutine rainFadeRoutine;
 
     void Awake()
@@ -105,26 +115,76 @@ public class AudioManager : MonoBehaviour
     public void PlayNpcVoiceOneShot(string voice)
     {
         if (npcVoiceSource == null) return;
-        if (Time.time < nextVoiceAllowedTime) return;
-
-        nextVoiceAllowedTime = Time.time + voiceCooldown;
 
         string v = voice != null ? voice.Trim().ToLowerInvariant() : "normal";
 
         AudioClip clip = voiceNormal;
-
         if (v == "low") clip = voiceLow;
         else if (v == "high") clip = voiceHigh;
         else clip = voiceNormal;
 
         if (clip == null) return;
 
-        // Random pitch: 1.0 +- variation
+        if (npcVoiceRoutine != null)
+        {
+            StopCoroutine(npcVoiceRoutine);
+            npcVoiceRoutine = null;
+        }
+
+        npcVoiceRoutine = StartCoroutine(PlayNpcVoiceFadeReplace(clip));
+    }
+
+    IEnumerator PlayNpcVoiceFadeReplace(AudioClip clip)
+    {
+        float startVol = npcVoiceSource.volume;
+
+        // Fade out current voice if something is playing
+        if (npcVoiceSource.isPlaying && npcVoiceFadeOutSeconds > 0f)
+        {
+            float t = 0f;
+            while (t < npcVoiceFadeOutSeconds)
+            {
+                t += Time.deltaTime;
+                float k = t / npcVoiceFadeOutSeconds;
+                if (k > 1f) k = 1f;
+                npcVoiceSource.volume = Mathf.Lerp(startVol, 0f, k);
+                yield return null;
+            }
+        }
+
+        npcVoiceSource.Stop();
+
+        // Random pitch per new line (your +-3% logic)
         float pitchOffset = Random.Range(-voicePitchVariation, voicePitchVariation);
         npcVoiceSource.pitch = 1f + pitchOffset;
 
-        npcVoiceSource.PlayOneShot(clip, 1f);
+        npcVoiceSource.clip = clip;
+        npcVoiceSource.volume = 0f;
+        npcVoiceSource.Play();
+
+        // Fade in new voice
+        float t2 = 0f;
+        float fadeIn = npcVoiceFadeInSeconds;
+        if (fadeIn <= 0f)
+        {
+            npcVoiceSource.volume = startVol;
+            npcVoiceRoutine = null;
+            yield break;
+        }
+
+        while (t2 < fadeIn)
+        {
+            t2 += Time.deltaTime;
+            float k2 = t2 / fadeIn;
+            if (k2 > 1f) k2 = 1f;
+            npcVoiceSource.volume = Mathf.Lerp(0f, startVol, k2);
+            yield return null;
+        }
+
+        npcVoiceSource.volume = startVol;
+        npcVoiceRoutine = null;
     }
+
     public void PlayUIWriting()
     {
         if (uiSource == null || writingClip == null) return;
@@ -139,6 +199,20 @@ public class AudioManager : MonoBehaviour
 
         uiSource.PlayOneShot(writingClip, finalVol);
     }
+    
+    public void PlayNpcCycle()
+    {
+        if (uiSource == null || npcCycleClip == null) return;
+
+        float pitchOffset = Random.Range(-npcCyclePitchVariation, npcCyclePitchVariation);
+        uiSource.pitch = 1f + pitchOffset;
+
+        float volOffset = Random.Range(-npcCycleVolumeVariation, npcCycleVolumeVariation);
+        float finalVol = Mathf.Clamp01(0.6f + volOffset);
+
+        uiSource.PlayOneShot(npcCycleClip, finalVol);
+    }
+
 
 
 
