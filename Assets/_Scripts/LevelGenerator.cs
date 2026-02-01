@@ -23,6 +23,7 @@ namespace GGJ
         
         public int NrOfMasks => _nrOfMasks;
         public List<GameObject> MaskPositions => _maskPositions;
+        public List<GameObject> InterviewRooms = new();
 
         [SerializeField] private List<GameObject> _maskPositions;
         [SerializeField] private List<Sprite> _accessory;
@@ -67,6 +68,13 @@ namespace GGJ
         private void CreateMasks()
         {
             MaskManager.Instance.Masks.Clear();
+            var index = 0;
+            _maskPositions.ForEach(maskPosition =>
+            {
+                var newPos = new Vector3(index * 30f, 0f, 0f);
+                maskPosition.transform.localPosition = newPos;
+                index++;
+            });
             for (var i = 0; i < _nrOfMasks; i++)
             {
                 var newMask = CreateMask();
@@ -111,6 +119,7 @@ namespace GGJ
                 var newRoom = Instantiate(newRoomPrefab, transform.position, Quaternion.identity);
                 newRoom.transform.parent = _maskPositions[i].transform;
                 newRoom.transform.localPosition = new Vector3(0, 0, 0);
+                InterviewRooms.Add(newRoom);
                 
                 var roomController = newRoom.GetComponent<InterviewRoomController>();
                 roomController.Foreground.sprite = _foregrounds.RandomElement();

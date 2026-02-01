@@ -137,9 +137,10 @@ namespace GGJ.Controllers
                 if (_maskCopies.Count == 1)
                 {
                     CheckIfLost();
+                    return;
                 }
                 var randomMask = _maskCopies.RandomElement();
-                while (randomMask.IsKiller)
+                while (randomMask.IsKiller && _maskCopies.Count >= 1)
                 {
                     randomMask = _maskCopies.RandomElement();
                 }
@@ -148,6 +149,7 @@ namespace GGJ.Controllers
                 if (_maskCopies.Count == 1)
                 {
                     CheckIfLost();
+                    return;
                 }
                 ReturnToConviction();
             }

@@ -102,20 +102,27 @@ namespace GGJ.Managers
                 _currentScreenCounter++;
                 GoToNextScreen();
             }
-            if ((Keyboard.current.spaceKey.wasPressedThisFrame || Keyboard.current.escapeKey.wasPressedThisFrame) && (_youWon || _youLost))
+            if ((Keyboard.current.spaceKey.wasPressedThisFrame || Keyboard.current.escapeKey.wasPressedThisFrame || Mouse.current.leftButton.wasPressedThisFrame) && (_youWon || _youLost)  && !ScreenFader.Instance.IsTweening)
             {
-                _youWinUI.SetActive(false);
-                _youLoseUI.SetActive(false);
-                _convictionScreen.SetActive(false);
-                _maskPositions.SetActive(true);
-                PlayerController.Instance.Navigation.SetActive(false);
-                _mainMenu.gameObject.SetActive(true);
-                _levelGenerator = LevelGenerator.Instance;
-                ReadMurderData();
-                ReadIntroText();
-                GenerateCrimeLocation();
-                GenerateCrimeTime();
-                GenerateIntroText();
+                ScreenFader.Instance.FadeHide(() =>
+                {
+                    _youWon = false;
+                    _youLost = false;
+                    _youWinUI.SetActive(false);
+                    _youLoseUI.SetActive(false);
+                    _convictionScreen.SetActive(false);
+                    _maskPositions.SetActive(true);
+                    LevelGenerator.Instance.InterviewRooms.ForEach(Destroy);
+                    LevelGenerator.Instance.InterviewRooms.Clear();
+                    PlayerController.Instance.Navigation.SetActive(false);
+                    _mainMenu.gameObject.SetActive(true);
+                    _levelGenerator = LevelGenerator.Instance;
+                    ReadMurderData();
+                    ReadIntroText();
+                    GenerateCrimeLocation();
+                    GenerateCrimeTime();
+                    GenerateIntroText();
+                });
             }
         }
 
