@@ -61,6 +61,7 @@ namespace GGJ.Controllers
         {
             if (Keyboard.current.escapeKey.wasPressedThisFrame && _maskFile.activeSelf && !ScreenFader.Instance.IsTweening)
             {
+                GameManager.Instance.PlayUINegative();
                 ReturnToConviction();
             }
             
@@ -108,6 +109,8 @@ namespace GGJ.Controllers
         {
             if (_currentMask.IsKiller)
             {
+                GameManager.Instance.PlayUIPositive();
+                
                 ScreenFader.Instance.FadeHide(GameManager.Instance.YouWin);
                 _maskFile.SetActive(false);
                 _background.SetActive(true);
@@ -118,6 +121,7 @@ namespace GGJ.Controllers
             }
             else
             {
+                GameManager.Instance.PlayUINegative();
                 _maskCopies.RemoveAll(mask => mask.Id == _currentMask.Id);
                 if (_maskCopies.Count == 1)
                 {
@@ -151,11 +155,15 @@ namespace GGJ.Controllers
 
         private void PressedNo()
         {
+            GameManager.Instance.PlayUINegative();
             ReturnToConviction();
         }
 
         public void PopulateMaskFile(MaskController mask)
         {
+            
+            GameManager.Instance.PlayUIClick();
+            
             ScreenFader.Instance.FadeHide(() =>
             {
                 _currentMask = mask;

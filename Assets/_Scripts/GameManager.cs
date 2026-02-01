@@ -46,6 +46,22 @@ namespace GGJ.Managers
         [SerializeField] private float _gameCutoff = 3000f;
         [SerializeField] private float _convictionCutoff = 500f;
 
+        [Header("Thunder Audio")]
+        [SerializeField] private AudioSource _thunderSource;
+        [SerializeField] private AudioClip _thunderClip;
+        
+        [Header("UI audio")]
+        [SerializeField] private AudioSource _uiSource;
+        
+        [SerializeField] private AudioClip _clickClip;
+        [SerializeField] private AudioClip _hoverClip;
+        [SerializeField] private AudioClip _positiveClip;
+        [SerializeField] private AudioClip _negativeClip;
+        
+        [Header("Vox audio")]
+        [SerializeField] private AudioClip _dialogueClip;
+
+
         public static GameManager Instance { get; private set; }
         public MurderModel MurderData => _murderModel;
         public string CrimeLocation => _crimeLocation;
@@ -75,8 +91,16 @@ namespace GGJ.Managers
         
         private void Start()
         {
-            _startButton.onClick.AddListener(GenerateGame);
-            _exitButton.onClick.AddListener(Application.Quit);
+            _startButton.onClick.AddListener(() =>
+            {
+                PlayUIPositive();
+                GenerateGame();
+            });
+            _exitButton.onClick.AddListener(() =>
+            {
+                PlayUIClick();
+                Application.Quit();
+            });
             _levelGenerator = LevelGenerator.Instance;
             ReadMurderData();
             ReadIntroText();
@@ -143,7 +167,9 @@ namespace GGJ.Managers
         
         private void ShowOutsideShot()
         {
+            
             StartRainSFX(_menuVolume, _menuCutoff);
+            
             
             _outsideShot.SetActive(true);
             _insideShot.SetActive(false);
@@ -152,6 +178,8 @@ namespace GGJ.Managers
 
         private void ShowInsideShot()
         {
+            PlayThunder();
+            
             _outsideShot.SetActive(false);
             _insideShot.SetActive(true);
             _canPressSpace = true;
@@ -226,12 +254,14 @@ namespace GGJ.Managers
 
         public void YouWin()
         {
+            PlayUIPositive();
             _youWinUI.SetActive(true);
             _youWon = true;
         }
 
         public void YouLose()
         {
+            PlayUINegative();
             _youLoseUI.SetActive(true);
             _youLost = true;
         }
@@ -266,6 +296,45 @@ namespace GGJ.Managers
       
           _rainSource.volume = targetVolume;
           _rainLowPass.cutoffFrequency = targetCutoff;
+      }
+
+      private void PlayThunder()
+      {
+          if (_thunderSource != null && _thunderClip != null)
+          {
+              _thunderSource.PlayOneShot(_thunderClip);
+          }
+      }
+
+      public void PlayUIClick()
+      {
+          PlayUI(_clickClip, 0.7f);
+      }
+
+      public void PlayUIHover()
+      {
+          PlayUI(_hoverClip, 0.4f);
+      }
+
+      public void PlayUIPositive()
+      {
+          PlayUI(_positiveClip, 0.8f);
+      }
+
+      public void PlayUINegative()
+      {
+          PlayUI(_negativeClip, 0.8f);
+      }
+
+      private void PlayUI(AudioClip clip, float vol = 1f)
+      {
+          if (_uiSource != null && clip != null)
+              _uiSource.PlayOneShot(clip, vol);
+      }
+
+      public void PlayDialogueReveal()
+      {
+          PlayUI(_dialogueClip, 0.5f);
       }
 
 
