@@ -29,6 +29,7 @@ namespace GGJ.Managers
         [SerializeField] private TextMeshProUGUI _insideShotText;
         [SerializeField] private GameObject _youWinUI;
         [SerializeField] private GameObject _youLoseUI;
+        [SerializeField] private GameObject _notepad;
 
         public static GameManager Instance { get; private set; }
         public MurderModel MurderData => _murderModel;
@@ -144,6 +145,7 @@ namespace GGJ.Managers
             _outsideShot.SetActive(false);
             _insideShot.SetActive(false);
             _inGameUI.SetActive(true);
+            _notepad.SetActive(true);
             _nextPhase.gameObject.SetActive(false);
             _levelGenerator.GenerateLevel();
         }
@@ -196,6 +198,7 @@ namespace GGJ.Managers
         {
             _maskPositions.SetActive(false);
             _inGameUI.SetActive(false);
+            _notepad.SetActive(false);
             _convictionScreen.SetActive(true);
             _convictionScreen.GetComponent<ConvictionPhaseController>().MoveMasksToConviction();
         }

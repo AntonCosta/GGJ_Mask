@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using GGJ.Utils;
+using GJJ.Managers;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -39,6 +40,19 @@ namespace GGJ.Controllers
                     {
                         _notepadIndex = _notepadIndex == 0 ? _notepads.Count - 1 : _notepadIndex - 1;
                         _notepadSprite.sprite = _notepads[_notepadIndex];
+                    }
+
+                    if (_notepadIndex == 0)
+                    {
+                        MaskManager.Instance.CurrentMask.PlayerVerdict = "Innocent";
+                    }
+                    else if (_notepadIndex == 1)
+                    {
+                        MaskManager.Instance.CurrentMask.PlayerVerdict = "Guilty";
+                    }
+                    else if (_notepadIndex == 2)
+                    {
+                        MaskManager.Instance.CurrentMask.PlayerVerdict = "Suspicious";
                     }
                 }
             }

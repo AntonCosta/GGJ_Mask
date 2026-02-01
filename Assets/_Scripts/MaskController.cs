@@ -92,7 +92,7 @@ namespace GGJ.Controllers
         private string _role;
         private bool _isTruthful;
         private string _voice;
-        private string _playerVerdict;
+        private string _playerVerdict = "Innocent";
         private Tween _tween;
         private bool _onScreen;
         private bool _wasOnScreen;

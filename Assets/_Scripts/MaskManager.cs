@@ -149,7 +149,6 @@ namespace GJJ.Managers
                 _tweenSequence.OnComplete(() =>
                 {
                     IsTweening = false;
-                    VerdictController.Instance.CheckCurrentVerdict();
                 });
 
                 return;
@@ -166,7 +165,6 @@ namespace GJJ.Managers
             _tweenSequence.OnComplete(() =>
             {
                 IsTweening = false;
-                VerdictController.Instance.CheckCurrentVerdict();
             });
         }
 
@@ -194,7 +192,6 @@ namespace GJJ.Managers
                 _tweenSequence.OnComplete(() =>
                 {
                     IsTweening = false;
-                    VerdictController.Instance.CheckCurrentVerdict();
                 });
 
                 return;
@@ -211,7 +208,6 @@ namespace GJJ.Managers
             _tweenSequence.OnComplete(() =>
             {
                 IsTweening = false;
-                VerdictController.Instance.CheckCurrentVerdict();
             });
         }
         
