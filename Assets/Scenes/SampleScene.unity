@@ -8327,7 +8327,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MaskManager
   Masks: []
   IsTweening: 0
-  audioManager: {fileID: 0}
+  audioManager: {fileID: 1026192483396023673}
 --- !u!4 &2080047224
 Transform:
   m_ObjectHideFlags: 0

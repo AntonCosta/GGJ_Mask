@@ -16,12 +16,17 @@ namespace GGJ.Controllers
         [SerializeField] private GameObject _arrowRight;
         [SerializeField] private GameObject _arrowLeft;
         [SerializeField] private List<Sprite> _notepads;
+        [SerializeField] private AudioManager audioManager;
+
         
         private Camera _camera;
         private int _notepadIndex = 0;
 
         private void Awake()
         {
+            if (audioManager == null)
+                audioManager = FindObjectOfType<AudioManager>();
+
             if (Instance != null && Instance != this)
             {
                 Destroy(gameObject);
@@ -55,6 +60,8 @@ namespace GGJ.Controllers
                         _notepadSprite.sprite = _notepads[_notepadIndex];
                     }
 
+                    string oldVerdict = MaskManager.Instance.CurrentMask.PlayerVerdict;
+
                     if (_notepadIndex == 0)
                     {
                         MaskManager.Instance.CurrentMask.PlayerVerdict = "Innocent";
@@ -67,6 +74,14 @@ namespace GGJ.Controllers
                     {
                         MaskManager.Instance.CurrentMask.PlayerVerdict = "Suspicious";
                     }
+                    
+                    string newVerdict = MaskManager.Instance.CurrentMask.PlayerVerdict;
+
+                    if (oldVerdict != newVerdict && audioManager != null)
+                    {
+                        audioManager.PlayUIWriting();
+                    }
+
                 }
             }
         }

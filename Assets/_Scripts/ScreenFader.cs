@@ -53,5 +53,20 @@ namespace GGJ.Utils
                     FadeInFromBlack(fade_time);
                 });
         }
+        public void FadeHide(Action beforeFade, Action work, float fade_time = FADE_TIME)
+        {
+            IsTweening = true;
+
+            // Do this immediately (play SFX, etc)
+            beforeFade?.Invoke();
+
+            FadeOutToBlack(fade_time)
+                .OnComplete(() =>
+                {
+                    work?.Invoke();
+                    FadeInFromBlack(fade_time);
+                });
+        }
+
     }
 }

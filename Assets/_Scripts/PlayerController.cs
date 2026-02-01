@@ -12,11 +12,14 @@ namespace GGJ.Controllers
         [SerializeField] public GameObject Navigation;
         [SerializeField] private GameObject _arrowRight;
         [SerializeField] private GameObject _arrowLeft;
-        
+
+        [Header("Audio")]
+        [SerializeField] private AudioManager audioManager;
+
         public static PlayerController Instance { get; private set; }
-        
+
         private Camera _camera;
-        
+
         private void Awake()
         {
             if (Instance != null && Instance != this)
@@ -26,6 +29,9 @@ namespace GGJ.Controllers
             }
 
             Instance = this;
+
+            if (audioManager == null)
+                audioManager = FindFirstObjectByType<AudioManager>();
         }
 
         private void Start()
@@ -33,18 +39,30 @@ namespace GGJ.Controllers
             _camera = Camera.main;
         }
 
+        void CycleNext()
+        {
+            if (audioManager != null) audioManager.PlayNpcCycle();
+            ScreenFader.Instance.FadeHide(MaskManager.Instance.NextMask);
+        }
+
+        void CyclePrevious()
+        {
+            if (audioManager != null) audioManager.PlayNpcCycle();
+            ScreenFader.Instance.FadeHide(MaskManager.Instance.PreviousMask);
+        }
+
         private void Update()
         {
             if (Keyboard.current.dKey.wasPressedThisFrame && !ScreenFader.Instance.IsTweening && !GameManager.Instance.InConvictionPhase)
             {
-                ScreenFader.Instance.FadeHide(MaskManager.Instance.NextMask);
+                CycleNext();
             }
 
             if (Keyboard.current.aKey.wasPressedThisFrame && !ScreenFader.Instance.IsTweening && !GameManager.Instance.InConvictionPhase)
             {
-                ScreenFader.Instance.FadeHide(MaskManager.Instance.PreviousMask);
+                CyclePrevious();
             }
-            
+
             if (Mouse.current.leftButton.wasPressedThisFrame && !ScreenFader.Instance.IsTweening)
             {
                 var worldPoint = _camera.ScreenToWorldPoint(Mouse.current.position.ReadValue());
@@ -53,11 +71,11 @@ namespace GGJ.Controllers
                 {
                     if (hit.collider.gameObject == _arrowRight)
                     {
-                        ScreenFader.Instance.FadeHide(MaskManager.Instance.NextMask);
+                        CycleNext();
                     }
-                    else if(hit.collider.gameObject == _arrowLeft)
+                    else if (hit.collider.gameObject == _arrowLeft)
                     {
-                        ScreenFader.Instance.FadeHide(MaskManager.Instance.PreviousMask);
+                        CyclePrevious();
                     }
                 }
             }

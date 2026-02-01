@@ -258,7 +258,12 @@ namespace GGJ.Managers
         public void ShowNextPhaseButton()
         {
             _nextPhase.gameObject.SetActive(true);
-            _nextPhase.onClick.AddListener(() => ScreenFader.Instance.FadeHide(GoToConvictionPhase));
+            _nextPhase.onClick.AddListener(() =>
+            {
+                if (audioManager != null) audioManager.StopNpcVoice(0.08f);
+                ScreenFader.Instance.FadeHide(GoToConvictionPhase);
+            });
+
         }
 
         private void GoToConvictionPhase()
@@ -287,6 +292,7 @@ namespace GGJ.Managers
         public void YouLose()
         {
             audioManager.PlayUINegative();
+            audioManager.PlayThunder();
             music.SetState(MusicState.Lose);
             _youLoseUI.SetActive(true);
             _youLost = true;
