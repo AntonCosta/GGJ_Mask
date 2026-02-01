@@ -50,6 +50,7 @@ namespace GGJ.Managers
         public string CrimeLocation => _crimeLocation;
         public string CrimeTime => _crimeTime;
         public GameObject ConvictionScreen => _convictionScreen;
+        public bool InConvictionPhase;
 
         private MurderModel _murderModel;
         private IntroTextModel _introTextModel;
@@ -117,6 +118,7 @@ namespace GGJ.Managers
                     _youWinUI.SetActive(false);
                     _youLoseUI.SetActive(false);
                     _convictionScreen.SetActive(false);
+                    InConvictionPhase = false;
                     _maskPositions.SetActive(true);
                     LevelGenerator.Instance.InterviewRooms.ForEach(Destroy);
                     LevelGenerator.Instance.InterviewRooms.Clear();
@@ -270,6 +272,7 @@ namespace GGJ.Managers
             PlayerController.Instance.Navigation.SetActive(false);
             _convictionScreen.SetActive(true);
             _convictionScreen.GetComponent<ConvictionPhaseController>().MoveMasksToConviction();
+            InConvictionPhase = true;
         }
 
         public void YouWin()

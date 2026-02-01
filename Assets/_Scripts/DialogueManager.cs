@@ -87,6 +87,7 @@ namespace GGJ.Managers
                     newMask.transform.localRotation = Quaternion.identity;
                     newMask.transform.localScale = new Vector3(0.6f, 0.6f, 0.6f);
                     newMask.GetComponent<MaskController>().Canvas.gameObject.SetActive(false);
+                    newMask.GetComponent<MaskController>().PotentialMaskPosition.gameObject.SetActive(false);
                 }
 
                 mask.Dialogue.text = mask.Dialogue.text.Replace("${MASK_NAME}", "they");
@@ -131,6 +132,7 @@ namespace GGJ.Managers
                     newMask.transform.localRotation = Quaternion.identity;
                     newMask.transform.localScale = new Vector3(0.6f, 0.6f, 0.6f);
                     newMask.GetComponent<MaskController>().Canvas.gameObject.SetActive(false);
+                    newMask.GetComponent<MaskController>().PotentialMaskPosition.gameObject.SetActive(false);
                 }
 
                 mask.Dialogue.text = mask.Dialogue.text.Replace("${MASK_NAME}", "they");

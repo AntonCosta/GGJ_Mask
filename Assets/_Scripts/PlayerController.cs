@@ -1,4 +1,5 @@
 using System;
+using GGJ.Managers;
 using GGJ.Utils;
 using GJJ.Managers;
 using UnityEngine;
@@ -34,12 +35,12 @@ namespace GGJ.Controllers
 
         private void Update()
         {
-            if (Keyboard.current.dKey.wasPressedThisFrame && !ScreenFader.Instance.IsTweening)
+            if (Keyboard.current.dKey.wasPressedThisFrame && !ScreenFader.Instance.IsTweening && !GameManager.Instance.InConvictionPhase)
             {
                 ScreenFader.Instance.FadeHide(MaskManager.Instance.NextMask);
             }
 
-            if (Keyboard.current.aKey.wasPressedThisFrame && !ScreenFader.Instance.IsTweening)
+            if (Keyboard.current.aKey.wasPressedThisFrame && !ScreenFader.Instance.IsTweening && !GameManager.Instance.InConvictionPhase)
             {
                 ScreenFader.Instance.FadeHide(MaskManager.Instance.PreviousMask);
             }

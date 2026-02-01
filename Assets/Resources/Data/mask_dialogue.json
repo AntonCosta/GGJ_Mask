@@ -159,7 +159,7 @@
             },
             {
               "Id": "5",
-              "Text": "Possibly had a ${VOICE}."
+              "Text": "Possibly had a ${VOICE} voice."
             },
             {
               "Id": "6",
@@ -179,7 +179,7 @@
             },
             {
               "Id": "10",
-              "Text": "I’m unsure, but ${VOICE}."
+              "Text": "I’m unsure, but ${VOICE} pitched voice."
             }
           ]
         }
