@@ -263,6 +263,7 @@ namespace GGJ.Managers
             _nextPhase.gameObject.SetActive(true);
             _nextPhase.onClick.AddListener(() =>
             {
+                audioManager.PlayUIPositive();
                 if (audioManager != null) audioManager.StopNpcVoice(0.08f);
                 ScreenFader.Instance.FadeHide(GoToConvictionPhase);
             });
