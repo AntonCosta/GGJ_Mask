@@ -89,7 +89,7 @@ namespace GGJ.Managers
                     newMask.GetComponent<MaskController>().Canvas.gameObject.SetActive(false);
                 }
 
-                mask.Dialogue.text = mask.Dialogue.text.Replace("${MASK_NAME}", "     ");
+                mask.Dialogue.text = mask.Dialogue.text.Replace("${MASK_NAME}", "them");
                 killerMask.WhatTheySaidAboutYou.Add(mask.Dialogue);
             }
             else
@@ -133,7 +133,7 @@ namespace GGJ.Managers
                     newMask.GetComponent<MaskController>().Canvas.gameObject.SetActive(false);
                 }
 
-                mask.Dialogue.text = mask.Dialogue.text.Replace("${MASK_NAME}", "     ");
+                mask.Dialogue.text = mask.Dialogue.text.Replace("${MASK_NAME}", "them");
                 maskCopyController.WhatTheySaidAboutYou.Add(mask.Dialogue);
             }
         }

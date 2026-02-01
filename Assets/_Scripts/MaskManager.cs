@@ -114,7 +114,7 @@ namespace GJJ.Managers
             {
                 if (_currentNrLiers < _maxNumberOfLiers)
                 {
-                    mask.IsTruthful = Random.Range(0, 1) == 1;
+                    mask.IsTruthful = Random.Range(0, 2) == 1;
                     if (!mask.IsTruthful)
                     {
                         _currentNrLiers++;

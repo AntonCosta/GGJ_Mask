@@ -27,6 +27,8 @@ namespace GGJ.Managers
         [SerializeField] private TextMeshProUGUI _outsideShotText;
         [SerializeField] private GameObject _insideShot;
         [SerializeField] private TextMeshProUGUI _insideShotText;
+        [SerializeField] private GameObject _tutorialShot;
+        [SerializeField] private TextMeshProUGUI _tutorialShotText;
         [SerializeField] private GameObject _youWinUI;
         [SerializeField] private GameObject _youLoseUI;
         [SerializeField] private GameObject _notepad;
@@ -83,6 +85,7 @@ namespace GGJ.Managers
                 _youWinUI.SetActive(false);
                 _youLoseUI.SetActive(false);
                 _convictionScreen.SetActive(false);
+                PlayerController.Instance.Navigation.SetActive(false);
                 _mainMenu.gameObject.SetActive(true);
                 _levelGenerator = LevelGenerator.Instance;
                 ReadMurderData();
@@ -120,6 +123,9 @@ namespace GGJ.Managers
                     ScreenFader.Instance.FadeHide(ShowInsideShot);
                     break;
                 case 2:
+                    ScreenFader.Instance.FadeHide(ShowTutorialShot);
+                    break;
+                case 3:
                     ScreenFader.Instance.FadeHide(ShowGame);
                     _currentScreenCounter = 0;
                     break;
@@ -130,6 +136,7 @@ namespace GGJ.Managers
         {
             _outsideShot.SetActive(true);
             _insideShot.SetActive(false);
+            _tutorialShot.SetActive(false);
             _canPressSpace = true;
         }
 
@@ -137,6 +144,15 @@ namespace GGJ.Managers
         {
             _outsideShot.SetActive(false);
             _insideShot.SetActive(true);
+            _tutorialShot.SetActive(false);
+            _canPressSpace = true;
+        }
+
+        private void ShowTutorialShot()
+        {
+            _outsideShot.SetActive(false);
+            _insideShot.SetActive(false);
+            _tutorialShot.SetActive(true);
             _canPressSpace = true;
         }
 
@@ -144,9 +160,11 @@ namespace GGJ.Managers
         {
             _outsideShot.SetActive(false);
             _insideShot.SetActive(false);
+            _tutorialShot.SetActive(false);
             _inGameUI.SetActive(true);
             _notepad.SetActive(true);
             _nextPhase.gameObject.SetActive(false);
+            PlayerController.Instance.Navigation.SetActive(true);
             _levelGenerator.GenerateLevel();
         }
 
@@ -199,6 +217,7 @@ namespace GGJ.Managers
             _maskPositions.SetActive(false);
             _inGameUI.SetActive(false);
             _notepad.SetActive(false);
+            PlayerController.Instance.Navigation.SetActive(false);
             _convictionScreen.SetActive(true);
             _convictionScreen.GetComponent<ConvictionPhaseController>().MoveMasksToConviction();
         }

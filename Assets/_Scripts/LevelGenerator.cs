@@ -16,6 +16,8 @@ namespace GGJ
         private const string MASK_PREFAB = "Prefabs/Mask";
         private const string INTERVIEW_ROOM_PREFAB = "Prefabs/InterviewRoom";
         private const float MASK_Y_OFFSET = -0.1f;
+        private const int MIN_NR_MASKS = 5;
+        private const int MAX_NR_MASKS = 7;
 
         public static LevelGenerator Instance { get; private set; }
         
@@ -50,7 +52,7 @@ namespace GGJ
 
         public void GenerateLevel()
         {
-            _nrOfMasks = Random.Range(5, 7);
+            _nrOfMasks = Random.Range(MIN_NR_MASKS, MAX_NR_MASKS + 1);
             ReadDialogue();
             CreateMasks();
             CreateBackgrounds();
@@ -86,11 +88,11 @@ namespace GGJ
             maskController.Id = _maskId++;
             maskController.Accessory.sprite = _accessory.RandomElement();
             maskController.Hat.sprite = _hats.RandomElement();
-            maskController.Eyes.sprite = _eyes.RandomEvenElement();
+            maskController.Eyes.sprite = _eyes.RandomElement();
             maskController.Nose.sprite = _nose.RandomElement();
             maskController.Mouth.sprite = _mouth.RandomElement();
             maskController.FaceType.sprite = _faceType.RandomElement();
-            maskController.Ears.sprite = _ears.RandomEvenElement();
+            maskController.Ears.sprite = _ears.RandomElement();
             maskController.MaskComponents.Add(maskController.Accessory);
             maskController.MaskComponents.Add(maskController.Hat);
             maskController.MaskComponents.Add(maskController.Eyes);
