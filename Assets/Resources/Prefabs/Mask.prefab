@@ -60,9 +60,11 @@ MonoBehaviour:
   Dialogue: {fileID: 7362143099588989335}
   SpeachBubble: {fileID: 7982658743957914731}
   PotentialMaskPosition: {fileID: 6098044885197103001}
+  Id: 0
   Amplitude: 0.025
   DialogueKnowledgeType: 
   MaskComponents: []
+  WhatTheySaidAboutYou: []
   Clickable: 0
 --- !u!61 &3803427382796595883
 BoxCollider2D:
@@ -992,7 +994,7 @@ MonoBehaviour:
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 11400000, guid: 634b637e9260ab44abfe86e23e5fc9ce, type: 2}
+  m_spriteAsset: {fileID: 11400000, guid: e8a6375a3b9bdc541b4b19e2efae627f, type: 2}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
   m_TextStyleHashCode: -1183493901

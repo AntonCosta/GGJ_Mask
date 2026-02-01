@@ -64,6 +64,7 @@ namespace GGJ
 
         private void CreateMasks()
         {
+            MaskManager.Instance.Masks.Clear();
             for (var i = 0; i < _nrOfMasks; i++)
             {
                 var newMask = CreateMask();

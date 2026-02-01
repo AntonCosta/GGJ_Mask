@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using DG.Tweening;
 using GGJ.Managers;
@@ -7,6 +8,7 @@ using GJJ.Managers;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Object = UnityEngine.Object;
 
 namespace GGJ.Controllers
 {
@@ -24,6 +26,7 @@ namespace GGJ.Controllers
         private MaskFileController _maskFileController;
         private Camera _camera;
         private MaskController _currentMask;
+        private List<MaskController> _maskCopies;
 
         private void Start()
         {
@@ -33,7 +36,8 @@ namespace GGJ.Controllers
 
         public void MoveMasksToConviction()
         {
-            MaskManager.Instance.Masks.ForEach(mask =>
+            _maskCopies = MaskManager.Instance.Masks.ToList();
+            _maskCopies.ForEach(mask =>
             {
                 mask.transform.SetParent(transform, false);
                 mask.transform.localPosition = Vector3.zero;
@@ -46,7 +50,7 @@ namespace GGJ.Controllers
             });
             _circularLayout.Arrange();
 
-            MaskManager.Instance.Masks.ForEach(mask =>
+            _maskCopies.ForEach(mask =>
             {
                 mask.Amplitude = 0.01f;
                 mask.OnScreen();
@@ -57,23 +61,7 @@ namespace GGJ.Controllers
         {
             if (Keyboard.current.escapeKey.wasPressedThisFrame && _maskFile.activeSelf && !ScreenFader.Instance.IsTweening)
             {
-                ScreenFader.Instance.FadeHide(() =>
-                {
-                    _maskFile.SetActive(false);
-                    _background.SetActive(true);
-                    MaskManager.Instance.Masks.ForEach(mask =>
-                    {
-                        mask.gameObject.SetActive(true);
-                        mask.transform.localScale = new Vector3(1f, 1f, 1f);
-                    });
-
-                    _circularLayout.Arrange();
-                    MaskManager.Instance.Masks.ForEach(mask =>
-                    {
-                        mask.Amplitude = 0.01f;
-                        mask.OnScreen();
-                    });
-                });
+                ReturnToConviction();
             }
             
             if (Mouse.current.leftButton.wasPressedThisFrame && !ScreenFader.Instance.IsTweening)
@@ -94,20 +82,68 @@ namespace GGJ.Controllers
             }
         }
 
+        private void ReturnToConviction()
+        {
+            ScreenFader.Instance.FadeHide(() =>
+            {
+                _maskFile.SetActive(false);
+                _background.SetActive(true);
+                _maskCopies.ForEach(mask =>
+                {
+                    mask.gameObject.SetActive(true);
+                    mask.transform.localScale = new Vector3(1f, 1f, 1f);
+                });
+
+                _circularLayout.Arrange();
+                _maskCopies.ForEach(mask =>
+                {
+                    mask.Amplitude = 0.01f;
+                    mask.OnScreen();
+                });
+            });
+        }
+
         private void PressedYes()
         {
             if (_currentMask.IsKiller)
             {
-                Debug.Log("You win");
+                ScreenFader.Instance.FadeHide(GameManager.Instance.YouWin);
+                _maskFile.SetActive(false);
+                _background.SetActive(true);
+                for (int i = transform.childCount - 1; i >= 0; i--)
+                {
+                    Destroy(transform.GetChild(i).gameObject);
+                }
+            }
+            else
+            {
+                _maskCopies.RemoveAll(mask => mask.Id == _currentMask.Id);
+                _currentMask.gameObject.SetActive(false);
+                if (_maskCopies.Count == 1)
+                {
+                    ScreenFader.Instance.FadeHide(GameManager.Instance.YouLose);
+                    _maskFile.SetActive(false);
+                    _background.SetActive(true);
+                    for (int i = transform.childCount - 1; i >= 0; i--)
+                    {
+                        Destroy(transform.GetChild(i).gameObject);
+                    }
+                    return;
+                }
+                var randomMask = _maskCopies.RandomElement();
+                while (randomMask.IsKiller)
+                {
+                    randomMask = _maskCopies.RandomElement();
+                }
+                _maskCopies.RemoveAll(mask => mask.Id == randomMask.Id);
+                randomMask.gameObject.SetActive(false);
+                ReturnToConviction();
             }
         }
 
         private void PressedNo()
         {
-            if (!_currentMask.IsKiller)
-            {
-                Debug.Log("You lose");
-            }
+            ReturnToConviction();
         }
 
         public void PopulateMaskFile(MaskController mask)

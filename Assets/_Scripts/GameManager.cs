@@ -27,6 +27,8 @@ namespace GGJ.Managers
         [SerializeField] private TextMeshProUGUI _outsideShotText;
         [SerializeField] private GameObject _insideShot;
         [SerializeField] private TextMeshProUGUI _insideShotText;
+        [SerializeField] private GameObject _youWinUI;
+        [SerializeField] private GameObject _youLoseUI;
 
         public static GameManager Instance { get; private set; }
         public MurderModel MurderData => _murderModel;
@@ -41,6 +43,8 @@ namespace GGJ.Managers
         private int _currentScreenCounter;
         private string _crimeLocation;
         private string _crimeTime;
+        private bool _youWon;
+        private bool _youLost;
 
         private void Awake()
         {
@@ -56,6 +60,7 @@ namespace GGJ.Managers
         private void Start()
         {
             _startButton.onClick.AddListener(GenerateGame);
+            _exitButton.onClick.AddListener(Application.Quit);
             _levelGenerator = LevelGenerator.Instance;
             ReadMurderData();
             ReadIntroText();
@@ -71,6 +76,19 @@ namespace GGJ.Managers
                 _canPressSpace = false;
                 _currentScreenCounter++;
                 GoToNextScreen();
+            }
+            if ((Keyboard.current.spaceKey.wasPressedThisFrame || Keyboard.current.escapeKey.wasPressedThisFrame) && (_youWon || _youLost))
+            {
+                _youWinUI.SetActive(false);
+                _youLoseUI.SetActive(false);
+                _convictionScreen.SetActive(false);
+                _mainMenu.gameObject.SetActive(true);
+                _levelGenerator = LevelGenerator.Instance;
+                ReadMurderData();
+                ReadIntroText();
+                GenerateCrimeLocation();
+                GenerateCrimeTime();
+                GenerateIntroText();
             }
         }
 
@@ -102,6 +120,7 @@ namespace GGJ.Managers
                     break;
                 case 2:
                     ScreenFader.Instance.FadeHide(ShowGame);
+                    _currentScreenCounter = 0;
                     break;
             }
         }
@@ -179,6 +198,18 @@ namespace GGJ.Managers
             _inGameUI.SetActive(false);
             _convictionScreen.SetActive(true);
             _convictionScreen.GetComponent<ConvictionPhaseController>().MoveMasksToConviction();
+        }
+
+        public void YouWin()
+        {
+            _youWinUI.SetActive(true);
+            _youWon = true;
+        }
+
+        public void YouLose()
+        {
+            _youLoseUI.SetActive(true);
+            _youLost = true;
         }
     }
 }

@@ -48,6 +48,7 @@ namespace GJJ.Managers
         {
             Masks.ForEach(mask =>
             {
+                mask.WhatTheySaidAboutYou.Clear();
                 mask.PersonalityType = Constants.MASK_PERSONALITY_TYPES.RandomElement();
                 while (mask.PersonalityType == "Aggressive" && _currentNrAggresive >= _maxNumberOfAggresive)
                 {
