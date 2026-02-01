@@ -34,6 +34,8 @@ namespace GJJ.Managers
         private int _currentNrAggresive= 0;
         private int _currentNrShady = 0;
         
+        public AudioManager audio;
+        
         private void Awake()
         {
             if (Instance != null && Instance != this)
@@ -139,7 +141,9 @@ namespace GJJ.Managers
             {
                 _currentMaskIndex = 0;
                 Masks[_currentMaskIndex].OnScreen();
-                GameManager.Instance.PlayNpcVoiceOneShot(Masks[_currentMaskIndex].Voice);
+                //GameManager.Instance.PlayNpcVoiceOneShot(Masks[_currentMaskIndex].Voice);
+                //audio.PlayNpcVoice(Masks[_currentMaskIndex].Voice,1);
+                
                 Masks[LevelGenerator.Instance.NrOfMasks - 1].OffScreen();;
                 for (var i = 0; i < LevelGenerator.Instance.NrOfMasks; i++)
                 {
@@ -157,7 +161,7 @@ namespace GJJ.Managers
             }
 
             _currentMaskIndex++;
-            GameManager.Instance.PlayNpcVoiceOneShot(Masks[_currentMaskIndex].Voice);
+            //GameManager.Instance.PlayNpcVoiceOneShot(Masks[_currentMaskIndex].Voice);
             Masks[_currentMaskIndex].OnScreen();
             Masks[_currentMaskIndex - 1].OffScreen();
             NotepadController.Instance.ChangeNotepad(Masks[_currentMaskIndex].PlayerVerdict);
@@ -184,7 +188,7 @@ namespace GJJ.Managers
             {
                 _currentMaskIndex = LevelGenerator.Instance.NrOfMasks - 1;
                 Masks[_currentMaskIndex].OnScreen();
-                GameManager.Instance.PlayNpcVoiceOneShot(Masks[_currentMaskIndex].Voice);
+                //GameManager.Instance.PlayNpcVoiceOneShot(Masks[_currentMaskIndex].Voice);
 
                 Masks[0].OffScreen();
                 for (var i = 0; i < LevelGenerator.Instance.NrOfMasks; i++)
@@ -204,7 +208,7 @@ namespace GJJ.Managers
             }
 
             _currentMaskIndex--;
-            GameManager.Instance.PlayNpcVoiceOneShot(Masks[_currentMaskIndex].Voice);
+            //GameManager.Instance.PlayNpcVoiceOneShot(Masks[_currentMaskIndex].Voice);
             Masks[_currentMaskIndex].OnScreen();
             Masks[_currentMaskIndex + 1].OffScreen();
             NotepadController.Instance.ChangeNotepad(Masks[_currentMaskIndex].PlayerVerdict);
