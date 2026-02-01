@@ -38,7 +38,7 @@ namespace GGJ.Controllers
                 audioManager = FindFirstObjectByType<AudioManager>();
             
             if (music == null)
-                music = FindObjectOfType<MusicManager>();
+                music = FindFirstObjectByType<MusicManager>();
         }
         private void Start()
         {
