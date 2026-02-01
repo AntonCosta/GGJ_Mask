@@ -284,6 +284,7 @@ namespace GGJ.Managers
         public void YouLose()
         {
             audioManager.PlayUINegative();
+            audioManager.PlayThunder();
             music.SetState(MusicState.Lose);
             _youLoseUI.SetActive(true);
             _youLost = true;
