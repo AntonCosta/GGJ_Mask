@@ -35,37 +35,13 @@ namespace GGJ.Managers
         [SerializeField] private GameObject _youLoseUI;
         [SerializeField] private GameObject _notepad;
 
+        [Header("Audio")]
+        [SerializeField] private AudioManager audio;
         
-        [Header("Rain Audio")]
-        [SerializeField] private AudioSource _rainSource;
-        [SerializeField] private AudioLowPassFilter _rainLowPass;
-
-        [SerializeField] private float _menuVolume = 0.6f;
-        [SerializeField] private float _gameVolume = 0.25f;
-        [SerializeField] private float _convictionVolume = 0f;
-
-        [SerializeField] private float _menuCutoff = 22000f;
-        [SerializeField] private float _gameCutoff = 3000f;
-        [SerializeField] private float _convictionCutoff = 500f;
-
-        [Header("Thunder Audio")]
-        [SerializeField] private AudioSource _thunderSource;
-        [SerializeField] private AudioClip _thunderClip;
-        
-        [Header("UI audio")]
-        [SerializeField] private AudioSource _uiSource;
-        
-        [SerializeField] private AudioClip _clickClip;
-        [SerializeField] private AudioClip _hoverClip;
-        [SerializeField] private AudioClip _positiveClip;
-        [SerializeField] private AudioClip _negativeClip;
-        
-        [Header("NPC Voice One Shots")]
-        [SerializeField] private AudioSource _npcVoiceSource;
-        [SerializeField] private AudioClip _voiceLow;
-        [SerializeField] private AudioClip _voiceNormal;
-        [SerializeField] private AudioClip _voiceHigh;
-
+        [Header("Rain Mix (per state)")]
+        [Range(0f, 1f)] [SerializeField] private float _menuRainVolume = 0.6f;
+        [Range(0f, 1f)] [SerializeField] private float _gameRainVolume = 0.25f;
+        [Range(0f, 1f)] [SerializeField] private float _convictionRainVolume = 0f;
         public static GameManager Instance { get; private set; }
         public MurderModel MurderData => _murderModel;
         public string CrimeLocation => _crimeLocation;
@@ -91,18 +67,21 @@ namespace GGJ.Managers
             }
 
             Instance = this;
+            
+            if (audio == null)
+                audio = FindObjectOfType<AudioManager>();
         }
         
         private void Start()
         {
             _startButton.onClick.AddListener(() =>
             {
-                PlayUIPositive();
+                audio.PlayUIPositive();
                 GenerateGame();
             });
             _exitButton.onClick.AddListener(() =>
             {
-                PlayUIClick();
+                audio.PlayUIClick();
                 Application.Quit();
             });
             _levelGenerator = LevelGenerator.Instance;
@@ -176,8 +155,7 @@ namespace GGJ.Managers
         private void ShowOutsideShot()
         {
             
-            StartRainSFX(_menuVolume, _menuCutoff);
-            
+            audio.StartRainSFX(_menuRainVolume, audio.menuCutoff);
             
             _outsideShot.SetActive(true);
             _insideShot.SetActive(false);
@@ -187,7 +165,7 @@ namespace GGJ.Managers
 
         private void ShowInsideShot()
         {
-            PlayThunder();
+            audio.PlayThunder();
             
             _outsideShot.SetActive(false);
             _insideShot.SetActive(true);
@@ -205,7 +183,7 @@ namespace GGJ.Managers
 
         private void ShowGame()
         {
-            StartRainSFX(_gameVolume, _gameCutoff);
+            audio.StartRainSFX(_gameRainVolume, audio.gameCutoff);
             
             _outsideShot.SetActive(false);
             _insideShot.SetActive(false);
@@ -263,7 +241,7 @@ namespace GGJ.Managers
 
         private void GoToConvictionPhase()
         {
-            StartRainSFX(_convictionVolume, _convictionCutoff);
+            audio.StartRainSFX(_convictionRainVolume, audio.convictionCutoff);
             
             _maskPositions.SetActive(false);
             _inGameUI.SetActive(false);
@@ -275,96 +253,18 @@ namespace GGJ.Managers
 
         public void YouWin()
         {
-            PlayUIPositive();
+            audio.PlayUIPositive();
             _youWinUI.SetActive(true);
             _youWon = true;
         }
 
         public void YouLose()
         {
-            PlayUINegative();
+            audio.PlayUINegative();
             _youLoseUI.SetActive(true);
             _youLost = true;
         }
-        
-      private void StartRainSFX(float volume, float cutoff)
-      {
-          if (!_rainSource.isPlaying)
-              _rainSource.Play();
-      
-          StopCoroutine("FadeRainSFX");
-          StartCoroutine(FadeRainSFX(volume, cutoff));
-      }
-      
-      private IEnumerator FadeRainSFX(float targetVolume, float targetCutoff)
-      {
-          float startVol = _rainSource.volume;
-          float startCut = _rainLowPass.cutoffFrequency;
-      
-          float t = 0f;
-          float dur = 0.8f;
-      
-          while (t < dur)
-          {
-              t += Time.deltaTime;
-              float k = t / dur;
-      
-              _rainSource.volume = Mathf.Lerp(startVol, targetVolume, k);
-              _rainLowPass.cutoffFrequency = targetCutoff;
-      
-              yield return null;
-          }
-      
-          _rainSource.volume = targetVolume;
-          _rainLowPass.cutoffFrequency = targetCutoff;
-      }
 
-      private void PlayThunder()
-      {
-          if (_thunderSource != null && _thunderClip != null)
-          {
-              _thunderSource.PlayOneShot(_thunderClip);
-          }
-      }
-
-      public void PlayUIClick()
-      {
-          PlayUI(_clickClip, 0.7f);
-      }
-
-      public void PlayUIHover()
-      {
-          PlayUI(_hoverClip, 0.4f);
-      }
-
-      public void PlayUIPositive()
-      {
-          PlayUI(_positiveClip, 0.8f);
-      }
-
-      public void PlayUINegative()
-      {
-          PlayUI(_negativeClip, 0.8f);
-      }
-
-      private void PlayUI(AudioClip clip, float vol = 1f)
-      {
-          if (_uiSource != null && clip != null)
-              _uiSource.PlayOneShot(clip, vol);
-      }
-      public void PlayNpcVoiceOneShot(string voice)
-      {
-          if (_npcVoiceSource == null) return;
-
-          AudioClip clip = _voiceNormal;
-
-          if (voice == "Low") clip = _voiceLow;
-          else if (voice == "High") clip = _voiceHigh;
-
-          if (clip == null) return;
-
-          _npcVoiceSource.PlayOneShot(clip, 1f);
-      }
 
 
 
