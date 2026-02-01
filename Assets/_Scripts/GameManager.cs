@@ -38,6 +38,9 @@ namespace GGJ.Managers
         [Header("Audio")]
         [SerializeField] private AudioManager audioManager;
         
+        [Header("Music")]
+        [SerializeField] private MusicManager music;
+        
         [Header("Rain Mix (per state)")]
         [Range(0f, 1f)] [SerializeField] private float _menuRainVolume = 0.6f;
         [Range(0f, 1f)] [SerializeField] private float _gameRainVolume = 0.25f;
@@ -76,6 +79,8 @@ namespace GGJ.Managers
         
         private void Start()
         {
+            music.SetState(MusicState.MainMenu);
+            
             _startButton.onClick.AddListener(() =>
             {
                 audioManager.PlayUIPositive();
@@ -84,6 +89,7 @@ namespace GGJ.Managers
             _exitButton.onClick.AddListener(() =>
             {
                 audioManager.PlayUIClick();
+                music.SetState(MusicState.Lose);
                 Application.Quit();
             });
             _levelGenerator = LevelGenerator.Instance;
@@ -166,6 +172,7 @@ namespace GGJ.Managers
         {
             
             audioManager.StartRainSFX(_menuRainVolume, audioManager.menuCutoff);
+            music.SetState(MusicState.InsideShot);
             
             _outsideShot.SetActive(true);
             _insideShot.SetActive(false);
@@ -177,6 +184,7 @@ namespace GGJ.Managers
         {
             audioManager.PlayThunder();
             
+            
             _outsideShot.SetActive(false);
             _insideShot.SetActive(true);
             _tutorialShot.SetActive(false);
@@ -185,6 +193,7 @@ namespace GGJ.Managers
 
         private void ShowTutorialShot()
         {
+            music.SetState(MusicState.TutorialShot);
             _outsideShot.SetActive(false);
             _insideShot.SetActive(false);
             _tutorialShot.SetActive(true);
@@ -194,6 +203,7 @@ namespace GGJ.Managers
         private void ShowGame()
         {
             audioManager.StartRainSFX(_gameRainVolume, audioManager.gameCutoff);
+            music.SetState(MusicState.GameShot);
             
             _outsideShot.SetActive(false);
             _insideShot.SetActive(false);
@@ -252,6 +262,7 @@ namespace GGJ.Managers
         private void GoToConvictionPhase()
         {
             audioManager.StartRainSFX(_convictionRainVolume, audioManager.convictionCutoff);
+            music.SetState(MusicState.ConvictionPhase);
             
             _maskPositions.SetActive(false);
             _inGameUI.SetActive(false);
@@ -264,6 +275,8 @@ namespace GGJ.Managers
         public void YouWin()
         {
             audioManager.PlayUIPositive();
+            //music.SetState(MusicState.Win);
+            music.PlayWinEndInstant(0.15f);
             _youWinUI.SetActive(true);
             _youWon = true;
         }
@@ -271,6 +284,7 @@ namespace GGJ.Managers
         public void YouLose()
         {
             audioManager.PlayUINegative();
+            music.SetState(MusicState.Lose);
             _youLoseUI.SetActive(true);
             _youLost = true;
         }

@@ -2542,6 +2542,7 @@ MonoBehaviour:
   _youLoseUI: {fileID: 75829411}
   _notepad: {fileID: 1824337222}
   audioManager: {fileID: 1026192483396023673}
+  music: {fileID: 6732150983715132419}
   _menuRainVolume: 0.6
   _gameRainVolume: 0.25
   _convictionRainVolume: 0
@@ -7783,7 +7784,8 @@ MonoBehaviour:
   _location: {fileID: 2103612049}
   _time: {fileID: 121150128}
   _voice: {fileID: 1573567980}
-  audio: {fileID: 1026192483396023673}
+  audioManager: {fileID: 1026192483396023673}
+  music: {fileID: 6732150983715132419}
 --- !u!114 &1983064281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8325,7 +8327,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MaskManager
   Masks: []
   IsTweening: 0
-  audioManager: {fileID: 1026192483396023673}
+  audioManager: {fileID: 0}
 --- !u!4 &2080047224
 Transform:
   m_ObjectHideFlags: 0
@@ -9109,6 +9111,78 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcd4ce49ce1797344bd3fd8d5bc4ec33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
+--- !u!1001 &6732150983715132417
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5007747801901427525, guid: 8787294a679bc9f49a873d4f8a607ee1, type: 3}
+      propertyPath: endVolume
+      value: 0.349
+      objectReference: {fileID: 0}
+    - target: {fileID: 6839984554636313974, guid: 8787294a679bc9f49a873d4f8a607ee1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.08055
+      objectReference: {fileID: 0}
+    - target: {fileID: 6839984554636313974, guid: 8787294a679bc9f49a873d4f8a607ee1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.1818
+      objectReference: {fileID: 0}
+    - target: {fileID: 6839984554636313974, guid: 8787294a679bc9f49a873d4f8a607ee1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6839984554636313974, guid: 8787294a679bc9f49a873d4f8a607ee1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6839984554636313974, guid: 8787294a679bc9f49a873d4f8a607ee1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6839984554636313974, guid: 8787294a679bc9f49a873d4f8a607ee1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6839984554636313974, guid: 8787294a679bc9f49a873d4f8a607ee1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6839984554636313974, guid: 8787294a679bc9f49a873d4f8a607ee1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6839984554636313974, guid: 8787294a679bc9f49a873d4f8a607ee1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6839984554636313974, guid: 8787294a679bc9f49a873d4f8a607ee1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8144918742850767686, guid: 8787294a679bc9f49a873d4f8a607ee1, type: 3}
+      propertyPath: m_Name
+      value: MusicManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8787294a679bc9f49a873d4f8a607ee1, type: 3}
+--- !u!114 &6732150983715132419 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5007747801901427525, guid: 8787294a679bc9f49a873d4f8a607ee1, type: 3}
+  m_PrefabInstance: {fileID: 6732150983715132417}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6bca745c35764946b48d51559c59a6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MusicManager
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -9129,3 +9203,4 @@ SceneRoots:
   - {fileID: 1824337223}
   - {fileID: 1987568607}
   - {fileID: 1026192483396023672}
+  - {fileID: 6732150983715132417}

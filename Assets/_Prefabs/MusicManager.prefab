@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8144918742850767686
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6839984554636313974}
+  - component: {fileID: 5007747801901427525}
+  m_Layer: 0
+  m_Name: MusicManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6839984554636313974
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8144918742850767686}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.08055, y: 0.1818, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5007747801901427525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8144918742850767686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6bca745c35764946b48d51559c59a6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MusicManager
+  bass_arp:
+    name: Bass Arp
+    clip: {fileID: 8300000, guid: 0621e82dd384ad248956d4b357033664, type: 3}
+    baseVolume: 0.376
+    source: {fileID: 0}
+  bass:
+    name: Bass
+    clip: {fileID: 8300000, guid: 1287f89864f2cab42b230f1224656d5a, type: 3}
+    baseVolume: 0.396
+    source: {fileID: 0}
+  bells:
+    name: Bells
+    clip: {fileID: 8300000, guid: 7c4105b88c2a5d1438c093615c0d7870, type: 3}
+    baseVolume: 0.275
+    source: {fileID: 0}
+  chords:
+    name: Chords
+    clip: {fileID: 8300000, guid: 4fe48195e26f7d945995824f3fa8d8dd, type: 3}
+    baseVolume: 0.362
+    source: {fileID: 0}
+  high:
+    name: High
+    clip: {fileID: 8300000, guid: 20b90ce204a76c84384ed7e7f4a011b8, type: 3}
+    baseVolume: 0.315
+    source: {fileID: 0}
+  low:
+    name: Low
+    clip: {fileID: 8300000, guid: 0b211cd7e75590d4b8c9d7a1f1778ce4, type: 3}
+    baseVolume: 0.295
+    source: {fileID: 0}
+  pedal:
+    name: Pedal
+    clip: {fileID: 8300000, guid: 943ccafe0be462f4c8a9ccdc848f7b5f, type: 3}
+    baseVolume: 0.06
+    source: {fileID: 0}
+  percussion:
+    name: Percussion
+    clip: {fileID: 8300000, guid: ef3774056859e9c46bf43407aabacbfd, type: 3}
+    baseVolume: 0.067
+    source: {fileID: 0}
+  loopLengthSeconds: 23.727
+  convictionPercussionLowpassHz: 3000
+  randomActiveCount: 4
+  randomizeBassArp: 1
+  randomizeBass: 1
+  randomizeBells: 1
+  randomizeChords: 1
+  randomizeHigh: 1
+  randomizeLow: 1
+  randomizePedal: 0
+  randomizePercussion: 0
+  fadeOutFast: 0.1
+  fadeInInside: 1.454
+  fadeTutorial: 0.6
+  fadeGame: 0.8
+  fadeWin: 1.2
+  fadeLose: 0.4
+  playOnAwake: 1
+  scheduledStartDelay: 0.05
+  playPedalInMenu: 0
+  maskFileFadeSeconds: 0.35
+  maskFileLowpassFadeSeconds: 0.35
+  end_bass: {fileID: 8300000, guid: d983909193a1b494ea8ba2094c9891f9, type: 3}
+  end_bells: {fileID: 8300000, guid: 301a1670e93c002488f1902e1a15413a, type: 3}
+  end_chords: {fileID: 8300000, guid: dfba3eee42ff4ec4b87c9a28a4eedf37, type: 3}
+  end_high: {fileID: 8300000, guid: 9b34b75b488359841a0c6f47f4797517, type: 3}
+  end_low: {fileID: 8300000, guid: 810c6c6933f0bec4dac10522dd15e43c, type: 3}
+  end_percussion: {fileID: 8300000, guid: 9cdf0e026503a7b49add726b432c3946, type: 3}
+  end_cymbal_crash: {fileID: 8300000, guid: 1edf8a9c974477548aca96911673415c, type: 3}
+  endVolume: 0.436

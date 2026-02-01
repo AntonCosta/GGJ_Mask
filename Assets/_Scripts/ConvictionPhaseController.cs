@@ -30,11 +30,15 @@ namespace GGJ.Controllers
         
         [Header("Audio")]
         [SerializeField] private AudioManager audioManager;
-
+        [Header("Music")]
+        [SerializeField] private MusicManager music;
         private void Awake()
         {
             if (audioManager == null)
                 audioManager = FindFirstObjectByType<AudioManager>();
+            
+            if (music == null)
+                music = FindObjectOfType<MusicManager>();
         }
         private void Start()
         {
@@ -63,6 +67,7 @@ namespace GGJ.Controllers
                 mask.Amplitude = 0.01f;
                 mask.OnScreen();
             });
+            music.SetState(MusicState.ConvictionPhase);
         }
 
         private void Update()
@@ -94,6 +99,7 @@ namespace GGJ.Controllers
 
         private void ReturnToConviction()
         {
+            music.SetState(MusicState.ConvictionPhase);
             ScreenFader.Instance.FadeHide(() =>
             {
                 _currentMask.gameObject.SetActive(false);
@@ -133,6 +139,8 @@ namespace GGJ.Controllers
                 //GameManager.Instance.PlayUINegative();
                 audioManager.PlayUINegative();
                 
+                music.ApplyWrongGuiltyPenalty();
+                
                 _maskCopies.RemoveAll(mask => mask.Id == _currentMask.Id);
                 if (_maskCopies.Count == 1)
                 {
@@ -157,6 +165,8 @@ namespace GGJ.Controllers
 
         private void CheckIfLost()
         {
+            music.ResolveLose();
+            
             ScreenFader.Instance.FadeHide(GameManager.Instance.YouLose);
             _maskFile.SetActive(false);
             _background.SetActive(true);
@@ -177,6 +187,7 @@ namespace GGJ.Controllers
         {
             
             //GameManager.Instance.PlayUIClick();
+            music.SetState(MusicState.MaskFile);
             audioManager.PlayUIClick();
             
             ScreenFader.Instance.FadeHide(() =>
