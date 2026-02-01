@@ -201,7 +201,7 @@ MonoBehaviour:
   - m_ElementType: 2
     m_Unicode: 65534
     m_GlyphIndex: 32
-    m_Scale: 1
+    m_Scale: 5
     m_Name: ALL MASK COMPONENTS PACKED (1)_32
   - m_ElementType: 2
     m_Unicode: 65534
@@ -843,7 +843,7 @@ MonoBehaviour:
       m_Y: 192
       m_Width: 96
       m_Height: 96
-    m_Scale: 1
+    m_Scale: 5
     m_AtlasIndex: 0
     m_ClassDefinitionType: 0
     sprite: {fileID: -2745235849904708108, guid: 5bb3dec90c0492d4da098ea451a695fc, type: 3}

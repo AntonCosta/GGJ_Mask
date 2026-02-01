@@ -86,6 +86,7 @@ namespace GGJ.Controllers
         {
             ScreenFader.Instance.FadeHide(() =>
             {
+                _currentMask.gameObject.SetActive(false);
                 _maskFile.SetActive(false);
                 _background.SetActive(true);
                 _maskCopies.ForEach(mask =>
@@ -118,7 +119,6 @@ namespace GGJ.Controllers
             else
             {
                 _maskCopies.RemoveAll(mask => mask.Id == _currentMask.Id);
-                _currentMask.gameObject.SetActive(false);
                 if (_maskCopies.Count == 1)
                 {
                     ScreenFader.Instance.FadeHide(GameManager.Instance.YouLose);

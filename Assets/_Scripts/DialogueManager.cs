@@ -74,10 +74,10 @@ namespace GGJ.Managers
                 }
 
                 mask.Dialogue.text = mask.Dialogue.text
-                    .Replace("${PLACE}", gameManager.CrimeLocation)
-                    .Replace("${TIME}", gameManager.CrimeTime)
-                    .Replace("${VOICE}", killerMask.Voice)
-                    .Replace("${MASK_DETAIL}", $"<space=0.2><size=300%><voffset=0.06><sprite={id}></voffset></size>");
+                    .Replace("${PLACE}", $"<sprite={id}>")
+                    .Replace("${TIME}", $"<sprite={id}>")
+                    .Replace("${VOICE}", $"<sprite={id}>")
+                    .Replace("${MASK_DETAIL}", $"<sprite={id}>");
 
                 if (mask.Dialogue.text.Contains("MASK_NAME"))
                 {
@@ -118,10 +118,10 @@ namespace GGJ.Managers
                 }
 
                 mask.Dialogue.text = mask.Dialogue.text
-                    .Replace("${PLACE}", gameManager.GetRandomLocation())
-                    .Replace("${TIME}", gameManager.GetRandomTime())
-                    .Replace("${VOICE}", Constants.MASK_VOICE.RandomElement())
-                    .Replace("${MASK_DETAIL}", $"<space=0.2><size=300%><voffset=0.06><sprite={id}></voffset></size>");
+                    .Replace("${PLACE}", $"<sprite={id}>")
+                    .Replace("${TIME}", $"<sprite={id}>")
+                    .Replace("${VOICE}", $"<sprite={id}>")
+                    .Replace("${MASK_DETAIL}", $"<sprite={id}>");
 
                 if (mask.Dialogue.text.Contains("MASK_NAME"))
                 {
