@@ -151,7 +151,7 @@
             },
             {
               "Id": "3",
-              "Text": "It sounded kind of ${VOICE}."
+              "Text": "It sounded kind of ${VOICE} pitched."
             },
             {
               "Id": "4",
@@ -159,11 +159,11 @@
             },
             {
               "Id": "5",
-              "Text": "Possibly ${VOICE}."
+              "Text": "Possibly had a ${VOICE}."
             },
             {
               "Id": "6",
-              "Text": "It might’ve been ${VOICE}."
+              "Text": "It might’ve been a ${VOICE} voice."
             },
             {
               "Id": "7",
@@ -171,11 +171,11 @@
             },
             {
               "Id": "8",
-              "Text": "Sort of ${VOICE}, I guess."
+              "Text": "Sort of ${VOICE} voice, I guess."
             },
             {
               "Id": "9",
-              "Text": "Hard to say, maybe ${VOICE}."
+              "Text": "Hard to say, maybe a ${VOICE} voice."
             },
             {
               "Id": "10",
@@ -336,7 +336,7 @@
             },
             {
               "Id": "3",
-              "Text": "It sounded ${VOICE}."
+              "Text": "It sounded ${VOICE} pitched."
             },
             {
               "Id": "4",
@@ -356,7 +356,7 @@
             },
             {
               "Id": "8",
-              "Text": "It was clearly ${VOICE}."
+              "Text": "It was clearly a ${VOICE} voice."
             },
             {
               "Id": "9",
@@ -364,7 +364,7 @@
             },
             {
               "Id": "10",
-              "Text": "I’m sure it was ${VOICE}."
+              "Text": "I’m sure it was a ${VOICE} voice."
             }
           ]
         }
@@ -518,39 +518,39 @@
             },
             {
               "Id": "2",
-              "Text": "It was ${VOICE}, 100%."
+              "Text": "It was a ${VOICE} voice, 100%."
             },
             {
               "Id": "3",
-              "Text": "No doubt, ${VOICE}."
+              "Text": "No doubt, a ${VOICE} voice."
             },
             {
               "Id": "4",
-              "Text": "I’m sure it was ${VOICE}."
+              "Text": "I’m sure it was a ${VOICE} voice."
             },
             {
               "Id": "5",
-              "Text": "Trust me, ${VOICE}."
+              "Text": "Trust me, a ${VOICE} voice."
             },
             {
               "Id": "6",
-              "Text": "It sounded exactly ${VOICE}."
+              "Text": "It sounded exactly like a ${VOICE} voice."
             },
             {
               "Id": "7",
-              "Text": "Absolutely ${VOICE}."
+              "Text": "Absolutely ${VOICE} voice."
             },
             {
               "Id": "8",
-              "Text": "Without question, ${VOICE}."
+              "Text": "Without question, ${VOICE} voice."
             },
             {
               "Id": "9",
-              "Text": "I know it was ${VOICE}."
+              "Text": "I know it was a ${VOICE} voice."
             },
             {
               "Id": "10",
-              "Text": "Clearly ${VOICE}."
+              "Text": "Clearly a ${VOICE} voice."
             }
           ]
         }
