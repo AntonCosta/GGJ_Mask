@@ -73,7 +73,7 @@ namespace GGJ.Controllers
 
         private void Update()
         {
-            if (Keyboard.current.escapeKey.wasPressedThisFrame && _maskFile.activeSelf && !ScreenFader.Instance.IsTweening)
+            if ((Keyboard.current.escapeKey.wasPressedThisFrame || Mouse.current.rightButton.wasPressedThisFrame) && _maskFile.activeSelf && !ScreenFader.Instance.IsTweening)
             {
                 audioManager.PlayUINegative();
                 

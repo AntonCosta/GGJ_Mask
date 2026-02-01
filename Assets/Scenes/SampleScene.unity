@@ -1471,7 +1471,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press ESC to return
+  m_text: Press ESC or RMB to return
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9f59fd43cc8d4d9409d34f27c98359fe, type: 2}
   m_sharedMaterial: {fileID: -431443413119936242, guid: 9f59fd43cc8d4d9409d34f27c98359fe, type: 2}
@@ -1537,7 +1537,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 2.465678, z: 17.999449, w: 1.3150284}
+  m_margin: {x: -0.3783512, y: 2.465678, z: 17.719797, w: 1.3150284}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0
@@ -4282,7 +4282,7 @@ Transform:
   m_GameObject: {fileID: 801635069}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.08}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
