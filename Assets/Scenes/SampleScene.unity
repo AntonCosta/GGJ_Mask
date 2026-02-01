@@ -7181,6 +7181,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1824337223}
+  - component: {fileID: 1824337224}
   m_Layer: 0
   m_Name: NotepadHolder
   m_TagString: Untagged
@@ -7206,6 +7207,26 @@ Transform:
   - {fileID: 2043820370}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1824337224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824337222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce800cdb053f572429bd2d75c249f525, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GGJ.Controllers.NotepadController
+  _notepad: {fileID: 1456664238}
+  _notepadSprite: {fileID: 1050820764}
+  _arrowRight: {fileID: 2043820369}
+  _arrowLeft: {fileID: 92109457}
+  _notepads:
+  - {fileID: -1465773084679732315, guid: 5eea12ddb94f45e498a022158a0e26d3, type: 3}
+  - {fileID: -5389823642223283965, guid: 5eea12ddb94f45e498a022158a0e26d3, type: 3}
+  - {fileID: -2101010256449987079, guid: 5eea12ddb94f45e498a022158a0e26d3, type: 3}
 --- !u!1 &1830486795
 GameObject:
   m_ObjectHideFlags: 0
