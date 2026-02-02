@@ -54,7 +54,6 @@ namespace GGJ.Controllers
             _maskCopies.ForEach(mask =>
             {
                 mask.transform.SetParent(transform, false);
-                mask.transform.localPosition = Vector3.zero;
                 mask.Canvas.gameObject.SetActive(false);
                 mask.PotentialMaskPosition.gameObject.SetActive(false);
                 mask.Tween.Kill();

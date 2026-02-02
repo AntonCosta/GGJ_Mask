@@ -162,7 +162,7 @@ namespace GJJ.Managers
                 
                 Masks[LevelGenerator.Instance.NrOfMasks - 1].OffScreen();
                 NotepadController.Instance.ChangeNotepad(Masks[_currentMaskIndex].PlayerVerdict);
-                for (var i = 0; i < LevelGenerator.Instance.NrOfMasks; i++)
+                for (var i = 0; i < LevelGenerator.Instance.MaskPositions.Count; i++)
                 {
                     _tweenSequence.Join(
                         LevelGenerator.Instance.MaskPositions[i].transform
@@ -211,7 +211,7 @@ namespace GJJ.Managers
                 PlayCurrentMaskVoice();
                 Masks[0].OffScreen();
                 NotepadController.Instance.ChangeNotepad(Masks[_currentMaskIndex].PlayerVerdict);
-                for (var i = 0; i < LevelGenerator.Instance.NrOfMasks; i++)
+                for (var i = 0; i < LevelGenerator.Instance.MaskPositions.Count; i++)
                 {
                     _tweenSequence.Join(
                         LevelGenerator.Instance.MaskPositions[i].transform
