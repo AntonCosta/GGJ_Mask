@@ -114,6 +114,7 @@ namespace GGJ.Managers
             {
                 ScreenFader.Instance.FadeHide(() =>
                 {
+                    _startButton.enabled = true;
                     // RESET MUSIC FIRST
                     if (music != null)
                     {
@@ -160,8 +161,8 @@ namespace GGJ.Managers
 
         private void GenerateGame()
         {
-            _mainMenu.gameObject.SetActive(false);
             GoToNextScreen();
+            _startButton.enabled = false;
         }
 
         private void GoToNextScreen()
@@ -186,7 +187,7 @@ namespace GGJ.Managers
         
         private void ShowOutsideShot()
         {
-            
+            _mainMenu.gameObject.SetActive(false);
             audioManager.StartRainSFX(_menuRainVolume, audioManager.menuCutoff);
             music.SetState(MusicState.OutsideShot);
             

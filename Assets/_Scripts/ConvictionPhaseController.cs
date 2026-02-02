@@ -48,6 +48,7 @@ namespace GGJ.Controllers
 
         public void MoveMasksToConviction()
         {
+            MaskManager.Instance.Masks.ForEach(mask => mask.OffScreen());
             music.SetState(MusicState.ConvictionPhase);
             _maskCopies = MaskManager.Instance.Masks.ToList();
             _maskCopies.ForEach(mask =>
@@ -65,8 +66,7 @@ namespace GGJ.Controllers
 
             _maskCopies.ForEach(mask =>
             {
-                mask.Amplitude = 0.01f;
-                mask.OnScreen();
+                mask.OnScreen(0.01f);
             });
             
         }
@@ -115,8 +115,7 @@ namespace GGJ.Controllers
                 _circularLayout.Arrange();
                 _maskCopies.ForEach(mask =>
                 {
-                    mask.Amplitude = 0.01f;
-                    mask.OnScreen();
+                    mask.OnScreen(0.01f);
                 });
             });
         }

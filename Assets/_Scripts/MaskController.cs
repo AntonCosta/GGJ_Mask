@@ -13,6 +13,7 @@ namespace GGJ.Controllers
     public class MaskController : MonoBehaviour
     {
         private const float DURATION = 0.7f;
+        private const float AMPLITUDE = 0.025f;
         
         [SerializeField] public GameObject Components;
         [SerializeField] public SpriteRenderer Accessory;
@@ -29,7 +30,6 @@ namespace GGJ.Controllers
 
         public Tween Tween => _tween;
         [HideInInspector] public int Id;
-        [HideInInspector] public float Amplitude = 0.025f;
         [HideInInspector] public string DialogueKnowledgeType;
         [HideInInspector] public List<SpriteRenderer> MaskComponents;
         [HideInInspector] public List<TextMeshProUGUI> WhatTheySaidAboutYou;
@@ -121,9 +121,9 @@ namespace GGJ.Controllers
             }
         }
 
-        public void OnScreen()
+        public void OnScreen(float amplitude = AMPLITUDE)
         {
-            _tween = Components.transform.DOMoveY(transform.position.y + Amplitude, DURATION);
+            _tween = Components.transform.DOMoveY(transform.position.y + amplitude, DURATION);
             switch (PersonalityType)
             {
                 case "Nervous":

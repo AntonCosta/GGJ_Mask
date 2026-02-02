@@ -49,7 +49,7 @@ namespace GJJ.Managers
             Instance = this;
             
             if (audioManager == null)
-                audioManager = FindObjectOfType<AudioManager>();
+                audioManager = FindFirstObjectByType<AudioManager>();
         }
         
         void PlayCurrentMaskVoice()

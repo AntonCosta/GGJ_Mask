@@ -25,7 +25,7 @@ namespace GGJ.Controllers
         private void Awake()
         {
             if (audioManager == null)
-                audioManager = FindObjectOfType<AudioManager>();
+                audioManager = FindFirstObjectByType<AudioManager>();
 
             if (Instance != null && Instance != this)
             {

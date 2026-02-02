@@ -29,7 +29,6 @@ namespace GGJ.Utils
         public Tween FadeOutToBlack(float fade_time = FADE_TIME)
         {
             IsTweening = true;
-            _fadeImage.gameObject.SetActive(true);
             return _fadeImage.DOFade(1f, fade_time).SetUpdate(true).OnComplete(() => IsTweening = false);
         }
 
@@ -38,7 +37,6 @@ namespace GGJ.Utils
             IsTweening = true;
             return _fadeImage.DOFade(0f, fade_time).SetUpdate(true).OnComplete(() =>
             {
-                _fadeImage.gameObject.SetActive(false);
                 IsTweening = false;
             });
         }
